@@ -1,0 +1,26 @@
+#notfound > img {
+  pointer-events: none;
+  width: 100%;
+}
+
+#notfound > div {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 320px;
+  padding: 10px;
+  color: #fff;
+}
+
+#notfound h2 { text-transform: none; }
+
+#notfound p { font-size: 0.875rem; }
+
+@media (max-width: 568px) {
+  #notfound > div {
+    position: relative;
+    color: #000;
+    margin: auto;
+    text-align: center;
+  }
+}

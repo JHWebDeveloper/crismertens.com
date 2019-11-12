@@ -1,0 +1,84 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html, body, div, iframe,
+header, nav, main, section, article,
+figure, footer, address, aside,
+h1, h2, p, ul, li, a, button, span, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html, body {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+body {
+  overflow-y: scroll;
+  color: #fff;
+  font: 400 16px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+div, header, nav, address, aside, main,
+section, article, figure, footer, a, button, span {
+  position: relative;
+}
+
+header, main { font-size: 0; }
+
+main, section, footer, img { display: block; }
+
+figure, h1, h2, a, li, span { display: inline-block; }
+
+h1, h2 {
+  font: 600 1.5rem 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+a, button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+body:not(.accessible) :matches(a, button) { outline: none; }
+
+a { text-decoration: none; }
+
+p > a {
+  display: inline;
+  text-decoration: underline;
+}
+
+a:matches(:link, :visited),
+button {
+  color: currentColor;
+}
+
+button { background-color: transparent; }
+
+ul { list-style-type: none; }
+
+svg:not([fill]) { fill: currentColor; }
+
+q {
+  quotes: "'" "'";
+  font-style: italic;
+}
+
+h1, h2, p, p > a, em, strong,
+q, sup, sub, i, section li {
+  user-select: text;
+}
+
+::selection { background-color: #fa0; }

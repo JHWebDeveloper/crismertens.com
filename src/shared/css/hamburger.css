@@ -1,0 +1,88 @@
+@keyframes spin-right {
+  25%  { transform: rotate(0turn); }
+  100% { transform: rotate(1.125turn); }
+}
+
+@keyframes spin-left {
+  0%  { transform: rotate(1.125turn); }
+  75% { transform: rotate(0turn); }
+}
+
+@keyframes morph-upper-bar {
+  25%  { transform: scaleX(0.115) translateY(9px); }
+  100% { transform: rotate(90deg) scaleX(1) translateY(9px); }
+}
+
+@keyframes return-upper-bar {
+  0%  { transform: rotate(90deg) scaleX(1) translateY(9px); }
+  75% { transform: scaleX(0.115) translateY(9px); }
+}
+
+@keyframes morph-middle-bar {
+  25%  { transform: scaleX(0.115); }
+  100% { transform: scaleX(1); }
+}
+
+@keyframes return-middle-bar {
+  75% { transform: scaleX(0.115); }
+}
+
+@keyframes morph-lower-bar {
+  25%  { transform: scaleX(0.115) translateY(-9px); }
+  100% { transform: scaleX(1) translateY(-9px); }
+}
+
+@keyframes return-lower-bar {
+  75% { transform: scaleX(0.115) translateY(-9px); }
+}
+
+.hamburger {
+  transform-origin: center;
+  animation-duration: 750ms;
+}
+
+button[aria-expanded="true"] > .hamburger {
+  animation-fill-mode: forwards;
+  animation-name: spin-right;
+}
+
+button[aria-expanded="false"] > .hamburger {
+  animation-name: spin-left;
+}
+
+.hamburger > rect {
+  transform-origin: inherit;
+  animation-duration: 500ms;
+}
+
+button[aria-expanded="true"] > .hamburger > rect {
+  animation-fill-mode: inherit;
+}
+
+button[aria-expanded="true"] > .hamburger > rect:nth-child(1) {
+  animation-name: morph-upper-bar;
+}
+
+button[aria-expanded="true"] > .hamburger > rect:nth-child(2) {
+  animation-name: morph-middle-bar;
+}
+
+button[aria-expanded="true"] > .hamburger > rect:nth-child(3) {
+  animation-name: morph-lower-bar;
+}
+
+button[aria-expanded="false"] > .hamburger > rect:nth-child(1) {
+  animation-name: return-upper-bar;
+}
+
+button[aria-expanded="false"] > .hamburger > rect:nth-child(n+2) {
+  animation-fill-mode: backwards;
+}
+
+button[aria-expanded="false"] > .hamburger > rect:nth-child(2) {
+  animation-name: return-middle-bar;
+}
+
+button[aria-expanded="false"] > .hamburger > rect:nth-child(3) {
+  animation-name: return-lower-bar;
+}
