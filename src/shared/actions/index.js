@@ -77,11 +77,6 @@ export const openModal = (el, videoData, pathname) => {
     window.history.pushState({}, '', `/${pathname}/${videoData.image}/${videoData.id}`)
   }
 
-  document.body.classList.add('noscroll')
-  document.body.ontouchstart = e => {
-    e.preventDefault()
-  }
-
   return {
     type: 'OPEN_MODAL',
     payload : {
@@ -107,9 +102,6 @@ export const markModalReady = () => ({
 
 export const closeModal = pathname => {
   window.history.pushState({}, '', `/${pathname}`)
-
-  document.body.classList.remove('noscroll')
-  document.body.ontouchstart = false
 
   return {
     type: 'CLOSE_MODAL'

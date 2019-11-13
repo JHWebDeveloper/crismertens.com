@@ -38,6 +38,16 @@ const Modal = ({ pathname }) => {
     setTimeout(() => {
       dispatch(animateModal())
     }, 250)
+
+    document.body.classList.add('noscroll')
+    document.body.ontouchstart = e => {
+      e.preventDefault()
+    }
+
+    return () => {
+      document.body.classList.remove('noscroll')
+      document.body.ontouchstart = false
+    }
   }, [])
 
   return (
