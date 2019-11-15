@@ -43,7 +43,9 @@ figure > a:focus > img { transform: scale(1) }
 
 figure .overlay {
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.75));
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 35%, 
+    rgba(0, 0, 0, 0.75));
 }
 
 figure .play {

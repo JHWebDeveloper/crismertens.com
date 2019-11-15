@@ -109,8 +109,44 @@ export const reducer = (state, action) => {
       return {
         ...state,
         modal: {
+          ...state.modal,
           open: false,
-          ready: false
+          ready: false,
+          episode: false,
+          episodeNumber: 0
+        }
+      }
+    case 'CHANGE_DISPLAYED_TITLE':
+      return {
+        ...state,
+        modal: {
+          ...state.modal,
+          displayedTitle: payload
+        }
+      }
+    case 'PLAY_EPISODE':
+      return {
+        ...state,
+        modal: {
+          ...state.modal,
+          episode: true,
+          episodeNumber: payload
+        }
+      }
+    case 'UPDATE_EPISODE_NUMBER':
+      return {
+        ...state,
+        modal: {
+          ...state.modal,
+          episodeNumber: payload
+        }
+      }
+    case 'CLOSE_EPISODE':
+      return {
+        ...state,
+        modal: {
+          ...state.modal,
+          episode: false
         }
       }
     default:

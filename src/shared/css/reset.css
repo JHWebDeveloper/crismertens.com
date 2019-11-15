@@ -21,7 +21,7 @@ html, body {
 }
 
 body {
-  overflow-y: scroll;
+  padding-left: calc(100vw - 100%);
   color: #fff;
   font: 400 16px 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

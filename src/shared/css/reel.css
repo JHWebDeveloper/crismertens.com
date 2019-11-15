@@ -89,7 +89,9 @@
 
 .crop-box > .overlay {
   width: 912px;
-  background: radial-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8));
+  background: radial-gradient(
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.8));
 }
 
 .crop-box > .play {

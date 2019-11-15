@@ -14,14 +14,16 @@
     "express": "^4.17.1",
     "focus-within": "^3.0.2",
     "helmet": "^3.21.2",
+    "load-script": "^1.0.0",
     "react": "^16.10.2",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.1.2",
-    "react-youtube": "^7.9.0",
+    "react-transition-group": "^4.3.0",
     "smoothscroll-polyfill": "^0.4.4",
-    "uuid": "^3.3.3"
+    "uuid": "^3.3.3",
+    "youtube-player": "^5.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",

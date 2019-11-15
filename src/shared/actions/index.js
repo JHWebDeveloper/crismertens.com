@@ -81,6 +81,7 @@ export const openModal = (el, videoData, pathname) => {
     type: 'OPEN_MODAL',
     payload : {
       open: true,
+      displayedTitle: videoData.type === 1 ? 'available on...' : '',
       videoData,
       ...getShape(el)
     }
@@ -107,3 +108,22 @@ export const closeModal = pathname => {
     type: 'CLOSE_MODAL'
   }
 }
+
+export const changeDisplayedTitle = (title = '') => ({
+  type: 'CHANGE_DISPLAYED_TITLE',
+  payload: title
+})
+
+export const playEpisode = index => ({
+  type: 'PLAY_EPISODE',
+  payload: index
+})
+
+export const updateEpisodeNumber = index => ({
+  type: 'UPDATE_EPISODE_NUMBER',
+  payload: index
+})
+
+export const closeEpisode = () => ({
+  type: 'CLOSE_EPISODE'
+})

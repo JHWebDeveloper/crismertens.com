@@ -80,3 +80,9 @@ export const applyDisplacement = el => {
     el.removeEventListener('mouseout', retract)
   }
 }
+
+export const transitionProps = {
+  appear: true,
+  mountOnEnter: true,
+  unmountOnExit: true,
+}

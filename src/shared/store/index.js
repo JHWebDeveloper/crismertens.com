@@ -23,7 +23,10 @@ const initState = {
     videoData: {},
     x: 0,
     y: 0,
-    scale: 0
+    scale: 0,
+    displayedTitle: '',
+    episode: false,
+    episodeNumber: 0
   }
 }
 

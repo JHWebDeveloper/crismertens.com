@@ -1,15 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import { CMContext } from '../../../store'
+import { playEpisode, changeDisplayedTitle } from '../../../actions'
 
 import Thumbnail from '../../main/Thumbnail'
 import { Play } from '../../svg'
 
-const Episode = ({ id, title, image, changeDisplayedTitle }) => {
+const Episode = ({ title, index, image, id }) => {
+  const { dispatch } = useContext(CMContext)
+
   return (
     <button
       data-title={title}
       title={`Click to play ${title}`}
-      onMouseEnter={() => changeDisplayedTitle(title)}
-      onMouseLeave={() => changeDisplayedTitle('')}>
+      onClick
+      onClick={() => dispatch(playEpisode(index))}
+      onMouseEnter={() => dispatch(changeDisplayedTitle(title))}
+      onMouseLeave={() => dispatch(changeDisplayedTitle())}>
       <span>
         <Thumbnail
           image={image}

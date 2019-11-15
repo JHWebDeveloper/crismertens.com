@@ -1,16 +1,15 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { memo, useCallback, useEffect, useRef, useState } from 'react'
 
-import VODLink from './VODLink'
-import Episode from './Episode'
+import ContentSliderButton from './ContentSliderButton'
 import { CaretLeft, CaretRight } from '../../svg'
 import { applyDisplacement } from '../../../utilities'
 
-const ContentSlider = ({ content, type, title, changeDisplayedTitle }) => {
+const ContentSlider = ({ hasScrolling, children }) => {
   const [ prevEnabled, enablePrev ] = useState(false)
-  const [ nextEnabled, enableNext ] = useState(content.length > 4)
+  const [ nextEnabled, enableNext ] = useState(hasScrolling)
   const container = useRef()
   const slider = useRef()
-  const ContentItem = type === 1 ? VODLink : Episode
+  
 
   useEffect(() => {
     applyDisplacement(slider.current)
@@ -34,32 +33,26 @@ const ContentSlider = ({ content, type, title, changeDisplayedTitle }) => {
 
   return (
     <div role="region" aria-label="gallery">
-      {prevEnabled && (
-        <button title="Previous" onClick={() => slide(true)}>
-          <CaretLeft />
-        </button>
-      )}
-      <div
-        ref={container}
-        onScroll={toggleButtons}>
+      <ContentSliderButton
+        enabled={prevEnabled}
+        buttonTitle="Previous"
+        buttonAction={(() => slide(true))}>
+        <CaretLeft />
+      </ContentSliderButton>
+      <div ref={container} onScroll={toggleButtons}>
         <div
           className="slider-items"
           ref={slider}
-          style={content.length < 4 ? { textAlign: 'center' } : {}}>
-          {content.map(item => (
-            <ContentItem
-              key={item.id}
-              entryTitle={title}
-              changeDisplayedTitle={changeDisplayedTitle}
-              {...item} />
-          ))}
+          style={hasScrolling ? {} : { textAlign: 'center' }}>
+          { children }
         </div>
       </div>
-      {nextEnabled && (
-        <button title="Next" onClick={() => slide()}>
-          <CaretRight />
-        </button>
-      )}
+      <ContentSliderButton
+        enabled={nextEnabled}
+        buttonTitle="Next"
+        buttonAction={(() => slide())}>
+        <CaretRight />
+      </ContentSliderButton>
     </div>
   )
 }

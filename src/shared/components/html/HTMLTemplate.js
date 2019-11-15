@@ -12,7 +12,7 @@ const HTMLTemplate = ({ location }) => (
       <title>Cris Mertens | Film Editor</title>
       <meta name="description" content="The official website of Los Angeles, CA based film editor Cris Mertens." />
       <link rel="stylesheet" href="/css/main.min.css" />
-      <link rel="preconnect" href="https://www.youtube.com/iframe_api" />
+      <script src="https://www.youtube.com/iframe_api"></script>
 
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

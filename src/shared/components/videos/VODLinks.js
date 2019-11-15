@@ -9,7 +9,7 @@ const VODLinks = ({ title, content }) => {
 
   return (
     <aside ref={vodRef}>
-      {content.map(({ id, url, name }) => (
+      {content.slice(0, 4).map(({ id, url, name }) => (
         <a
           key={id}
           href={url}

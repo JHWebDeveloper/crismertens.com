@@ -1,26 +1,54 @@
-import React, { useContext } from 'react'
+import React, { useEffect } from 'react'
+import YouTubePlayer from 'youtube-player'
 
-import { CMContext } from '../../../store'
-import { closeModal } from '../../../actions'
+import { updateEpisodeNumber, closeModal } from '../../../actions'
 
-import YouTube from 'react-youtube'
+const Player = ({ videoData, episodeNumber, styles, dispatch }) => {
+  const { type, videoId, content } = videoData
 
-const Player = ({ videoData }) => {
-  const { dispatch } = useContext(CMContext)
-  const opts = {
+  const options = {
     playerVars: {
       controls: 1,
       autoplay: 1,
-      playsinline: 1
-    }
+      playsinline: 1,
+    },
+    suggestedQuality: 1080,
   }
 
+  if (type === 0) options.videoId = videoId
+
+  useEffect(() => {
+    const player = YouTubePlayer('player-placeholder', options)
+
+    if (type === 2) {
+      player.loadPlaylist({
+        list: videoId,
+        listType: 'playlist',
+        index: episodeNumber
+      })
+
+      player.on('stateChange', e => {
+        if (e.data !== 0) return
+
+        const index = e.target.l.playlistIndex
+
+        if (index + 1 === content.length) {
+          dispatch(closeModal())
+        } else {
+          dispatch(updateEpisodeNumber(index + 1))
+        }
+      })
+    } else {
+      player.on('stateChange', e => {
+        if (e.data === 0) dispatch(closeModal())
+      })
+    }
+  })
+
   return (
-    <YouTube
-      containerClassName={'player'}
-      videoId={videoData.videoId}
-      opts={opts}
-      onEnd={() => dispatch(closeModal())} />
+    <div id="player" style={styles}>
+      <div id="player-placeholder"></div>
+    </div>
   )
 }
 
