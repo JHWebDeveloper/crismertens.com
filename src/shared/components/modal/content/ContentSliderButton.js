@@ -17,7 +17,8 @@ const ContentSliderButton = ({ enabled, buttonTitle, buttonAction, children }) =
       <button
         title={buttonTitle}
         onClick={buttonAction}
-        style={{ ...transitionStyles[state] }}>
+        style={{ ...transitionStyles[state] }}
+        tabIndex="-1">
         { children }
       </button>
     )}

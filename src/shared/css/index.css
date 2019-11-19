@@ -204,6 +204,16 @@ section > header svg {
   transition: transform 350ms;
 }
 
+section > div {
+  visibility: hidden;
+  transition: visibility 0ms 350ms
+}
+
+section.open > div {
+  visibility: visible;
+  transition-delay: 0ms;
+}
+
 article {
   display: flex;
   flex-direction: row-reverse;
@@ -243,9 +253,10 @@ figure {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
 }
 
-figure img {
-  height: 100%;
-}
+.accessible figure:focus-within { outline: 2px solid #fa0; }
+.accessible figure:focus-within > a { outline: none; }
+
+figure img { height: 100%; }
 
 .overlay,
 .runtime,
@@ -393,9 +404,20 @@ main + footer > a:hover {
   nav > :matches(aside, address) > a:hover { background-color: #4a4a4a; }
   nav > :matches(aside, address) svg { display: none; }
   nav > :matches(aside, address) span { display: inline-block; }
+
+  main { padding-top: 80px; }
+}
+
+@media (max-width: 375px) {
+  article h1 { font-size: 18px; }
 }
 
 /* -- MISC -- */
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 .noscroll {
   overflow: hidden;

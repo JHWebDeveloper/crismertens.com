@@ -87,10 +87,6 @@ section > ul > li:first-child { padding-top: 0; }
   font-size: 0;
 }
 
-body.accessible a[download]:focus {
-	outline: 3px solid #fa0;
-}
-
 @media (max-width: 960px) {
   .job:nth-child(even) { border-radius: 0; }
 }

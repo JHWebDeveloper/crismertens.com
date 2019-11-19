@@ -1,11 +1,9 @@
-import React, { useCallback, useContext, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import { CMContext } from '../../store'
 import { CaretDown } from '../svg'
 
-const Dropdown = ({ name, url, content, isolateCategory, resetCategories }) => {
-  const { dispatch } = useContext(CMContext)
+const Dropdown = ({ name, url, content, isolateCategory, resetCategories, dispatch }) => {
   const [ open, toggleDropdown ] = useState(false)
   const ref = useRef()
 

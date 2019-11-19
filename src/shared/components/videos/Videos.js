@@ -9,13 +9,16 @@ import Head from '../html/Head'
 import VideoCategory from './VideoCategory'
 
 const Videos = ({ route }) => {
-  const { videos } = useContext(CMContext).data
+  const { data, dispatch } = useContext(CMContext)
 
   return (
     <>
       <Head {...route} />
-      {videos.map(category => (
-        <VideoCategory key={category.id} {...category} />
+      {data.videos.map(category => (
+        <VideoCategory
+          key={category.id}
+          dispatch={dispatch}
+          {...category} />
       ))}
       {renderRoutes(route.routes)}
     </>

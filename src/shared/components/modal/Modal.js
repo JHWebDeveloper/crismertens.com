@@ -1,9 +1,8 @@
-import React, { useCallback, useContext, useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import { Transition } from 'react-transition-group'
 
 if (process.env.WEBPACK) require('../../css/modal.css')
 
-import { CMContext } from '../../store'
 import { animateModal, markModalReady, closeModal, closeEpisode } from '../../actions'
 import { getImageWidth, transitionProps } from '../../utilities'
 
@@ -11,19 +10,19 @@ import ModalContent from './ModalContent'
 import Gallery from './content/Gallery'
 import Player from './content/Player'
 
-const Modal = ({ pathname, styles }) => {
-  const { modal, dispatch } = useContext(CMContext)
-  const { ready, x, y, scale, videoData, episode } = modal
-  const { type } = videoData
+const Modal = ({ pathname, styles, modal, dispatch }) => {
+  const { ready, x, y, scale, videoData, episode, episodeId } = modal
+  const { type, id } = videoData
   const modalRef = useRef()
   const transform = `translate(${x}, ${y}) scale(${scale})`
+  const animation = pathname === 'videos' ? 'zoom-out 300ms' : 'none'
   const backgroundImage = `${[
     'url("',
     'images',
     'render',
     getImageWidth(),
     videoData.id,
-    videoData.image
+    videoData.tag
   ].join('/')}")`
 
   const transitionStyles = {
@@ -37,11 +36,28 @@ const Modal = ({ pathname, styles }) => {
     }
   }
 
-  const close = useCallback(e => {
-    if (e.target === e.currentTarget) dispatch(closeModal(pathname))
+  const close = useCallback(() => {
+    dispatch(closeModal(pathname, id))
+  }, [])
+
+  const closeWithTarget = useCallback(e => {
+    if (e.target === e.currentTarget) {
+      e.preventDefault()
+      close()
+    }
+  }, [])
+
+  const closeOnKeyDown = useCallback(e => {
+    if (e.keyCode === 13 ||
+        e.keyCode === 32 ||
+        e.keyCode === 9  && e.shiftKey) closeWithTarget(e)
+
+    if (e.keyCode === 27) close()
   }, [])
 
   useEffect(() => {
+    modalRef.current.parentElement.focus()
+
     modalRef.current.addEventListener('transitionend', () => {
       dispatch(markModalReady())
     }, { once: true })
@@ -50,6 +66,7 @@ const Modal = ({ pathname, styles }) => {
       dispatch(animateModal())
     }, 250)
 
+    window.onpopstate = close
     document.body.classList.add('noscroll')
     document.body.ontouchstart = e => {
       e.preventDefault()
@@ -57,45 +74,54 @@ const Modal = ({ pathname, styles }) => {
 
     return () => {
       document.body.classList.remove('noscroll')
-      document.body.ontouchstart = false
+      document.body.ontouchstart = window.onpopstate = false
     }
   }, [])
 
   return (
-    <div id="modal" onClick={close} style={styles}>
+    <div
+      id="modal"
+      onClick={closeWithTarget}
+      style={styles}
+      tabIndex={0}
+      onKeyDown={closeOnKeyDown}>
       <div ref={modalRef} style={{ transform }}>
-        <span style={{ backgroundImage }}></span>
-          <ModalContent
-            close={close}
-            ready={ready}
-            episode={episode}
-            closeEpisode={() => dispatch(closeEpisode())}>
-            <Transition
-              in={type > 0}
-              timeout={{ enter: 500 }}
-              {...transitionProps}>
-              {state => (
-                <Gallery
-                  videoData={videoData}
-                  styles={transitionStyles[state]} />
-              )}
-            </Transition>
-            <Transition
-              in={type === 0 || episode}
-              timeout={{
-                enter: 500,
-                exit: 350
-              }}
-              {...transitionProps}>
-              {state => (
-                <Player
-                  videoData={videoData}
-                  episodeNumber={modal.episodeNumber}
-                  styles={transitionStyles[state]}
-                  dispatch={dispatch} />
-              )}
-            </Transition>
-          </ModalContent>
+        <span>
+          <span
+            className="modal-bg"
+            style={{ backgroundImage, animation }}></span>
+        </span>
+        <ModalContent
+          closeWithTarget={closeWithTarget}
+          ready={ready}
+          episode={episode}
+          closeEpisode={() => dispatch(closeEpisode(episodeId))}>
+          <Transition
+            in={ready && type > 0}
+            timeout={0}
+            {...transitionProps}>
+            {state => (
+              <Gallery
+                videoData={videoData}
+                styles={transitionStyles[state]}
+                dispatch={dispatch}
+                pathname={pathname} />
+            )}
+          </Transition>
+          <Transition
+            in={ready && (type === 0 || episode)}
+            timeout={{ exit: 350 }}
+            {...transitionProps}>
+            {state => (
+              <Player
+                videoData={videoData}
+                episodeId={modal.episodeId}
+                styles={transitionStyles[state]}
+                dispatch={dispatch}
+                closeModal={close} />
+            )}
+          </Transition>
+        </ModalContent>
       </div>
     </div>
   )

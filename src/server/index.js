@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === 'development') {
   const compiler = require('webpack')(config)
 
   app.use(require('webpack-dev-middleware')(compiler, {
-    publicPath: config.output.publicPath,
+    publicPath: config.output.publicPath
   }))
 
   app.use(require('webpack-hot-middleware')(compiler))

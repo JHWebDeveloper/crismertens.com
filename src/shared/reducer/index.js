@@ -1,23 +1,26 @@
-export const reducer = (state, action) => {
+export default (state, action) => {
   const { type, payload } = action
 
   switch (type) {
     case 'LOAD_SITE_DATA':
-      const allVideos = payload.videos
-        .map(video => video.entries)
-        .flat()
-
       return {
         ...state,
         data: {
+          ...state.data,
           ...payload,
-          featured: payload.featured.map(feature => (
-            allVideos.find(({ id }) => id === feature)
-          )),
-          reference: {
-            allVideoCategories: payload.videos.map(({ title, id }) => ({ title, id })),
-            allVideos
-          }
+          videoCategoriesStatic: payload.videos.map(({ title, id }) => ({ title, id })),
+        }
+      }
+    case 'LOAD_FEATURED':
+      return {
+        ...state,
+        data: {
+          ...state.data,
+          featured: state.data.featuredId.flatMap(id => (
+            state.data.videos.flatMap(({ entries }) => (
+              entries.filter(video => video.id === id)
+            ))
+          ))
         }
       }
     case 'INIT_INTERSECTION_OBSERVER':
@@ -34,16 +37,6 @@ export const reducer = (state, action) => {
       return {
         ...state,
         navOpen: false
-      }
-    case 'SET_FEATURED_CURRENT':
-      return {
-        ...state,
-        featuredCurrent: payload
-      }
-    case 'INCREMENT_FEATURED_LOADED':
-      return {
-        ...state,
-        featuredLoaded: state.featuredLoaded += 1
       }
     case 'ISOLATE_CATEGORY':
       return {
@@ -87,9 +80,14 @@ export const reducer = (state, action) => {
     case 'OPEN_MODAL':
       return {
         ...state,
-        modal: payload
+        modal: {
+          ...state.modal,
+          ...payload,
+          open: true
+        }
       }
     case 'ANIMATE_MODAL':
+    case 'UPDATE_EPISODE_NUMBER':
       return {
         ...state,
         modal: {
@@ -129,16 +127,8 @@ export const reducer = (state, action) => {
         ...state,
         modal: {
           ...state.modal,
+          episodeId: payload,
           episode: true,
-          episodeNumber: payload
-        }
-      }
-    case 'UPDATE_EPISODE_NUMBER':
-      return {
-        ...state,
-        modal: {
-          ...state.modal,
-          episodeNumber: payload
         }
       }
     case 'CLOSE_EPISODE':

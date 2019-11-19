@@ -28,10 +28,10 @@ export const SiteLogo = () => (
   </svg>
 )
 
-export const IMDbLogo = () => (
-  <svg viewBox="0 0 66 33">
-    <path d="M66,30.2V2.7c-0.2-1.4-1.3-2.5-2.7-2.7H2.7C1.2,0.2,0,1.5,0,3.1v26.7C0,31.6,1.4,33,3.2,33h59.7C64.5,33,65.8,31.8,66,30.2z"/>
-    <path fill="#323232" d="M9.1,6.8h5V26h-5V6.8z M24.7,6.8l-1.2,9l-0.7-4.9c-0.2-1.6-0.4-2.9-0.6-4.1h-6.5V26h4.4l0-12.7L22,26
+const IMDbTemplate = ({ bgFill, fgFill }) => (
+  <>
+    <path fill={bgFill} d="M66,30.2V2.7c-0.2-1.4-1.3-2.5-2.7-2.7H2.7C1.2,0.2,0,1.5,0,3.1v26.7C0,31.6,1.4,33,3.2,33h59.7C64.5,33,65.8,31.8,66,30.2z"/>
+    <path fill={fgFill} d="M9.1,6.8h5V26h-5V6.8z M24.7,6.8l-1.2,9l-0.7-4.9c-0.2-1.6-0.4-2.9-0.6-4.1h-6.5V26h4.4l0-12.7L22,26
       h3.1l1.7-13l0,13h4.4V6.8H24.7L24.7,6.8z M39.1,10.2c0.2,0.1,0.3,0.3,0.4,0.5c0.1,0.2,0.1,0.8,0.1,1.7v7.4c0,1.3-0.1,2.1-0.2,2.3
       c-0.2,0.3-0.6,0.4-1.3,0.4V10.1C38.5,10.1,38.9,10.1,39.1,10.2L39.1,10.2z M39,26c1.2,0,2.1-0.1,2.7-0.2c0.6-0.1,1.1-0.4,1.5-0.7
       c0.4-0.3,0.7-0.8,0.8-1.4s0.3-1.7,0.3-3.5v-6.7c0-1.8-0.1-3-0.2-3.7s-0.4-1.2-0.8-1.7s-1.1-0.9-1.9-1.1c-0.9-0.2-2.2-0.3-4.7-0.3H33
@@ -40,6 +40,22 @@ export const IMDbLogo = () => (
       l0.3-1.2c0.4,0.5,0.9,0.9,1.3,1.1s1.2,0.4,1.8,0.4c0.8,0,1.5-0.2,2-0.6c0.6-0.4,0.9-0.9,1.1-1.5c0.2-0.6,0.2-1.4,0.2-2.6v-5.4
       c0-1.2,0-1.9-0.1-2.3c-0.1-0.4-0.2-0.7-0.5-1.1c-0.3-0.4-0.6-0.7-1.1-0.9c-0.5-0.2-1.1-0.3-1.7-0.3c-0.6,0-1.3,0.1-1.8,0.3
       c-0.5,0.2-0.9,0.6-1.3,1V6.8H46L46,6.8z"/>
+  </>
+)
+
+export const IMDb = () => (
+  <svg viewBox="0 0 66 33">
+    <IMDbTemplate bgFill="#fff" fgFill="#323232" />
+  </svg>
+)
+
+export const IMDbColor = () => (
+  <svg viewBox="0 0 66 33">
+    <radialGradient id="imdb-gradient" cx="-70.2002" cy="145.5869" r="19.0393" gradientTransform="matrix(1.4095 0 0 -1.4095 131.3908 222.9356)" gradientUnits="userSpaceOnUse">
+      <stop  offset="0" style={{ stopColor: '#fbf070' }} />
+      <stop  offset="0.99" style={{ stopColor:' #daa628' }} />
+    </radialGradient>
+    <IMDbTemplate bgFill="url(#imdb-gradient)" fgFill="#000" />
   </svg>
 )
 
@@ -68,6 +84,14 @@ export const Hamburger = () => {
     </svg>
   )
 }
+
+export const Loading = () => (
+  <svg viewBox="0 0 200 200">
+    <rect x="50.367" y="50" width="25" height="100"/>
+    <rect x="87.867" y="50" width="25" height="100"/>
+    <rect x="125.367" y="50" width="25" height="100"/>
+  </svg>
+)
 
 export const Play = () => (
   <svg className="play" viewBox="0 0 100 100">

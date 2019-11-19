@@ -1,16 +1,27 @@
-import React, { useCallback, useContext, useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
-import { CMContext } from '../../store'
-import { setFeaturedCurrent, incrementFeaturedLoaded, openModal } from '../../actions'
+import { openModal } from '../../actions'
 
 import Thumbnail from '../main/Thumbnail'
 import { Play } from '../svg'
 import { secondsToTC } from '../../utilities'
 
-const Feature = ({ entry, extendState, retractState, displayTitle }) => {
-  const { id, altTitle, title, image, trt } = entry
-  const { featuredCurrent, featuredLoaded, dispatch } = useContext(CMContext)
+const Feature = props => {
+  const{
+    entry,
+    extendState,
+    retractState,
+    displayTitle,
+    featuredCurrent,
+    setFeaturedCurrent,
+    countFeaturedLoaded,
+    dispatch
+  } = props
+
+  let { featuredLoaded } = props
+
+  const { id, altTitle, title, tag, trt } = entry
 
   const getClass = useCallback(() => {
     switch (featuredCurrent) {
@@ -24,8 +35,9 @@ const Feature = ({ entry, extendState, retractState, displayTitle }) => {
   }, [featuredCurrent])
 
   const openModalOnSecondTouch = useCallback(e => {
+    if (window.matchMedia('hover: none')) return
     if (featuredCurrent !== extendState) e.preventDefault()
-    dispatch(setFeaturedCurrent(extendState))
+    setFeaturedCurrent(extendState)
   }, [featuredCurrent])
 
   const openVideo = useCallback(e => {
@@ -45,21 +57,21 @@ const Feature = ({ entry, extendState, retractState, displayTitle }) => {
 
   return (
     <Link
-      to={`/reel/${image}/${id}`}
+      to={`/reel/${tag}/${id}`}
       title={`Click to play ${title}`}
       className={getClass()}
       ref={ref}
-      onMouseEnter={() => dispatch(setFeaturedCurrent(extendState))}
-      onMouseLeave={() => dispatch(setFeaturedCurrent(0))}
-      onFocus={() => dispatch(setFeaturedCurrent(extendState))}
-      onBlur={() => dispatch(setFeaturedCurrent(0))}
+      onMouseEnter={() => setFeaturedCurrent(extendState)}
+      onMouseLeave={() => setFeaturedCurrent(0)}
+      onFocus={() => setFeaturedCurrent(extendState)}
+      onBlur={() => setFeaturedCurrent(0)}
       onClick={openVideo}>
       <span className="crop-box">
         <Thumbnail
-          image={image}
+          image={tag}
           id={id}
           alt={`A still from ${altTitle || title}`}
-          loadAction={() => dispatch(incrementFeaturedLoaded(featuredLoaded))}/>
+          loadAction={() => countFeaturedLoaded(featuredLoaded += 1)}/>
         <span className="overlay"></span>
         <Play />
         <h2>{displayTitle}</h2>

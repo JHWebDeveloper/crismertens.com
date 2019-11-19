@@ -12,7 +12,7 @@ import {
 } from '../../actions'
 
 import Dropdown from './Dropdown'
-import { SiteLogo, Hamburger, IMDbLogo, EmailIcon } from '../svg'
+import { SiteLogo, Hamburger, IMDb, EmailIcon } from '../svg'
 
 const Header = () => {
   const { navOpen, data, dispatch } = useContext(CMContext)
@@ -32,6 +32,7 @@ const Header = () => {
       <button
         onClick={() => dispatch(toggleNavigation())}
         aria-expanded={navOpen}
+        aria-label="Toggle navigation menu"
         title={`${navOpen ? 'Close' : 'Open'} navigation menu`}>
         <Hamburger />
       </button>
@@ -47,7 +48,8 @@ const Header = () => {
         <Dropdown
           name="Videos"
           url="/videos"
-          content={data.reference.allVideoCategories}
+          dispatch={dispatch}
+          content={data.videoCategoriesStatic}
           isolateCategory={isolateCategoryVideos}
           resetCategories={resetCategoriesVideos} />
         <aside>
@@ -56,7 +58,7 @@ const Header = () => {
             rel="external noopener noreferrer"
             target="_blank"
             title="Cris Mertens on IMDb">
-            <IMDbLogo />
+            <IMDb />
             <span>IMDb</span>
           </a>
         </aside>

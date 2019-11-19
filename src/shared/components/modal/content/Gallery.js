@@ -4,9 +4,9 @@ import GalleryHeader from './GalleryHeader'
 import ContentSlider from './ContentSlider'
 import VODLink from './VODLink'
 import Episode from './Episode'
-import IMDb from '../../svg/vod-logos/IMDb'
+import { IMDbColor } from '../../svg'
 
-const Gallery = ({ videoData, styles }) => {
+const Gallery = ({ videoData, styles, dispatch }) => {
   const { type, title, year, content, imdb } = videoData
   const ContentItem = type === 1 ? VODLink : Episode
 
@@ -15,18 +15,18 @@ const Gallery = ({ videoData, styles }) => {
       <div>
         <GalleryHeader year={year} title={title} />
         <ContentSlider hasScrolling={content.length > 4}>
-          {content.map((item, i) => (
+          {content.map(item=> (
             <ContentItem
               key={item.id}
-              index={i}
               entryTitle={title}
+              dispatch={dispatch}
               {...item} />
           ))}
         </ContentSlider>
         {imdb && (
           <footer>
             <a href={imdb} rel="external nooppener noreferrer" target="_blank">
-              <IMDb />
+              <IMDbColor />
             </a>
           </footer>
         )}

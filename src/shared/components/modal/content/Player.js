@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import YouTubePlayer from 'youtube-player'
 
-import { updateEpisodeNumber, closeModal } from '../../../actions'
+import { playEpisode } from '../../../actions'
 
-const Player = ({ videoData, episodeNumber, styles, dispatch }) => {
+const Player = ({ videoData, episodeId, styles, dispatch, closeModal }) => {
   const { type, videoId, content } = videoData
 
   const options = {
@@ -24,23 +24,23 @@ const Player = ({ videoData, episodeNumber, styles, dispatch }) => {
       player.loadPlaylist({
         list: videoId,
         listType: 'playlist',
-        index: episodeNumber
+        index: content.findIndex(ep => ep.id === episodeId)
       })
 
       player.on('stateChange', e => {
-        if (e.data !== 0) return
+        if (e.data > 0) return
 
         const index = e.target.l.playlistIndex
 
-        if (index + 1 === content.length) {
-          dispatch(closeModal())
-        } else {
-          dispatch(updateEpisodeNumber(index + 1))
+        if (e.data === 0 && index + 1 === content.length) {
+          closeModal()
+        } else if (e.data < 1) {
+          dispatch(playEpisode(content[index].id))
         }
       })
     } else {
       player.on('stateChange', e => {
-        if (e.data === 0) dispatch(closeModal())
+        if (e.data === 0) closeModal()
       })
     }
   })

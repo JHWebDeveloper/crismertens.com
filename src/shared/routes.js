@@ -25,7 +25,7 @@ const routes = [
         component: Reel,
         routes: [
           {
-            path: '/reel/:title/:id',
+            path: '/reel/:title/:id?',
             component: ModalURLLoader
           }
         ]
@@ -42,7 +42,7 @@ const routes = [
         component: Videos,
         routes: [
           {
-            path: '/videos/:title/:id',
+            path: '/videos/:title/:id?',
             component: ModalURLLoader
           }
         ]

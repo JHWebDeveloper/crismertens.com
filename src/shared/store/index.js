@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useReducer } from 'react'
-import { reducer } from '../reducer'
+import reducer from '../reducer'
 import { loadSiteData, initIntersectionObserver } from '../actions'
 
 const initState = {
@@ -8,14 +8,14 @@ const initState = {
     resume: [],
     videos: [],
     featured: [],
+    featuredId: [],
+    videoCategoriesStatic: [],
     reference: {
       allVideoCategories: [],
       allVideos: []
     }
   },
   navOpen: false,
-  featuredCurrent: 0,
-  featuredLoaded: 0,
   intersectionObserver: false,
   modal: {
     open: false,
@@ -26,6 +26,7 @@ const initState = {
     scale: 0,
     displayedTitle: '',
     episode: false,
+    episodeId: false,
     episodeNumber: 0
   }
 }
@@ -36,6 +37,7 @@ export const CMProvider = ({children }) => {
   const [state, dispatch] = useReducer(reducer, initState)
 
   useEffect(() => {
+
     loadSiteData().then(res => dispatch(res))
     dispatch(initIntersectionObserver())
   }, [])

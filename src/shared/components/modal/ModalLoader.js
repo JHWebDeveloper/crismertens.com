@@ -13,17 +13,21 @@ const transitionStyles = {
 }
 
 const ModalLoader = withRouter(({ location }) => {
-  const { open } = useContext(CMContext).modal;
+  const { modal, dispatch } = useContext(CMContext);
   const pathname = location.pathname.split('/')[1]
 
   return (
     <Transition
-      in={open}
+      in={modal.open}
       timeout={{ exit: 200 }}
       mountOnEnter
       unmountOnExit>
       {state => (
-        <Modal pathname={pathname} styles={{ ...transitionStyles[state] }}/>
+        <Modal
+          pathname={pathname}
+          styles={{ ...transitionStyles[state] }}
+          modal={modal}
+          dispatch={dispatch} />
       )}
     </Transition>
   )

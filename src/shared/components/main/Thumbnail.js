@@ -9,7 +9,7 @@ const Thumbnail = (props, ref) => {
     const width = getImageWidth(props.desktopWidth)
     const src = ['/images', 'render', width, id, image].join('/')
 
-    imageRef.current.style.height = `${width * 0.5625}px`
+    imageRef.current.style.height = `${imageRef.current.clientWidth * 0.5625}px`
 
     if (isLazy) {
       imageRef.current.dataset.src = src

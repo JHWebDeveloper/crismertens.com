@@ -1,8 +1,7 @@
-import React, { useCallback, useContext, memo } from 'react'
+import React, { useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import uuid from 'uuid/v1'
 
-import { CMContext } from '../../store'
 import { openModal } from '../../actions'
 
 import VODLinks from './VODLinks'
@@ -11,9 +10,8 @@ import { Play } from '../svg'
 
 import { secondsToTC } from '../../utilities'
 
-const VideoEntry = memo(({ entry }) => {
-  const { id, title, image } = entry
-  const { dispatch } = useContext(CMContext)
+const VideoEntry = ({ entry, dispatch }) => {
+  const { id, title, tag } = entry
 
   const openVideo = useCallback(e => {
     e.preventDefault()
@@ -31,16 +29,16 @@ const VideoEntry = memo(({ entry }) => {
       </div>
       <figure>
         <Link
-          to={`/videos/${image}/${id}`}
+          to={`/videos/${tag}/${id}`}
           title={`Click to Play ${title}`}
           onClick={openVideo}>
           <LazyLoadImage
-            image={image}
+            image={tag}
             id={id}
             alt={`A still from ${entry.altTitle || title}`}
             desktopWidth={480} />
           <LazyLoadImage
-            image={image}
+            image={tag}
             id={id}
             alt={`A still from ${entry.altTitle || title}`} />
           <span className="overlay"></span>
@@ -50,6 +48,6 @@ const VideoEntry = memo(({ entry }) => {
       </figure>
     </article>
   )
-})
+}
 
 export default VideoEntry

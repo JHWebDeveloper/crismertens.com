@@ -16,8 +16,6 @@ const VODLogo = ({ name }) => {
       return <AmazonVideo />
     case 'YouTube':
       return <YouTube />
-    case 'IMDb':
-      return <IMDb />
     default:
       return false
   }

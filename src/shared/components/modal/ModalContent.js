@@ -13,7 +13,7 @@ const backStyles = {
   exiting: { transform: 'translateY(0)' }
 }
 
-const ModalContent = ({ close, ready, episode, closeEpisode, children }) => (
+const ModalContent = ({ closeWithTarget, ready, episode, closeEpisode, children }) => (
   <>
     <Transition
       in={ready}
@@ -21,7 +21,7 @@ const ModalContent = ({ close, ready, episode, closeEpisode, children }) => (
       {...transitionProps}>
       {state => (
         <button
-          onClick={close}
+          onClick={closeWithTarget}
           title="Close"
           style={{ ...closeStyles[state] }}>CLOSE</button>
       )}
@@ -35,7 +35,8 @@ const ModalContent = ({ close, ready, episode, closeEpisode, children }) => (
         <button
           onClick={closeEpisode}
           title="Back"
-          style={{ ...backStyles[state] }}>BACK</button>
+          style={{ ...backStyles[state] }}
+          autoFocus>BACK</button>
       )}
     </Transition>
   </>

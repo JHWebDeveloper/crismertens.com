@@ -8,6 +8,10 @@ export const loadSiteData = () => axios
     payload: res.data
   }))
 
+export const loadFeatured = () => ({
+  type: 'LOAD_FEATURED'
+})
+
 export const initIntersectionObserver = () => ({
   type: 'INIT_INTERSECTION_OBSERVER',
   payload: new IntersectionObserver((entries, observer) => {
@@ -30,17 +34,6 @@ export const closeNavigation = backToTop => dispatch => {
 
   dispatch({
     type: 'CLOSE_NAVIGATION'
-  })
-}
-
-export const setFeaturedCurrent = n => ({
-  type: 'SET_FEATURED_CURRENT',
-  payload: n
-})
-
-export const incrementFeaturedLoaded = loadCount => dispatch => {
-  if (loadCount < 2) dispatch({
-    type: 'INCREMENT_FEATURED_LOADED'
   })
 }
 
@@ -72,20 +65,19 @@ const toggleCategory = (pageName, id) => ({
 export const toggleCategoryResume = id => toggleCategory('resume', id)
 export const toggleCategoryVideos = id => toggleCategory('videos', id)
 
-export const openModal = (el, videoData, pathname) => {
+export const openModal = (el, videoData, pathname) => dispatch => {
   if (pathname) {
-    window.history.pushState({}, '', `/${pathname}/${videoData.image}/${videoData.id}`)
+    window.history.pushState({}, '', `/${pathname}/${videoData.tag}/${videoData.id}`)
   }
 
-  return {
+  dispatch({
     type: 'OPEN_MODAL',
     payload : {
-      open: true,
       displayedTitle: videoData.type === 1 ? 'available on...' : '',
       videoData,
       ...getShape(el)
     }
-  }
+  })
 }
 
 export const animateModal = () => ({
@@ -101,12 +93,13 @@ export const markModalReady = () => ({
   type: 'MARK_MODAL_READY'
 })
 
-export const closeModal = pathname => {
+export const closeModal = (pathname, id) => dispatch => {
   window.history.pushState({}, '', `/${pathname}`)
+  document.querySelector(`a[href$="${id}"]`).focus()
 
-  return {
+  dispatch({
     type: 'CLOSE_MODAL'
-  }
+  })
 }
 
 export const changeDisplayedTitle = (title = '') => ({
@@ -114,16 +107,15 @@ export const changeDisplayedTitle = (title = '') => ({
   payload: title
 })
 
-export const playEpisode = index => ({
+export const playEpisode = id => ({
   type: 'PLAY_EPISODE',
-  payload: index
+  payload: id
 })
 
-export const updateEpisodeNumber = index => ({
-  type: 'UPDATE_EPISODE_NUMBER',
-  payload: index
-})
+export const closeEpisode = id => dispatch => {
+  document.querySelector(`#${id}`).focus()
 
-export const closeEpisode = () => ({
-  type: 'CLOSE_EPISODE'
-})
+  dispatch({
+    type: 'CLOSE_EPISODE'
+  })
+}
