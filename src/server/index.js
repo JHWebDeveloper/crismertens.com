@@ -43,12 +43,12 @@ app.get('*', (req, res) => {
     return route.loadData
       ? route.loadData(match)
       : Promise.resolve(null)
-  });
+  })
 
-  Promise.all(promises).then(data => {
+  Promise.all(promises).then(() => {
     const html = renderToString(<HTMLTemplate location={req.url} />)
     res.send(`<!DOCTYPE html>${html}`)
   })
-});
+})
 
-app.listen(port, () => console.log(`Server listening on port ${port}`))
+app.listen(port, () => console.log(`Server listening on port ${port}`)) // eslint-disable-line no-console

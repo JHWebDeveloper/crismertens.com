@@ -10,9 +10,9 @@ const Player = ({ videoData, episodeId, styles, dispatch, closeModal }) => {
     playerVars: {
       controls: 1,
       autoplay: 1,
-      playsinline: 1,
+      playsinline: 1
     },
-    suggestedQuality: 1080,
+    suggestedQuality: 1080
   }
 
   if (type === 'video') options.videoId = videoId

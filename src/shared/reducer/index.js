@@ -10,7 +10,7 @@ export default (state, action) => {
         data: {
           ...state.data,
           ...payload,
-          videoCategoriesStatic: payload.videos.map(({ title, id }) => ({ title, id })),
+          videoCategoriesStatic: payload.videos.map(({ title, id }) => ({ title, id }))
         }
       }
     case TYPES.LOAD_FEATURED:
@@ -130,7 +130,7 @@ export default (state, action) => {
         modal: {
           ...state.modal,
           episodeId: payload,
-          episode: true,
+          episode: true
         }
       }
     case TYPES.CLOSE_EPISODE:

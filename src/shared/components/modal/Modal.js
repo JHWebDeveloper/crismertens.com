@@ -32,7 +32,7 @@ const Modal = ({ pathname, styles, modal, dispatch }) => {
       transitionDelay: '350ms'
     },
     exiting: {
-      opacity: type === 'series' ? 0 : 1,
+      opacity: type === 'series' ? 0 : 1
     }
   }
 

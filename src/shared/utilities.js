@@ -84,5 +84,5 @@ export const applyDisplacement = el => {
 export const transitionProps = {
   appear: true,
   mountOnEnter: true,
-  unmountOnExit: true,
+  unmountOnExit: true
 }

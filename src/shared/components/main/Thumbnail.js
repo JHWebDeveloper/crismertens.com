@@ -20,15 +20,15 @@ const Thumbnail = (props, ref) => {
 
   return (
     <img
-     className="notloaded"
-     ref={imageRef}
-     onLoad={() => {
-      imageRef.current.classList.remove('notloaded')
-      imageRef.current.style.removeProperty('height')
-      if (loadAction) loadAction()
-     }}
-     alt={props.alt} />
- )
+      className="notloaded"
+      ref={imageRef}
+      onLoad={() => {
+        imageRef.current.classList.remove('notloaded')
+        imageRef.current.style.removeProperty('height')
+        if (loadAction) loadAction()
+      }}
+      alt={props.alt} />
+  )
 }
 
 export default Thumbnail

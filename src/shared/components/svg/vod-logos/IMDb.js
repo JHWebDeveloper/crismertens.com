@@ -5,7 +5,7 @@ const IMDb = () => {
     <svg viewBox="0 0 66 33">
       <radialGradient id="imdb-gradient" cx="-70.2002" cy="145.5869" r="19.0393" gradientTransform="matrix(1.4095 0 0 -1.4095 131.3908 222.9356)" gradientUnits="userSpaceOnUse">
         <stop  offset="0" style={{ stopColor: '#fbf070' }} />
-        <stop  offset="0.99" style={{ stopColor:' #daa628' }} />
+        <stop  offset="0.99" style={{ stopColor: '#daa628' }} />
       </radialGradient>
       <path fill="url(#imdb-gradient)" d="M66,30.2V2.7
         c-0.2-1.4-1.3-2.5-2.7-2.7H2.7C1.2,0.2,0,1.5,0,3.1v26.7C0,31.6,1.4,33,3.2,33h59.7C64.5,33,65.8,31.8,66,30.2z"/>

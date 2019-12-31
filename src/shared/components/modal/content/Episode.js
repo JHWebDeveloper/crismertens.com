@@ -10,7 +10,6 @@ const Episode = ({ title, tag, id, dispatch }) => (
     data-title={title}
     title={`Click to play ${title}`}
     id={id}
-    onClick
     onClick={() => dispatch(playEpisode(id))}
     onMouseEnter={() => dispatch(changeDisplayedTitle(title))}
     onMouseLeave={() => dispatch(changeDisplayedTitle())}

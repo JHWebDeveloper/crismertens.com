@@ -8,7 +8,7 @@ import { Play } from '../svg'
 import { secondsToTC } from '../../utilities'
 
 const Feature = props => {
-  const{
+  const {
     entry,
     extendState,
     retractState,

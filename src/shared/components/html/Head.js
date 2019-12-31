@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 
 const url = 'http://www.crismertens.com'
 
-const Head = ({ path, alternate, title, indexing }) => {
+const Head = ({ path, alternate, title }) => {
   const pageURL = [url, path === '/reel' ? '' : path].join('')
 
   return (

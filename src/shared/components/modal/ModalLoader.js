@@ -13,7 +13,7 @@ const transitionStyles = {
 }
 
 const ModalLoader = withRouter(({ location }) => {
-  const { modal, dispatch } = useContext(CMContext);
+  const { modal, dispatch } = useContext(CMContext)
   const pathname = location.pathname.split('/')[1]
 
   return (

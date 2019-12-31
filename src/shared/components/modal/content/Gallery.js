@@ -25,7 +25,7 @@ const Gallery = ({ videoData, styles, dispatch }) => {
         </ContentSlider>
         {imdb && (
           <footer>
-            <a href={imdb} rel="external nooppener noreferrer" target="_blank">
+            <a href={imdb} rel="external noopener noreferrer" target="_blank">
               <IMDbColor />
             </a>
           </footer>

@@ -74,7 +74,7 @@ export const openModal = (el, videoData, pathname) => dispatch => {
 
   dispatch({
     type: TYPES.OPEN_MODAL,
-    payload : {
+    payload: {
       displayedTitle: videoData.type === 'vod' ? 'available on...' : '',
       videoData,
       ...getShape(el)

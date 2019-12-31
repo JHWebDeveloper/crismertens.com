@@ -31,7 +31,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               hmr: true
-            },
+            }
           },
           {
             loader: 'css-loader',
@@ -54,17 +54,17 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-			'process.env.WEBPACK': true
+      'process.env.WEBPACK': true
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/main.min.css',
+      filename: 'css/main.min.css'
     }),
     new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([
       { from: './src/server/data', to: 'data' },
       { from: './src/shared/font', to: 'font' },
       { from: './src/shared/downloads', to: 'downloads' },
-      { from: './src/shared/icons', to: '' },
+      { from: './src/shared/icons', to: '' }
     ])
   ]
 }

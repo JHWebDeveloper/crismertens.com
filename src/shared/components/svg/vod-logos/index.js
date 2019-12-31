@@ -4,7 +4,6 @@ import ITunesStore from './ITunesStore'
 import GooglePlay from './GooglePlay'
 import AmazonVideo from './AmazonVideo'
 import YouTube from './YouTube'
-import IMDb from './IMDb'
 
 const VODLogo = ({ name }) => {
   switch (name) {

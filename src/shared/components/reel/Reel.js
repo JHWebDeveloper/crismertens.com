@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { renderRoutes } from 'react-router-config';
+import { renderRoutes } from 'react-router-config'
 
 if (process.env.WEBPACK) require('../../css/reel.css')
 
@@ -11,7 +11,7 @@ import Feature from './Feature'
 import { Loading } from '../svg'
 
 const Reel = ({ route }) => {
-  const { data, dispatch }= useContext(CMContext)
+  const { data, dispatch } = useContext(CMContext)
   const { featured } = data
 
   const [featuredLoaded, countFeaturedLoaded] = useState(0)
@@ -38,21 +38,20 @@ const Reel = ({ route }) => {
       </div>
       <div id="featured" className={featuredLoaded < 2 ? 'loading' : ''}>
         {featuredLoaded < 2 && <Loading />}
-        {featured.length && (<>
+        {featured.length && <>
           <Feature
             displayTitle="Editing Reel"
             extendState={1}
             retractState={2}
             entry={featured[0]}
-            {...featureProps} />}
+            {...featureProps} />
           <Feature
             displayTitle="Featured Work"
             extendState={2}
             retractState={1}
             entry={featured[1]}
             {...featureProps} />
-          </>
-        )}
+        </>}
       </div>
       {renderRoutes(route.routes)}
     </>

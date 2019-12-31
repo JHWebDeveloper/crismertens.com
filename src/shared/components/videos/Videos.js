@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { renderRoutes } from 'react-router-config';
+import { renderRoutes } from 'react-router-config'
 
 if (process.env.WEBPACK) require('../../css/videos.css')
 

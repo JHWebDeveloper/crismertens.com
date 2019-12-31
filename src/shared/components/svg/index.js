@@ -53,7 +53,7 @@ export const IMDbColor = () => (
   <svg viewBox="0 0 66 33">
     <radialGradient id="imdb-gradient" cx="-70.2002" cy="145.5869" r="19.0393" gradientTransform="matrix(1.4095 0 0 -1.4095 131.3908 222.9356)" gradientUnits="userSpaceOnUse">
       <stop  offset="0" style={{ stopColor: '#fbf070' }} />
-      <stop  offset="0.99" style={{ stopColor:' #daa628' }} />
+      <stop  offset="0.99" style={{ stopColor: '#daa628' }} />
     </radialGradient>
     <IMDbTemplate bgFill="url(#imdb-gradient)" fgFill="#000" />
   </svg>

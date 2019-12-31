@@ -85,10 +85,10 @@ const browserConfig = {
   },
   plugins: [
     new webpack.DefinePlugin({
-			'process.env.WEBPACK': true
+      'process.env.WEBPACK': true
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/main.min.css',
+      filename: 'css/main.min.css'
     }),
     new CopyWebpackPlugin([
       { from: './src/shared/font', to: 'font' },

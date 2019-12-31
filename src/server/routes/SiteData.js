@@ -1,7 +1,7 @@
-import express from 'express';
-import fs from 'fs';
+import express from 'express'
+import fs from 'fs'
 
-const router = express.Router();
+const router = express.Router()
 
 router.get('/', (req, res) => {
   const file = process.env.NODE_ENV === 'development'

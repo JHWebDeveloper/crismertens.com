@@ -6,7 +6,8 @@
   "scripts": {
     "start": "NODE_ENV=development babel-node src/server",
     "build": "rimraf build && webpack --config webpack.prod.js",
-    "serve": "cd build && node server.js"
+    "serve": "cd build && node server.js",
+    "lint": "eslint . --ext .js"
   },
   "author": "Jonathan Hamilton",
   "license": "ISC",
@@ -36,6 +37,8 @@
     "css-loader": "^3.2.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.17.0",
     "file-loader": "^4.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "postcss": "^7.0.18",
