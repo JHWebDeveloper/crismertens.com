@@ -37,8 +37,10 @@ export const CMProvider = ({children }) => {
   const [state, dispatch] = useReducer(reducer, initState)
 
   useEffect(() => {
-
-    loadSiteData().then(res => dispatch(res))
+    (async () => {
+      dispatch(await loadSiteData())
+    })()
+    
     dispatch(initIntersectionObserver())
   }, [])
 

@@ -73,7 +73,9 @@ const browserConfig = {
                 postcssImport(),
                 postcssPresetEnv({ stage: 0 }),
                 cssMQPacker({ sort: true }),
-                cssnano()
+                cssnano({
+                  preset: ['default', { calc: false }]
+                })
               ]
             }
           }

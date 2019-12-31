@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import uuid from 'uuid/v1'
 
@@ -11,12 +11,14 @@ import { Play } from '../svg'
 import { secondsToTC } from '../../utilities'
 
 const VideoEntry = ({ entry, dispatch }) => {
-  const { id, title, tag } = entry
+  const { id, title, tag, trt } = entry
 
   const openVideo = useCallback(e => {
     e.preventDefault()
     dispatch(openModal(e.currentTarget, entry, 'videos'))
   }, [])
+
+  const runtime = useMemo(() => secondsToTC(trt), [trt])
 
   return (
     <article>
@@ -25,7 +27,7 @@ const VideoEntry = ({ entry, dispatch }) => {
         {entry.description.map(txt => (
           <p key={uuid()} dangerouslySetInnerHTML={{ __html: txt }}></p>
         ))}
-        {entry.type === 1 && <VODLinks title={title} content={entry.content}/>}
+        {entry.type === 'vod' && <VODLinks title={title} content={entry.content}/>}
       </div>
       <figure>
         <Link
@@ -42,7 +44,7 @@ const VideoEntry = ({ entry, dispatch }) => {
             id={id}
             alt={`A still from ${entry.altTitle || title}`} />
           <span className="overlay"></span>
-          <span className="runtime" aria-hidden="true">{secondsToTC(entry.trt)}</span>
+          <span className="runtime" aria-hidden="true">{runtime}</span>
           <Play />
         </Link>
       </figure>

@@ -32,7 +32,7 @@ const Modal = ({ pathname, styles, modal, dispatch }) => {
       transitionDelay: '350ms'
     },
     exiting: {
-      opacity: type === 2 ? 0 : 1,
+      opacity: type === 'series' ? 0 : 1,
     }
   }
 
@@ -97,7 +97,7 @@ const Modal = ({ pathname, styles, modal, dispatch }) => {
           episode={episode}
           closeEpisode={() => dispatch(closeEpisode(episodeId))}>
           <Transition
-            in={ready && type > 0}
+            in={ready && type !== 'video'}
             timeout={0}
             {...transitionProps}>
             {state => (
@@ -109,7 +109,7 @@ const Modal = ({ pathname, styles, modal, dispatch }) => {
             )}
           </Transition>
           <Transition
-            in={ready && (type === 0 || episode)}
+            in={ready && (type === 'video' || episode)}
             timeout={{ exit: 350 }}
             {...transitionProps}>
             {state => (

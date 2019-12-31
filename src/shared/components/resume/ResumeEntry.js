@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ResumeEntry = ({ type, title, company, format, position, start, end, skill }) => (
-  type ? (
-    <li className="skill">{skill}</li>
+const ResumeEntry = ({ type, title, company, format, position, year }) => (
+  type === 'skill' ? (
+    <li className="skill">{title}</li>
   ) : (
     <li className="job">
       <ul>
@@ -14,7 +14,7 @@ const ResumeEntry = ({ type, title, company, format, position, start, end, skill
           </ul>
         </li>
         <li>{position}</li>
-        <li>{end ? `${start} - ${end}` : start}</li>
+        <li>{year}</li>
       </ul>
     </li>
   )

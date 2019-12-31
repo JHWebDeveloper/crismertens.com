@@ -15,12 +15,12 @@ const Player = ({ videoData, episodeId, styles, dispatch, closeModal }) => {
     suggestedQuality: 1080,
   }
 
-  if (type === 0) options.videoId = videoId
+  if (type === 'video') options.videoId = videoId
 
   useEffect(() => {
     const player = YouTubePlayer('player-placeholder', options)
 
-    if (type === 2) {
+    if (type === 'series') {
       player.loadPlaylist({
         list: videoId,
         listType: 'playlist',

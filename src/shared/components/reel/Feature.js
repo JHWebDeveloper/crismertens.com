@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useMemo, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 import { openModal } from '../../actions'
@@ -45,6 +45,8 @@ const Feature = props => {
     dispatch(openModal(e.currentTarget, entry, 'reel'))
   }, [])
 
+  const runtime = useMemo(() => secondsToTC(trt), [trt])
+
   const ref = useRef()
 
   useEffect(() => {
@@ -75,7 +77,7 @@ const Feature = props => {
         <span className="overlay"></span>
         <Play />
         <h2>{displayTitle}</h2>
-        <span className="runtime">{secondsToTC(trt)}</span>
+        <span className="runtime">{runtime}</span>
       </span>
     </Link>
   )

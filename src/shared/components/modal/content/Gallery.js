@@ -8,7 +8,7 @@ import { IMDbColor } from '../../svg'
 
 const Gallery = ({ videoData, styles, dispatch }) => {
   const { type, title, year, content, imdb } = videoData
-  const ContentItem = type === 1 ? VODLink : Episode
+  const ContentItem = type === 'vod' ? VODLink : Episode
 
   return (
     <div id="gallery" style={styles}>

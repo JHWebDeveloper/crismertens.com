@@ -1,8 +1,10 @@
+import * as TYPES from '../actions/types'
+
 export default (state, action) => {
   const { type, payload } = action
 
   switch (type) {
-    case 'LOAD_SITE_DATA':
+    case TYPES.LOAD_SITE_DATA:
       return {
         ...state,
         data: {
@@ -11,7 +13,7 @@ export default (state, action) => {
           videoCategoriesStatic: payload.videos.map(({ title, id }) => ({ title, id })),
         }
       }
-    case 'LOAD_FEATURED':
+    case TYPES.LOAD_FEATURED:
       return {
         ...state,
         data: {
@@ -23,22 +25,22 @@ export default (state, action) => {
           ))
         }
       }
-    case 'INIT_INTERSECTION_OBSERVER':
+    case TYPES.INIT_INTERSECTION_OBSERVER:
       return {
         ...state,
         intersectionObserver: payload
       }
-    case 'OPEN_NAVIGATION':
+    case TYPES.OPEN_NAVIGATION:
       return {
         ...state,
         navOpen: true
       }
-    case 'CLOSE_NAVIGATION':
+    case TYPES.CLOSE_NAVIGATION:
       return {
         ...state,
         navOpen: false
       }
-    case 'ISOLATE_CATEGORY':
+    case TYPES.ISOLATE_CATEGORY:
       return {
         ...state,
         navOpen: false,
@@ -52,7 +54,7 @@ export default (state, action) => {
           })
         }
       }
-    case 'RESET_CATEGORIES':
+    case TYPES.RESET_CATEGORIES:
       return {
         ...state,
         navOpen: false,
@@ -66,7 +68,7 @@ export default (state, action) => {
           })
         }
       }
-    case 'TOGGLE_CATEGORY':
+    case TYPES.TOGGLE_CATEGORY:
       return {
         ...state,
         data: {
@@ -77,7 +79,7 @@ export default (state, action) => {
           })
         }
       }
-    case 'OPEN_MODAL':
+    case TYPES.OPEN_MODAL:
       return {
         ...state,
         modal: {
@@ -86,8 +88,8 @@ export default (state, action) => {
           open: true
         }
       }
-    case 'ANIMATE_MODAL':
-    case 'UPDATE_EPISODE_NUMBER':
+    case TYPES.ANIMATE_MODAL:
+    case TYPES.UPDATE_EPISODE_NUMBER:
       return {
         ...state,
         modal: {
@@ -95,7 +97,7 @@ export default (state, action) => {
           ...payload
         }
       }
-    case 'MARK_MODAL_READY':
+    case TYPES.MARK_MODAL_READY:
       return {
         ...state,
         modal: {
@@ -103,7 +105,7 @@ export default (state, action) => {
           ready: true
         }
       }
-    case 'CLOSE_MODAL':
+    case TYPES.CLOSE_MODAL:
       return {
         ...state,
         modal: {
@@ -114,7 +116,7 @@ export default (state, action) => {
           episodeNumber: 0
         }
       }
-    case 'CHANGE_DISPLAYED_TITLE':
+    case TYPES.CHANGE_DISPLAYED_TITLE:
       return {
         ...state,
         modal: {
@@ -122,7 +124,7 @@ export default (state, action) => {
           displayedTitle: payload
         }
       }
-    case 'PLAY_EPISODE':
+    case TYPES.PLAY_EPISODE:
       return {
         ...state,
         modal: {
@@ -131,7 +133,7 @@ export default (state, action) => {
           episode: true,
         }
       }
-    case 'CLOSE_EPISODE':
+    case TYPES.CLOSE_EPISODE:
       return {
         ...state,
         modal: {

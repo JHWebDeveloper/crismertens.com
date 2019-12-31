@@ -8,7 +8,7 @@
       "entries": [
         {
           "id": "1cd0e1d0-f74b-11e9-9383-1d9654827c43",
-          "type": 0,
+          "type": "video",
           "title": "Editing Reel",
           "tag": "editing-reel",
           "altTitle": false,
@@ -29,7 +29,7 @@
       "entries": [
         {
           "id": "episode_test",
-          "type": 2,
+          "type": "series",
           "title": "Battle Damage",
           "tag": "battle-damage",
           "description": [
@@ -38,6 +38,7 @@
           "trt": "Web Series",
           "year": 2015,
           "videoId": "PLHWWYNoH4JRC0-FULbCxhB6bbi0t8T1x3",
+          "imdb": false,
           "content": [
             {
               "id": "episode_test_0",
@@ -91,7 +92,7 @@
       "entries": [
         {
           "id": "1cd108e0-f74b-11e9-9383-1d9654827c43",
-          "type": 1,
+          "type": "vod",
           "title": "Teen Titans Go! Vs. Teen Titans",
           "tag": "teen-titans-go-vs-teen-titans",
           "altTitle": false,
@@ -104,29 +105,29 @@
           "content": [
             {
               "id": "49077560-ff21-11e9-b06c-217bbe3911a6",
-              "name": "iTunes Store",
+              "title": "iTunes Store",
               "url": "https://itunes.apple.com/us/movie/teen-titans-go-vs-teen-titans/id1470514777"
             },
             {
               "id": "490838b0-ff21-11e9-b06c-217bbe3911a6",
-              "name": "Google Play",
+              "title": "Google Play",
               "url": "https://play.google.com/store/movies/details?id=xm3WtJ-S2-Q.P"
             },
             {
               "id": "49085fc0-ff21-11e9-b06c-217bbe3911a6",
-              "name": "Amazon Video",
+              "title": "Amazon Video",
               "url": "https://www.amazon.com/gp/video/detail/B07VF1T3SR"
             },
             {
               "id": "49085fc1-ff21-11e9-b06c-217bbe3911a6",
-              "name": "YouTube",
+              "title": "YouTube",
               "url": "https://www.youtube.com/watch?v=7uEAvwuzRYU"
             }
           ]
         },
         {
           "id": "1cd108e1-f74b-11e9-9383-1d9654827c43",
-          "type": 1,
+          "type": "vod",
           "title": "Lego DC Batman: Family Matters",
           "tag": "lego-dc-batman-family-matters",
           "altTitle": false,
@@ -139,29 +140,29 @@
           "content": [
             {
               "id": "49085fc2-ff21-11e9-b06c-217bbe3911a6",
-              "name": "iTunes Store",
+              "title": "iTunes Store",
               "url": "https://itunes.apple.com/us/movie/lego-dc-batman-family-matters/id1460329533"
             },
             {
               "id": "490886d0-ff21-11e9-b06c-217bbe3911a6",
-              "name": "Google Play",
+              "title": "Google Play",
               "url": "https://play.google.com/store/movies/details/LEGO_DC_Batman_Family_Matters?id=_zY5pTGgrrc&hl=en_US"
             },
             {
               "id": "490886d1-ff21-11e9-b06c-217bbe3911a6",
-              "name": "Amazon Video",
+              "title": "Amazon Video",
               "url": "https://www.amazon.com/LEGO-DC-Batman-Family-Matters/dp/B07SKQWY3P/ref=tmm_aiv_swatch_0?_encoding=UTF8&qid=1559073651&sr=8-3"
             },
             {
               "id": "490886d2-ff21-11e9-b06c-217bbe3911a6",
-              "name": "YouTube",
+              "title": "YouTube",
               "url": "https://www.youtube.com/watch?v=_zY5pTGgrrc"
             }
           ]
         },
         {
           "id": "1cd108e2-f74b-11e9-9383-1d9654827c43",
-          "type": 1,
+          "type": "vod",
           "title": "Lego DC Super Heroes: Aquaman: Rage of Atlantis",
           "tag": "lego-dc-super-heroes-aquaman-rage-of-atlantis",
           "altTitle": false,
@@ -174,29 +175,29 @@
           "content": [
             {
               "id": "4908ade0-ff21-11e9-b06c-217bbe3911a6",
-              "name": "iTunes Store",
+              "title": "iTunes Store",
               "url": "https://itunes.apple.com/us/movie/lego-dc-super-heroes-aquaman-rage-of-atlantis/id1383149948"
             },
             {
               "id": "4908ade1-ff21-11e9-b06c-217bbe3911a6",
-              "name": "Google Play",
+              "title": "Google Play",
               "url": "https://play.google.com/store/movies/details/LEGO_DC_Super_Heroes_Aquaman_Rage_of_Atlantis?id=dDU_0cdKljg"
             },
             {
               "id": "4908ade2-ff21-11e9-b06c-217bbe3911a6",
-              "name": "Amazon Video",
+              "title": "Amazon Video",
               "url": "https://www.amazon.com/LEGO-DC-Comics-Super-Heroes/dp/B07D5MRY9L/"
             },
             {
               "id": "4908d4f0-ff21-11e9-b06c-217bbe3911a6",
-              "name": "YouTube",
+              "title": "YouTube",
               "url": "https://www.youtube.com/watch?v=dDU_0cdKljg"
             }
           ]
         },
         {
           "id": "1cd12ff0-f74b-11e9-9383-1d9654827c43",
-          "type": 1,
+          "type": "vod",
           "title": "Lego DC Super Heroes: The Flash",
           "tag": "lego-dc-super-heroes-the-flash",
           "altTitle": false,
@@ -209,29 +210,29 @@
           "content": [
             {
               "id": "4908d4f1-ff21-11e9-b06c-217bbe3911a6",
-              "name": "iTunes Store",
+              "title": "iTunes Store",
               "url": "https://itunes.apple.com/us/movie/lego-dc-super-heroes-the-flash/id1330276666"
             },
             {
               "id": "4908fc00-ff21-11e9-b06c-217bbe3911a6",
-              "name": "Google Play",
+              "title": "Google Play",
               "url": "https://play.google.com/store/movies/details?id=Y566qkvJ56Y"
             },
             {
               "id": "4908fc01-ff21-11e9-b06c-217bbe3911a6",
-              "name": "Amazon Video",
+              "title": "Amazon Video",
               "url": "https://www.amazon.com/LEGO-DC-Super-Heroes-Flash/dp/B078WGS36L"
             },
             {
               "id": "4908fc02-ff21-11e9-b06c-217bbe3911a6",
-              "name": "YouTube",
+              "title": "YouTube",
               "url": "https://www.youtube.com/watch?v=A2bFC7QTv9o"
             }
           ]
         },
         {
           "id": "1cd12ff1-f74b-11e9-9383-1d9654827c43",
-          "type": 1,
+          "type": "vod",
           "title": "Escape Room",
           "tag": "escape-room",
           "altTitle": false,
@@ -244,29 +245,29 @@
           "content": [
             {
               "id": "49092310-ff21-11e9-b06c-217bbe3911a6",
-              "name": "iTunes Store",
+              "title": "iTunes Store",
               "url": "https://itunes.apple.com/us/movie/escape-room/id1284052857"
             },
             {
               "id": "49092311-ff21-11e9-b06c-217bbe3911a6",
-              "name": "Google Play",
+              "title": "Google Play",
               "url": "https://play.google.com/store/movies/details/Escape_Room?id=SUXCLp3M50k"
             },
             {
               "id": "49092312-ff21-11e9-b06c-217bbe3911a6",
-              "name": "Amazon Video",
+              "title": "Amazon Video",
               "url": "https://www.amazon.com/Escape-Room-Evan-Williams/dp/B076FL6FH4/ref=tmm_aiv_swatch_1?_encoding=UTF8&qid=&sr="
             },
             {
               "id": "9f6f5cb0-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "YouTube",
+              "title": "YouTube",
               "url": "https://www.youtube.com/watch?v=SUXCLp3M50k"
             }
           ]
         },
         {
           "id": "1cd12ff2-f74b-11e9-9383-1d9654827c43",
-          "type": 1,
+          "type": "vod",
           "title": "Lego Scooby-Doo! Blowout Beach Bash",
           "tag": "lego-scooby-doo-blowout-beach-bash",
           "altTitle": false,
@@ -279,29 +280,29 @@
           "content": [
             {
               "id": "9f706e20-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "iTunes Store",
+              "title": "iTunes Store",
               "url": "https://itunes.apple.com/us/movie/lego-scooby-doo-blowout-beach-bash/id1245545279"
             },
             {
               "id": "9f706e21-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "Google Play",
+              "title": "Google Play",
               "url": "https://play.google.com/store/movies/details?id=0PnS0tnRSWQ"
             },
             {
               "id": "9f709530-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "Amazon Video",
+              "title": "Amazon Video",
               "url": "https://www.amazon.com/dp/B071VM3C1L"
             },
             {
               "id": "9f709531-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "YouTube",
+              "title": "YouTube",
               "url": "https://www.youtube.com/watch?v=0PnS0tnRSWQ"
             }
           ]
         },
         {
           "id": "1cd12ff3-f74b-11e9-9383-1d9654827c43",
-          "type": 1,
+          "type": "vod",
           "title": "Jetsons & WWE: Robo Wrestlemania",
           "tag": "jetsons-and-wwe-robo-wrestlemania",
           "altTitle": false,
@@ -314,29 +315,29 @@
           "content": [
             {
               "id": "9f709532-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "iTunes Store",
+              "title": "iTunes Store",
               "url": "https://itunes.apple.com/us/movie/the-jetsons-wwe-robo-wrestlemania/id1192573232"
             },
             {
               "id": "9f70bc40-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "Google Play",
+              "title": "Google Play",
               "url": "https://play.google.com/store/movies/details/Jetsons_and_WWE_Robo_Wrestlemania?id=kY1sEmsxFA0&hl=en"
             },
             {
               "id": "9f70bc41-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "Amazon Video",
+              "title": "Amazon Video",
               "url": "https://www.amazon.com/Jetsons-WWE-Robo-Wrestlemania-Jeff-Bergman/dp/B01N7VCUPT"
             },
             {
               "id": "9f70bc42-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "YouTube",
+              "title": "YouTube",
               "url": "https://www.youtube.com/watch?v=kY1sEmsxFA0"
             }
           ]
         },
         {
           "id": "1cd15700-f74b-11e9-9383-1d9654827c43",
-          "type": 1,
+          "type": "vod",
           "title": "Manhattan Undying",
           "tag": "manhattan-undying",
           "altTitle": false,
@@ -349,24 +350,24 @@
           "content": [
             {
               "id": "9f70e350-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "iTunes Store",
+              "title": "iTunes Store",
               "url": "https://itunes.apple.com/us/movie/manhattan-undying/id1232463495"
             },
             {
               "id": "9f70e351-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "Google Play",
+              "title": "Google Play",
               "url": "https://play.google.com/store/movies/details/Manhattan_Undying?id=DC01EB444738130BMV"
             },
             {
               "id": "9f70e352-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "Amazon Video",
+              "title": "Amazon Video",
               "url": "https://www.amazon.com/dp/B072JL1PKS/ref=cm_sw_r_cp_ep_dp_QyXozbGSN5H2S"
             }
           ]
         },
         {
           "id": "1cd15701-f74b-11e9-9383-1d9654827c43",
-          "type": 1,
+          "type": "vod",
           "title": "2 Survive",
           "tag": "2-survive",
           "altTitle": false,
@@ -379,17 +380,17 @@
           "content": [
             {
               "id": "9f710a60-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "iTunes Store",
+              "title": "iTunes Store",
               "url": "https://itunes.apple.com/us/movie/2-survive/id976803895"
             },
             {
               "id": "9f710a61-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "Google Play",
+              "title": "Google Play",
               "url": "https://play.google.com/store/movies/details/2_Survive?id=hfXmn6sYupQ&hl=en"
             },
             {
               "id": "9f710a62-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "name": "Amazon Video",
+              "title": "Amazon Video",
               "url": "https://www.amazon.com/dp/B00X5FX7Q6/ref=cm_sw_su_dp"
             }
           ]
@@ -404,7 +405,7 @@
       "entries": [
         {
           "id": "1cd17e10-f74b-11e9-9383-1d9654827c43",
-          "type": 0,
+          "type": "job",
           "title": "Wildness",
           "tag": "wildness",
           "altTitle": false,
@@ -417,7 +418,7 @@
         },
         {
           "id": "1cd17e11-f74b-11e9-9383-1d9654827c43",
-          "type": 0,
+          "type": "job",
           "title": "Shadow May Lie",
           "tag": "shadow-may-lie",
           "altTitle": false,
@@ -440,102 +441,102 @@
       "entries": [
         {
           "id": "3482e260-ff20-11e9-9f03-69efd541dc3d",
-          "type": 0,
+          "type": "job",
           "title": "Follow Me",
           "company": "Voltage Pictures",
           "format": "Feature",
           "position": "Editor",
-          "start": 2019
+          "year": 2019
         },
         {
           "id": "3482e261-ff20-11e9-9f03-69efd541dc3d",
-          "type": 0,
+          "type": "job",
           "title": "Teen Titans Go! Vs. Teen Titans",
           "company": "Warner Bros. Animation",
           "format": "Feature",
           "position": "Editor",
-          "start": 2019
+          "year": 2019
         },
         {
           "id": "34830970-ff20-11e9-9f03-69efd541dc3d",
-          "type": 0,
+          "type": "job",
           "title": "LEGO DC: Batman - Family Matters",
           "company": "Warner Bros. Animation",
           "format": "Feature",
           "position": "Editor",
-          "start": 2018
+          "year": 2018
         },
         {
           "id": "34830971-ff20-11e9-9f03-69efd541dc3d",
-          "type": 0,
+          "type": "job",
           "title": "LEGO DC Super Heroes: Aquaman: Rage of Atlantis",
           "company": "Warner Bros. Animation",
           "format": "Feature",
           "position": "Editor",
-          "start": 2018
+          "year": 2018
         },
         {
           "id": "34830972-ff20-11e9-9f03-69efd541dc3d",
-          "type": 0,
+          "type": "job",
           "title": "LEGO DC Super Heroes: The Flash",
           "company": "Warner Bros. Animation",
           "format": "Feature",
           "position": "Editor",
-          "start": 2017
+          "year": 2017
         },
         {
           "id": "34830973-ff20-11e9-9f03-69efd541dc3d",
-          "type": 0,
+          "type": "job",
           "title": "LEGO Scooby-Doo! Blowout Beach Bash",
           "company": "Warner Bros. Animation",
           "format": "Feature",
           "position": "Editor",
-          "start": 2017
+          "year": 2017
         },
         {
           "id": "34833080-ff20-11e9-9f03-69efd541dc3d",
-          "type": 0,
+          "type": "job",
           "title": "The Jetsons & WWE: Robo-WrestleMania!",
           "company": "Warner Bros. Animation",
           "format": "Feature",
           "position": "Editor",
-          "start": 2017
+          "year": 2017
         },
         {
           "id": "34833081-ff20-11e9-9f03-69efd541dc3d",
-          "type": 0,
+          "type": "job",
           "title": "Escape Room",
           "company": "Distributed by Lionsgate",
           "format": "Feature",
           "position": "Editor",
-          "start": 2016
+          "year": 2016
         },
         {
           "id": "34833082-ff20-11e9-9f03-69efd541dc3d",
-          "type": 0,
+          "type": "job",
           "title": "Manhattan Undying",
           "company": "Distributed by Paramount UK",
           "format": "Feature",
           "position": "Editor",
-          "start": 2015
+          "year": 2015
         },
         {
           "id": "34835790-ff20-11e9-9f03-69efd541dc3d",
-          "type": 0,
+          "type": "job",
           "title": "2 Survive",
           "company": "Distributed by Gravitas Ventures",
           "format": "Feature",
           "position": "Editor",
-          "start": 2014
+          "year": 2014
         },
         {
           "id": "34835791-ff20-11e9-9f03-69efd541dc3d",
-          "type": 0,
+          "type": "job",
           "title": "The Rift",
           "company": "Featured Artists",
           "format": "Feature",
           "position": "Editor",
-          "start": 2013
+          "year": 2013
         }
       ]
     },
@@ -547,33 +548,33 @@
       "entries": [
         {
           "id": "34835793-ff20-11e9-9f03-69efd541dc3d",
-          "type": 1,
-          "skill": "FCPX, Premiere, Avid, Resolve and Storyboard Pro"
+          "type": "skill",
+          "title": "FCPX, Premiere, Avid, Resolve and Storyboard Pro"
         },
         {
           "id": "34837ea0-ff20-11e9-9f03-69efd541dc3d",
-          "type": 1,
-          "skill": "Finding the best story available, being precious with the material and thinking outside the box"
+          "type": "skill",
+          "title": "Finding the best story available, being precious with the material and thinking outside the box"
         },
         {
           "id": "34837ea1-ff20-11e9-9f03-69efd541dc3d",
-          "type": 1,
-          "skill": "Robust sound design with any project because sound is everything"
+          "type": "skill",
+          "title": "Robust sound design with any project because sound is everything"
         },
         {
           "id": "34837ea2-ff20-11e9-9f03-69efd541dc3d",
-          "type": 1,
-          "skill": "Mobility to work in office or from home"
+          "type": "skill",
+          "title": "Mobility to work in office or from home"
         },
         {
           "id": "3483a5b0-ff20-11e9-9f03-69efd541dc3d",
-          "type": 1,
-          "skill": "Stereoscopic (3D) workflows using Quantel, FileMaker Pro & Pablo Rio platforms"
+          "type": "skill",
+          "title": "Stereoscopic (3D) workflows using Quantel, FileMaker Pro & Pablo Rio platforms"
         },
         {
           "id": "3483a5b1-ff20-11e9-9f03-69efd541dc3d",
-          "type": 1,
-          "skill": "Experienced voice actor if scratch dialogue is needed"
+          "type": "skill",
+          "title": "Experienced voice actor if scratch dialogue is needed"
         }
       ]
     }

@@ -2,14 +2,14 @@ import React from 'react'
 
 import VODLogo from '../../svg/vod-logos'
 
-const VODLink = ({ entryTitle, name, url }) => {
+const VODLink = ({ entryTitle, title, url }) => {
   return (
     <a
       href={url}
-      title={`${entryTitle} on ${name}`}
+      title={`${entryTitle} on ${title}`}
       rel="external noopener noreferrer"
       target="_blank">
-      <VODLogo name={name}/>
+      <VODLogo name={title}/>
     </a>
   )
 }

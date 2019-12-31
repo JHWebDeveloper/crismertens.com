@@ -5,8 +5,8 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   const file = process.env.NODE_ENV === 'development'
-    ? './src/server/data/sitedata.json'
-    : './data/sitedata.json'
+    ? './src/server/data/data.json'
+    : './data/data.json'
 
   fs.readFile(file, (err, data) => {
     res.status(200).send(data)
