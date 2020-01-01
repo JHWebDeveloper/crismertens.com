@@ -38,7 +38,6 @@
           "trt": "Web Series",
           "year": 2015,
           "videoId": "PLHWWYNoH4JRC0-FULbCxhB6bbi0t8T1x3",
-          "imdb": false,
           "content": [
             {
               "id": "episode_test_0",
@@ -405,7 +404,7 @@
       "entries": [
         {
           "id": "1cd17e10-f74b-11e9-9383-1d9654827c43",
-          "type": "job",
+          "type": "video",
           "title": "Wildness",
           "tag": "wildness",
           "altTitle": false,
@@ -418,7 +417,7 @@
         },
         {
           "id": "1cd17e11-f74b-11e9-9383-1d9654827c43",
-          "type": "job",
+          "type": "video",
           "title": "Shadow May Lie",
           "tag": "shadow-may-lie",
           "altTitle": false,
