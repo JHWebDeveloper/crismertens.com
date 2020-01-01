@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef } from 'react'
+import { bool, func, number, object, oneOfType, shape, string } from 'prop-types'
 import { Transition } from 'react-transition-group'
 
 if (process.env.WEBPACK) require('../../css/modal.css')
@@ -9,6 +10,7 @@ import { getImageWidth, transitionProps } from '../../utilities'
 import ModalContent from './ModalContent'
 import Gallery from './content/Gallery'
 import Player from './content/Player'
+import VideoEntryPropTypes from '../videos/VideoEntryPropTypes'
 
 const Modal = ({ pathname, styles, modal, dispatch }) => {
   const { ready, x, y, scale, videoData, episode, episodeId } = modal
@@ -125,6 +127,20 @@ const Modal = ({ pathname, styles, modal, dispatch }) => {
       </div>
     </div>
   )
+}
+
+Modal.propTypes = {
+  pathname: string.isRequired,
+  styles: object,
+  modal: shape({
+    x: string,
+    y: string,
+    scale: number,
+    videoData: shape(VideoEntryPropTypes).isRequired,
+    episode: bool,
+    episodeId: oneOfType([bool, string])
+  }).isRequired,
+  dispatch: func.isRequired
 }
 
 export default Modal

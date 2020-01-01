@@ -1,11 +1,15 @@
-import React, { useCallback, useEffect, useMemo, useRef } from 'react'
+import React, { forwardRef, useCallback, useEffect, useMemo, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { func, number, shape, string } from 'prop-types'
 
 import { openModal } from '../../actions'
 
 import Thumbnail from '../main/Thumbnail'
 import { Play } from '../svg'
 import { secondsToTC } from '../../utilities'
+import VideoEntryPropTypes from '../videos/VideoEntryPropTypes'
+
+const ReelThumbnail = forwardRef(Thumbnail)
 
 const Feature = props => {
   const {
@@ -69,7 +73,7 @@ const Feature = props => {
       onBlur={() => setFeaturedCurrent(0)}
       onClick={openVideo}>
       <span className="crop-box">
-        <Thumbnail
+        <ReelThumbnail
           image={tag}
           id={id}
           alt={`A still from ${altTitle || title}`}
@@ -81,6 +85,26 @@ const Feature = props => {
       </span>
     </Link>
   )
+}
+
+Feature.propTypes = {
+  entry: shape(VideoEntryPropTypes).isRequired,
+  extendState: number.isRequired,
+  retractState: number.isRequired,
+  displayTitle: string.isRequired,
+  featuredCurrent: number.isRequired,
+  setFeaturedCurrent: func.isRequired,
+  featuredLoaded: number.isRequired,
+  countFeaturedLoaded: func.isRequired,
+  dispatch: func.isRequired
+}
+
+ReelThumbnail.propTypes = {
+  image: string.isRequired,
+  id: string.isRequired,
+  alt: string.isRequired,
+  loadAction: func,
+  desktopWidth: number
 }
 
 export default Feature

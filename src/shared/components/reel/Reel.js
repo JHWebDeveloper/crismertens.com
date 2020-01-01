@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import { object } from 'prop-types'
 import { renderRoutes } from 'react-router-config'
 
 if (process.env.WEBPACK) require('../../css/reel.css')
@@ -56,6 +57,10 @@ const Reel = ({ route }) => {
       {renderRoutes(route.routes)}
     </>
   )
+}
+
+Reel.propTypes = {
+  route: object.isRequired
 }
 
 export default Reel

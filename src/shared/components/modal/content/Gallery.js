@@ -1,10 +1,12 @@
 import React from 'react'
+import { func, object, shape } from 'prop-types'
 
 import GalleryHeader from './GalleryHeader'
 import ContentSlider from './ContentSlider'
 import VODLink from './VODLink'
 import Episode from './Episode'
 import { IMDbColor } from '../../svg'
+import VideoEntryPropTypes from '../../videos/VideoEntryPropTypes'
 
 const Gallery = ({ videoData, styles, dispatch }) => {
   const { type, title, year, content, imdb } = videoData
@@ -33,6 +35,12 @@ const Gallery = ({ videoData, styles, dispatch }) => {
       </div>
     </div>
   )
+}
+
+Gallery.propTypes = {
+  videoData: shape(VideoEntryPropTypes).isRequired,
+  styles: object,
+  dispatch: func.isRequired
 }
 
 export default Gallery

@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { arrayOf, func, shape, string } from 'prop-types'
 import { Link } from 'react-router-dom'
 
 import { CaretDown } from '../svg'
@@ -68,6 +69,18 @@ const Dropdown = ({ name, url, content, isolateCategory, resetCategories, dispat
       </ul>
     </span>
   )
+}
+
+Dropdown.propTypes = {
+  name: string.isRequired,
+  url: string.isRequired,
+  content: arrayOf(shape({
+    title: string,
+    id: string
+  })).isRequired,
+  isolateCategory: func.isRequired,
+  resetCategories: func.isRequired,
+  dispatch: func.isRequired
 }
 
 export default Dropdown

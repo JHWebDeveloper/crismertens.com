@@ -1,4 +1,5 @@
 import React from 'react'
+import { arrayOf, bool, element, func, oneOfType } from 'prop-types'
 import { Transition } from 'react-transition-group'
 import { transitionProps } from '../../utilities'
 
@@ -41,5 +42,13 @@ const ModalContent = ({ closeWithTarget, ready, episode, closeEpisode, children 
     </Transition>
   </>
 )
+
+ModalContent.propTypes = {
+  closeWithTarget: func.isRequired,
+  ready: bool.isRequired,
+  episode: bool,
+  closeEpisode: func,
+  children: oneOfType([element, arrayOf(element)]).isRequired
+}
 
 export default ModalContent

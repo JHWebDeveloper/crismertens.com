@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { object } from 'prop-types'
 import { renderRoutes } from 'react-router-config'
 
 if (process.env.WEBPACK) require('../../css/videos.css')
@@ -23,6 +24,10 @@ const Videos = ({ route }) => {
       {renderRoutes(route.routes)}
     </>
   )
+}
+
+Videos.propTypes = {
+  route: object.isRequired
 }
 
 export default Videos

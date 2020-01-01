@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
+import { bool, func, object, oneOfType, shape, string } from 'prop-types'
 import YouTubePlayer from 'youtube-player'
 
 import { playEpisode } from '../../../actions'
+import VideoEntryPropTypes from '../../videos/VideoEntryPropTypes'
 
 const Player = ({ videoData, episodeId, styles, dispatch, closeModal }) => {
   const { type, videoId, content } = videoData
@@ -50,6 +52,14 @@ const Player = ({ videoData, episodeId, styles, dispatch, closeModal }) => {
       <div id="player-placeholder"></div>
     </div>
   )
+}
+
+Player.propTypes = {
+  videoData: shape(VideoEntryPropTypes).isRequired,
+  episodeId: oneOfType([bool, string]),
+  styles: object,
+  dispatch: func.isRequired,
+  closeModal: func.isRequired
 }
 
 export default Player

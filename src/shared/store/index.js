@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useReducer } from 'react'
+import { arrayOf, element, oneOfType } from 'prop-types'
 import reducer from '../reducer'
 import { loadSiteData, initIntersectionObserver } from '../actions'
 
@@ -33,14 +34,14 @@ const initState = {
 
 export const CMContext = createContext()
 
-export const CMProvider = ({children }) => {
+export const CMProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initState)
 
   useEffect(() => {
     (async () => {
       dispatch(await loadSiteData())
     })()
-    
+
     dispatch(initIntersectionObserver())
   }, [])
 
@@ -54,4 +55,8 @@ export const CMProvider = ({children }) => {
       { children }
     </CMContext.Provider> 
   )
+}
+
+CMProvider.propTypes = {
+  children: oneOfType([element, arrayOf(element)])
 }

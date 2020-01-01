@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { object } from 'prop-types'
 import Thumbnail from '../main/Thumbnail'
 
 if (process.env.WEBPACK) require('../../css/notfound.css')
@@ -22,5 +23,9 @@ const NotFound = ({ route }) => (
     </div>
   </>
 )
+
+NotFound.propTypes = {
+  route: object.isRequired
+}
 
 export default NotFound

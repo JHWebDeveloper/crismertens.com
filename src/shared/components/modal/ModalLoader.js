@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Transition } from 'react-transition-group'
 import { withRouter } from 'react-router-dom'
+import { object } from 'prop-types'
 
 import { CMContext } from '../../store'
 import Modal from './Modal'
@@ -32,5 +33,9 @@ const ModalLoader = withRouter(({ location }) => {
     </Transition>
   )
 })
+
+ModalLoader.propTypes = {
+  location: object
+}
 
 export default ModalLoader

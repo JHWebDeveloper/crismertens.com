@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticRouter } from 'react-router-dom'
+import { string } from 'prop-types'
 import App from '../main/App'
 
 const HTMLTemplate = ({ location }) => (
@@ -12,7 +13,7 @@ const HTMLTemplate = ({ location }) => (
       <title>Cris Mertens | Film Editor</title>
       <meta name="description" content="The official website of Los Angeles, CA based film editor Cris Mertens." />
       <link rel="stylesheet" href="/css/main.min.css" />
-      <link rel="preconnect" href="https://www.youtube.com/iframe_api" crossOrigin />
+      <link rel="preconnect" href="https://www.youtube.com/iframe_api" crossOrigin="true" />
 
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -32,5 +33,9 @@ const HTMLTemplate = ({ location }) => (
     </body>
   </html>
 )
+
+HTMLTemplate.propTypes = {
+  location: string.isRequired
+}
 
 export default HTMLTemplate

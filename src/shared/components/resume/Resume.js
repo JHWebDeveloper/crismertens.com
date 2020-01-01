@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { object } from 'prop-types'
 if (process.env.WEBPACK) require('../../css/resume.css')
 
 import { CMContext } from '../../store'
@@ -22,6 +23,10 @@ const Resume = ({ route }) => {
       ))}
     </>
   )
+}
+
+Resume.propTypes = {
+  route: object.isRequired
 }
 
 export default Resume

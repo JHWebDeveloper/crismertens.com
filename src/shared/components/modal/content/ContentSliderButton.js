@@ -1,4 +1,5 @@
 import React from 'react'
+import { bool, element, func, string } from 'prop-types'
 import { Transition } from 'react-transition-group'
 
 const transitionStyles = {
@@ -24,5 +25,12 @@ const ContentSliderButton = ({ enabled, buttonTitle, buttonAction, children }) =
     )}
   </Transition>
 )
+
+ContentSliderButton.propTypes = {
+  enabled: bool.isRequired,
+  buttonTitle: string.isRequired,
+  buttonAction: func.isRequired,
+  children: element.isRequired
+}
 
 export default ContentSliderButton

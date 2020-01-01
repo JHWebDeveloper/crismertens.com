@@ -1,4 +1,5 @@
 import React from 'react'
+import { string, func } from 'prop-types'
 
 import { playEpisode, changeDisplayedTitle } from '../../../actions'
 
@@ -26,5 +27,12 @@ const Episode = ({ title, tag, id, dispatch }) => (
     </span>
   </button>
 )
+
+Episode.propTypes = {
+  title: string.isRequired,
+  tag: string.isRequired,
+  id: string.isRequired,
+  dispatch: func.isRequired
+}
 
 export default Episode

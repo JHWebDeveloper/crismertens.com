@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from 'react'
+import { arrayOf, shape, string } from 'prop-types'
+
 import VODLogo from '../svg/vod-logos'
 import { applyDisplacement } from '../../utilities'
 
@@ -22,6 +24,15 @@ const VODLinks = ({ title, content }) => {
       ))}
     </aside>
   )
+}
+
+VODLinks.propTypes = {
+  title: string.isRequired,
+  content: arrayOf(shape({
+    id: string.isRequired,
+    url: string.isRequired,
+    title: string.isRequired
+  })).isRequired
 }
 
 export default VODLinks

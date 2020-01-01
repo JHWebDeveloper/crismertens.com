@@ -1,4 +1,5 @@
 import { useContext, useEffect } from 'react'
+import { object } from 'prop-types'
 
 import { CMContext } from '../../store'
 import { openModal } from '../../actions/'
@@ -25,6 +26,10 @@ const ModalURLLoader = ({ match }) => {
   }, [videos])
 
   return false
+}
+
+ModalURLLoader.propTypes = {
+  match: object
 }
 
 export default ModalURLLoader

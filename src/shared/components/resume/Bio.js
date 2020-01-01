@@ -1,4 +1,5 @@
 import React from 'react'
+import { arrayOf, string } from 'prop-types'
 import uuid from 'uuid/v1'
 import Thumbnail from '../main/Thumbnail'
 
@@ -29,5 +30,9 @@ const Bio = ({ content }) => (
     </figure>
   </article>
 )
+
+Bio.propTypes = {
+  content: arrayOf(string).isRequired
+}
 
 export default Bio

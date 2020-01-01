@@ -1,14 +1,15 @@
 import React, { useCallback, useMemo } from 'react'
+import { func, shape } from 'prop-types'
 import { Link } from 'react-router-dom'
 import uuid from 'uuid/v1'
 
 import { openModal } from '../../actions'
+import { secondsToTC } from '../../utilities'
 
 import VODLinks from './VODLinks'
 import LazyLoadImage from './LazyLoadImage'
 import { Play } from '../svg'
-
-import { secondsToTC } from '../../utilities'
+import VideoEntryPropTypes from './VideoEntryPropTypes'
 
 const VideoEntry = ({ entry, dispatch }) => {
   const { id, title, tag, trt } = entry
@@ -50,6 +51,11 @@ const VideoEntry = ({ entry, dispatch }) => {
       </figure>
     </article>
   )
+}
+
+VideoEntry.propTypes = {
+  entry: shape(VideoEntryPropTypes).isRequired,
+  dispatch: func.isRequired
 }
 
 export default VideoEntry

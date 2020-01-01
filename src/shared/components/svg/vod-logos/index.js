@@ -1,4 +1,5 @@
 import React from 'react'
+import { string } from 'prop-types'
 
 import ITunesStore from './ITunesStore'
 import GooglePlay from './GooglePlay'
@@ -18,6 +19,10 @@ const VODLogo = ({ name }) => {
     default:
       return false
   }
+}
+
+VODLogo.propTypes = {
+  name: string.isRequired
 }
 
 export default VODLogo

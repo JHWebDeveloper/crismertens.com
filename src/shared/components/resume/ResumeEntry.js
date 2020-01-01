@@ -1,4 +1,5 @@
 import React from 'react'
+import ResumeEntryPropTypes from './ResumeEntryPropTypes'
 
 const ResumeEntry = ({ type, title, company, format, position, year }) => (
   type === 'skill' ? (
@@ -19,5 +20,7 @@ const ResumeEntry = ({ type, title, company, format, position, year }) => (
     </li>
   )
 )
+
+ResumeEntry.propTypes = ResumeEntryPropTypes
 
 export default ResumeEntry

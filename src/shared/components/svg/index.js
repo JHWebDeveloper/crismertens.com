@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { string } from 'prop-types'
 
 export const SiteLogo = () => (
   <svg role="img" aria-label="crismertens.com logo and homepage link" viewBox="0 0 250 50" focusable="false">
@@ -42,6 +43,11 @@ const IMDbTemplate = ({ bgFill, fgFill }) => (
       c-0.5,0.2-0.9,0.6-1.3,1V6.8H46L46,6.8z"/>
   </>
 )
+
+IMDbTemplate.propTypes = {
+  bgFill: string,
+  fgFill: string
+}
 
 export const IMDb = () => (
   <svg viewBox="0 0 66 33">

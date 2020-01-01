@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { string } from 'prop-types'
 
 const url = 'http://www.crismertens.com'
 
@@ -25,6 +26,12 @@ const Head = ({ path, alternate, title }) => {
       <meta property="og:image:alt" content="Photo of Cris Mertens, Film Editor" />
     </Helmet>
   )
+}
+
+Head.propTypes = {
+  path: string,
+  alternate: string,
+  title: string
 }
 
 export default Head

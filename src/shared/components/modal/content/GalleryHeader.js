@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { number, string } from 'prop-types'
 
 import { CMContext } from '../../../store'
 
@@ -11,6 +12,11 @@ const GalleryHeader = ({ year, title }) => {
       <span>{displayedTitle}</span>
     </header>
   )
+}
+
+GalleryHeader.propTypes = {
+  year: number.isRequired,
+  title: string.isRequired
 }
 
 export default GalleryHeader

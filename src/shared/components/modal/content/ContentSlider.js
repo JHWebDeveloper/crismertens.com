@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { arrayOf, bool, element, oneOfType } from 'prop-types'
 
 import ContentSliderButton from './ContentSliderButton'
 import { CaretLeft, CaretRight } from '../../svg'
@@ -55,6 +56,11 @@ const ContentSlider = ({ hasScrolling, children }) => {
       </ContentSliderButton>
     </div>
   )
+}
+
+ContentSlider.propTypes = {
+  hasScrolling: bool.isRequired,
+  children: oneOfType([element, arrayOf(element)]).isRequired
 }
 
 export default ContentSlider

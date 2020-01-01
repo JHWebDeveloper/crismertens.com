@@ -1,4 +1,5 @@
 import React, { useCallback, useRef } from 'react'
+import { arrayOf, bool, element, func, oneOfType, string } from 'prop-types'
 import { CaretDown } from '../svg'
 
 const Category = ({ title, open, toggleCategory, children }) => {
@@ -27,6 +28,13 @@ const Category = ({ title, open, toggleCategory, children }) => {
       { children }
     </section>
   )
+}
+
+Category.propTypes = {
+  title: string.isRequired,
+  open: bool.isRequired,
+  toggleCategory: func.isRequired,
+  children: oneOfType([element, arrayOf(element)]).isRequired
 }
 
 export default Category
