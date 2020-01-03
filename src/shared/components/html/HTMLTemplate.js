@@ -26,7 +26,7 @@ const HTMLTemplate = ({ location }) => (
     <body>
       <div id="root">
         <StaticRouter location={location}>
-          <App/>
+          <App />
         </StaticRouter>
       </div>
       <script src="/bundle.js"></script>
