@@ -1,16 +1,18 @@
 import express from 'express'
-import fs from 'fs'
+import { promises as fsp } from 'fs'
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res, next) => {
   const file = process.env.NODE_ENV === 'development'
     ? './src/server/data/data.json'
     : './data/data.json'
 
-  fs.readFile(file, (err, data) => {
-    res.status(200).send(data)
-  })
+  try {
+    res.send(await fsp.readFile(file)).status(200)
+  } catch (err) {
+    next(err)
+  }
 })
 
 export default router
