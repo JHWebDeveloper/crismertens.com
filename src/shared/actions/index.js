@@ -1,14 +1,11 @@
+import axios from 'axios'
 import * as TYPES from './types'
 import { getShape } from '../utilities'
 
-export const loadSiteData = async () => {
-  const data = await fetch('/api/sitedata')
-
-  return {
-    type: TYPES.LOAD_SITE_DATA,
-    payload: await data.json()
-  }
-}
+export const loadSiteData = async () => ({
+  type: TYPES.LOAD_SITE_DATA,
+  payload: (await axios.get('/api/sitedata')).data
+})
 
 export const loadFeatured = () => ({
   type: TYPES.LOAD_FEATURED

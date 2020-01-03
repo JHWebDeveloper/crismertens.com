@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useReducer } from 'react'
+import { useHistory } from "react-router-dom"
 import { arrayOf, element, oneOfType } from 'prop-types'
 import reducer from '../reducer'
 import { loadSiteData, initIntersectionObserver } from '../actions'
@@ -36,10 +37,15 @@ export const CMContext = createContext()
 
 export const CMProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initState)
+  const history = useHistory()
 
   useEffect(() => {
     (async () => {
-      dispatch(await loadSiteData())
+      try {
+        dispatch(await loadSiteData())
+      } catch (err) {
+        history.push('/error')
+      }
     })()
 
     dispatch(initIntersectionObserver())
