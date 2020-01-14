@@ -16,7 +16,7 @@ const jsloader = {
 
 const serverConfig = {
   mode: 'production',
-  entry: './src/server',
+  entry: path.join(__dirname, 'src', 'server'),
   target: 'node',
   externals: [nodeExternals()],
   output: {
@@ -40,15 +40,21 @@ const serverConfig = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      { from: './src/server/data', to: 'data' },
-      { from: './src/server/images', to: 'images' }
+      {
+        from: path.join('src', 'server', 'data'),
+        to: 'data'
+      },
+      {
+        from: path.join('src', 'server', 'images'),
+        to: 'images'
+      }
     ])
   ]
 }
 
 const browserConfig = {
   mode: 'production',
-  entry: './src/client',
+  entry: path.join(__dirname, 'src', 'client'),
   output: {
     path: path.join(__dirname, 'build', 'client'),
     filename: 'bundle.js',
@@ -88,12 +94,21 @@ const browserConfig = {
       'process.env.WEBPACK': true
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/main.min.css'
+      filename: path.join('css', 'main.min.css')
     }),
     new CopyWebpackPlugin([
-      { from: './src/shared/font', to: 'font' },
-      { from: './src/shared/downloads', to: 'downloads' },
-      { from: './src/shared/icons', to: '' }
+      {
+        from: path.join('src', 'shared', 'font'),
+        to: 'font'
+      },
+      {
+        from: path.join('src', 'shared', 'downloads'),
+        to: 'downloads'
+      },
+      {
+        from: path.join('src', 'shared', 'icons'),
+        to: ''
+      }
     ])
   ]
 }

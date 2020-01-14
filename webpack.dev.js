@@ -10,7 +10,7 @@ module.exports = {
   mode: 'development',
   entry: [
     'webpack-hot-middleware/client',
-    path.resolve(__dirname, 'src', 'client')
+    path.join(__dirname, 'src', 'client')
   ],
   output: {
     path: path.join(__dirname, 'build'),
@@ -57,14 +57,26 @@ module.exports = {
       'process.env.WEBPACK': true
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/main.min.css'
+      filename: path.join('css', 'main.min.css')
     }),
     new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([
-      { from: './src/server/data', to: 'data' },
-      { from: './src/shared/font', to: 'font' },
-      { from: './src/shared/downloads', to: 'downloads' },
-      { from: './src/shared/icons', to: '' }
+      {
+        from: path.join('src', 'server', 'data'),
+        to: 'data'
+      },
+      {
+        from: path.join('src', 'shared', 'font'),
+        to: 'font'
+      },
+      {
+        from: path.join('src', 'shared', 'downloads'),
+        to: 'downloads'
+      },
+      {
+        from: path.join('src', 'shared', 'icons'),
+        to: ''
+      }
     ])
   ]
 }
