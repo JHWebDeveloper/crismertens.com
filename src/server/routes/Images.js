@@ -8,8 +8,8 @@ const router = express.Router()
 router.get('/:width/:id/:title', (req, res, next) => {
   let { width, id, title } = req.params
   const srcPath = id === '0'
-    ? path.resolve('src', 'server', 'images', `${title}.jpg`)
-    : path.resolve('src', 'server', 'images', id, `${title}.jpg`)
+    ? path.join('src', 'server', 'images', `${title}.jpg`)
+    : path.join('src', 'server', 'images', id, `${title}.jpg`)
   
   width = parseInt(width)
 
