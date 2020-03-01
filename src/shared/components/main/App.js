@@ -1,7 +1,11 @@
 import React from 'react'
 import { renderRoutes } from 'react-router-config'
 
-if (process.env.WEBPACK) require('../../css/index.css')
+if (process.env.WEBPACK) {
+  require('../../css/font.css')
+  require('../../css/reset.css')
+  require('../../css/index.css')
+}
 
 import { CMProvider } from '../../store'
 import Header from './Header'
