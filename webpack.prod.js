@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const nodeExternals = require('webpack-node-externals')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const postcssImport = require('postcss-import')
 const postcssPresetEnv = require('postcss-preset-env')
 const cssMQPacker = require('css-mqpacker')
 const cssnano = require('cssnano')
@@ -76,7 +75,6 @@ const browserConfig = {
             options: {
               ident: 'postcss',
               plugins: [
-                postcssImport(),
                 postcssPresetEnv({ stage: 0 }),
                 cssMQPacker({ sort: true }),
                 cssnano({
