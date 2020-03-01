@@ -50,7 +50,8 @@ const routes = [
       {
         path: '*',
         title: `Error! | ${title}`,
-        component: NotFound
+        component: NotFound,
+        noindex: true
       }
     ]
   }

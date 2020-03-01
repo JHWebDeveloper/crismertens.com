@@ -22,6 +22,18 @@ const HTMLTemplate = ({ location }) => (
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#323232" />
       <meta name="msapplication-TileColor" content="#323232" />
       <meta name="theme-color" content="#ffffff" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@CrisMertens" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Cris Mertens | Film Editor" />
+      <meta property="og:description" content="The official website of Los Angeles, CA based film editor Cris Mertens." />
+      <meta property="og:url" content="https://www.crismertens.com" />
+      <meta property="og:image" content="https://www.crismertens.com/images/render/1920/0/cris-mertens" />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:width" content="1920" />
+      <meta property="og:image:height" content="1080" />
+      <meta property="og:image:alt" content="Photo of Cris Mertens, Film Editor" />
     </head>
     <body>
       <div id="root">
