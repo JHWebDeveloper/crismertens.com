@@ -2,8 +2,12 @@ import React from 'react'
 
 const Footer = () => (
   <footer>
-    <a href="mailto:jonathanjhamilton@gmail.com" rel="nofollow">
-      Site Designed by Jonathan Hamilton
+    <a
+      href="https://www.jonathanhamilton.com"
+      rel="external nofollow noopener noreferrer"
+      target="_blank"
+      title="Visit jonathanhamilton.com">
+      Site designed by Jonathan Hamilton
     </a>
   </footer>
 )
