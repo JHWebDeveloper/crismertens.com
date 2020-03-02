@@ -26,10 +26,9 @@
     }
   },
   "ignorePatterns": [
+    "backup/",
     "build/",
-    "dist/",
-    "node-modules/",
-    "src/main/preview/"
+    "node-modules/"
   ],
   "rules": {
     "arrow-parens": ["error", "as-needed"],
@@ -46,6 +45,11 @@
     "no-console": ["error", {
       "allow": ["warn", "error"]
     }],
+    "no-extra-parens": ["error", "all", {
+      "enforceForArrowConditionals": false,
+      "ignoreJSX": "multi-line",
+      "returnAssign": false
+    }],
     "no-floating-decimal": "error",
     "no-unneeded-ternary": "error",
     "no-useless-return": "error",
@@ -57,7 +61,6 @@
     "prefer-template": "error",
     "quotes": ["error", "single"],
     "react/display-name": "off",
-    "react/prop-types": 1,
     "space-before-blocks": "error",
     "space-infix-ops": "error",
     "semi": ["error", "never"],
