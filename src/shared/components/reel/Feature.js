@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 import { func, number, shape, string } from 'prop-types'
 
 import { openModal } from '../../actions'
+import { getImageWidth } from '../../utilities'
 
-import Thumbnail from '../main/Thumbnail'
 import { Play } from '../svg'
 import { secondsToTC } from '../../utilities'
 import VideoEntryPropTypes from '../videos/VideoEntryPropTypes'
 
-const ReelThumbnail = forwardRef(Thumbnail)
+// const ReelThumbnail = forwardRef(Thumbnail)
 
 const Feature = props => {
   const {
@@ -73,11 +73,10 @@ const Feature = props => {
       onBlur={() => setFeaturedCurrent(0)}
       onClick={openVideo}>
       <span className="crop-box">
-        <ReelThumbnail
-          image={tag}
-          id={id}
+        <img
+          src={`/images/render/${getImageWidth()}/${id}/${tag}`}
           alt={`A still from ${altTitle || title}`}
-          loadAction={() => countFeaturedLoaded(featuredLoaded += 1)}/>
+          onLoad={() => countFeaturedLoaded(featuredLoaded += 1)}/>
         <span className="overlay"></span>
         <Play />
         <h2>{displayTitle}</h2>
@@ -99,12 +98,12 @@ Feature.propTypes = {
   dispatch: func.isRequired
 }
 
-ReelThumbnail.propTypes = {
-  image: string.isRequired,
-  id: string.isRequired,
-  alt: string.isRequired,
-  loadAction: func,
-  desktopWidth: number
-}
+// ReelThumbnail.propTypes = {
+//   image: string.isRequired,
+//   id: string.isRequired,
+//   alt: string.isRequired,
+//   loadAction: func,
+//   desktopWidth: number
+// }
 
 export default Feature

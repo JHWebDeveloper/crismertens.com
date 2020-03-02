@@ -11,19 +11,6 @@ export const loadFeatured = () => ({
   type: TYPES.LOAD_FEATURED
 })
 
-export const initIntersectionObserver = () => ({
-  type: TYPES.INIT_INTERSECTION_OBSERVER,
-  payload: new IntersectionObserver((entries, observer) => {
-    entries.forEach(({ intersectionRatio, target }) => {
-      if (intersectionRatio > 0) {
-        target.src = target.dataset.src
-        target.removeAttribute('data-src')
-        observer.unobserve(target)
-      }
-    })
-  })
-})
-
 export const openNavigation = () => ({
   type: TYPES.OPEN_NAVIGATION
 })

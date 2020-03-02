@@ -8,20 +8,23 @@ if (process.env.WEBPACK) {
 }
 
 import { CMProvider } from '../../store'
+import { ScrollHandlerProvider } from '../../store/ScrollHandler'
 import Header from './Header'
 import routes from '../../routes'
 import Footer from './Footer'
 import ModalLoader from '../modal/ModalLoader'
 
 const App = () => (
-  <CMProvider>
-    <Header />
-    <main>
-      {renderRoutes(routes)}
-    </main>
-    <Footer />
-    <ModalLoader />
-  </CMProvider>
+  <ScrollHandlerProvider>
+    <CMProvider>
+      <Header />
+      <main>
+        {renderRoutes(routes)}
+      </main>
+      <Footer />
+      <ModalLoader />
+    </CMProvider>
+  </ScrollHandlerProvider>
 )
 
 export default App

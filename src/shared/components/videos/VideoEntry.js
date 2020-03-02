@@ -6,8 +6,8 @@ import uuid from 'uuid/v1'
 import { openModal } from '../../actions'
 import { secondsToTC } from '../../utilities'
 
+import Thumbnail from '../main/Thumbnail'
 import VODLinks from './VODLinks'
-import LazyLoadImage from './LazyLoadImage'
 import { Play } from '../svg'
 import VideoEntryPropTypes from './VideoEntryPropTypes'
 
@@ -35,15 +35,11 @@ const VideoEntry = ({ entry, dispatch }) => {
           to={`/videos/${tag}/${id}`}
           title={`Click to Play ${title}`}
           onClick={openVideo}>
-          <LazyLoadImage
+          <Thumbnail
             image={tag}
             id={id}
             alt={`A still from ${entry.altTitle || title}`}
-            desktopWidth={480} />
-          <LazyLoadImage
-            image={tag}
-            id={id}
-            alt={`A still from ${entry.altTitle || title}`} />
+            preloadModalBG />
           <span className="overlay"></span>
           <span className="runtime" aria-hidden="true">{runtime}</span>
           <Play />

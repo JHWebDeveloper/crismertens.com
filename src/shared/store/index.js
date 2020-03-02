@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useReducer } from 'react'
 import { useHistory } from "react-router-dom"
 import { arrayOf, element, oneOfType } from 'prop-types'
 import reducer from '../reducer'
-import { loadSiteData, initIntersectionObserver } from '../actions'
+import { loadSiteData } from '../actions'
 
 const initState = {
   data: {
@@ -18,7 +18,6 @@ const initState = {
     }
   },
   navOpen: false,
-  intersectionObserver: false,
   modal: {
     open: false,
     ready: false,
@@ -47,8 +46,6 @@ export const CMProvider = ({ children }) => {
         history.push('/error')
       }
     })()
-
-    dispatch(initIntersectionObserver())
   }, [])
 
   return (
