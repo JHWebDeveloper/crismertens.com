@@ -15,11 +15,19 @@ export const secondsToTC = s => {
   return tc.join(':')
 }
 
-export const getImageWidth = fixedWidth => {
+export const getImageWidth = () => {
   const pxr = window.devicePixelRatio || 1
-  const win = Math.min(window.innerWidth, 960)
+  let width = 960
 
-  return (fixedWidth || win) * pxr
+  if (window.matchMedia('min-width: 2561px')) {
+    width = 2280
+  } else if (window.matchMedia('min-width: 1921px')) {
+    width = 1500
+  } else if (window.matchMedia('min-width: 1441px')) {
+    width = 1080
+  }
+
+  return Math.min(window.innerWidth, width) * pxr
 }
 
 export const getShape = el => {

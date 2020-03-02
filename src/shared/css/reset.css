@@ -28,6 +28,18 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+@media (min-width: 1441px) { /* 1920x1080 */
+  html { font-size: 18px; }
+}
+
+@media (min-width: 1921px) { /* QHD 2560x2096 */
+  html { font-size: 25px; }
+}
+
+@media (min-width: 2561px) { /* 4k 3840x2160 */
+  html { font-size: 38px; }
+}
+
 body { padding-left: calc(100vw - 100%); }
 
 div, header, nav, address, aside, main,
