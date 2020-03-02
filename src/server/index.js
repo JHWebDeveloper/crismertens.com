@@ -15,6 +15,7 @@ const port = process.env.PORT || 3000
 
 app.use(helmet())
 
+/* develblock:start */
 if (process.env.NODE_ENV === 'development') {
   const config = require('../../webpack.dev.js')
   const compiler = require('webpack')(config)
@@ -29,6 +30,7 @@ if (process.env.NODE_ENV === 'development') {
 
   app.use('/images/render', require('./routes/Images').router)
 }
+/* develblock:end */
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client'))
