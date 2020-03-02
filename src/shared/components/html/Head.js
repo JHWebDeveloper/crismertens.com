@@ -10,7 +10,7 @@ const Head = ({ path, title, alternate, noindex }) => {
       <title>{title}</title>
       {noindex
         ? <meta name="robots" content="noindex, nofollow"/>
-        : <link rel="canonical" href={`https://www.crismertens.com${fixedPath}`} />}
+        : <link rel="canonical" href={`https://www.crismertens.com${fixedPath}.html`} />}
       {!noindex && alternate && <link rel="alternate" href={`https://www.crismertens.com${alternate}`} />}
     </Helmet>
   )
