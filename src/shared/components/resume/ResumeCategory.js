@@ -13,9 +13,7 @@ const ResumeCategory = ({ title, id, open, entries, dispatch }) => (
     open={open}
     toggleCategory={() => dispatch(toggleCategoryResume(id))}>
     <ul>
-      {entries.map(entry => (
-        <ResumeEntry key={entry.id} {...entry}/>
-      ))}
+      {entries.map(entry => <ResumeEntry key={entry.id} {...entry}/>)}
     </ul>
   </Category>
 )

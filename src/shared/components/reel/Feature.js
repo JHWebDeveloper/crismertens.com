@@ -1,4 +1,4 @@
-import React, { forwardRef, useCallback, useEffect, useMemo, useRef } from 'react'
+import React, { useCallback, useEffect, useMemo, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { func, number, shape, string } from 'prop-types'
 
@@ -8,8 +8,6 @@ import { getImageWidth } from '../../utilities'
 import { Play } from '../svg'
 import { secondsToTC } from '../../utilities'
 import VideoEntryPropTypes from '../videos/VideoEntryPropTypes'
-
-// const ReelThumbnail = forwardRef(Thumbnail)
 
 const Feature = props => {
   const {
@@ -97,13 +95,5 @@ Feature.propTypes = {
   countFeaturedLoaded: func.isRequired,
   dispatch: func.isRequired
 }
-
-// ReelThumbnail.propTypes = {
-//   image: string.isRequired,
-//   id: string.isRequired,
-//   alt: string.isRequired,
-//   loadAction: func,
-//   desktopWidth: number
-// }
 
 export default Feature

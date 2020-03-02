@@ -7,9 +7,7 @@ const Bio = ({ content }) => (
   <article id="bio">
     <div>
       <h1 aria-level="2">Cris Mertens</h1>
-      {content.map(txt => (
-        <p key={uuid()} dangerouslySetInnerHTML={{ __html: txt }}></p>
-      ))}
+      {content.map(txt => <p key={uuid()} dangerouslySetInnerHTML={{ __html: txt }}></p>)}
       <a
         href="/downloads/cris-mertens-resume.pdf"
         title="Download résumé"

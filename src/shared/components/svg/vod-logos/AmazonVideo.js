@@ -86,4 +86,4 @@ const AmazonVideo = () => (
   </svg>
 )
 
-export default AmazonVideo 
+export default AmazonVideo

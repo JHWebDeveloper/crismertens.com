@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { string } from 'prop-types'
+import { string, bool } from 'prop-types'
 
 const Head = ({ path, title, alternate, noindex }) => {
   const fixedPath = path === '/reel' ? '' : `${path}.html`
@@ -18,8 +18,9 @@ const Head = ({ path, title, alternate, noindex }) => {
 
 Head.propTypes = {
   path: string,
+  title: string,
   alternate: string,
-  title: string
+  noindex: bool
 }
 
 export default Head

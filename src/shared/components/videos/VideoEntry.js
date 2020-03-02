@@ -25,9 +25,7 @@ const VideoEntry = ({ entry, dispatch }) => {
     <article>
       <div>
         <h1 aria-level="3">{title}</h1>
-        {entry.description.map(txt => (
-          <p key={uuid()} dangerouslySetInnerHTML={{ __html: txt }}></p>
-        ))}
+        {entry.description.map(txt => <p key={uuid()} dangerouslySetInnerHTML={{ __html: txt }}></p>)}
         {entry.type === 'vod' && <VODLinks title={title} content={entry.content}/>}
       </div>
       <figure>

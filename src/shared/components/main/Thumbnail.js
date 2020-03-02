@@ -1,5 +1,6 @@
 import React, { useCallback, useContext, useEffect, useRef, useState } from 'react'
 import Helmet from 'react-helmet'
+import { bool, func, string } from 'prop-types'
 
 import { ScrollHandlerContext } from '../../store/ScrollHandler'
 import { getImageWidth } from '../../utilities'
@@ -9,19 +10,6 @@ const Thumbnail = ({ image, id, alt, loadAction, preloadModalBG }) => {
   const [status, setStatus] = useState('loading')
   const [renderWidth, setRenderWidth] = useState(0)
   const imgRef = useRef()
-
-  // useEffect(() => {
-  //   const width = getImageWidth(props.desktopWidth)
-  //   const src = `/images/render/${width}/${id}/${image}`
-
-  //   imageRef.current.style.height = `${imageRef.current.clientWidth * 0.5625}px`
-
-  //   if (isLazy) {
-  //     imageRef.current.dataset.src = src
-  //   } else {
-  //     imageRef.current.src = src
-  //   }
-  // }, [image, id])
 
   const onLoad = useCallback(() => {
     setStatus('loaded')
@@ -67,6 +55,14 @@ const Thumbnail = ({ image, id, alt, loadAction, preloadModalBG }) => {
         }} />
     </>
   )
+}
+
+Thumbnail.propTypes = {
+  image: string.isRequired,
+  id: string.isRequired,
+  alt: string.isRequired,
+  loadAction: func,
+  preloadModalBG: bool
 }
 
 export default Thumbnail

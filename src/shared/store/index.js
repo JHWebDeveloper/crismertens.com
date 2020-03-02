@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useReducer } from 'react'
-import { useHistory } from "react-router-dom"
+import { useHistory } from 'react-router-dom'
 import { arrayOf, element, oneOfType } from 'prop-types'
 import reducer from '../reducer'
 import { loadSiteData } from '../actions'
