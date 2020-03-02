@@ -5,6 +5,7 @@
   "main": "src/server",
   "scripts": {
     "start": "NODE_ENV=development babel-node src/server",
+    "dev": "npm start",
     "build": "rimraf build && webpack --config webpack.prod.js",
     "serve": "cd build && node server.js",
     "lint": "eslint . --ext .js"
@@ -16,6 +17,7 @@
     "express": "^4.17.1",
     "focus-within": "^3.0.2",
     "helmet": "^3.21.2",
+    "intersection-observer": "^0.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.11.0",
@@ -54,7 +56,8 @@
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.9.0",
     "webpack-hot-middleware": "^2.25.0",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-node-externals": "^1.7.2",
+    "webpack-strip-block": "^0.2.0"
   },
   "browserslist": "defaults"
 }

@@ -10,7 +10,10 @@ const cssnano = require('cssnano')
 const jsloader = {
   test: /\.js$/,
   exclude: /node_modules/,
-  use: ['babel-loader']
+  use: [
+    'webpack-strip-block',
+    'babel-loader'
+  ]
 }
 
 const serverConfig = {
@@ -39,21 +42,18 @@ const serverConfig = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      {
-        from: path.join('src', 'server', 'data'),
-        to: 'data'
-      },
-      {
-        from: path.join('src', 'server', 'images'),
-        to: 'images'
-      }
+      { from: path.join('src', 'server', 'data'), to: 'data' },
+      { from: path.join('src', 'server', 'images'), to: 'images' }
     ])
   ]
 }
 
 const browserConfig = {
   mode: 'production',
-  entry: path.join(__dirname, 'src', 'client'),
+  entry: [
+    'intersection-observer',
+    path.join(__dirname, 'src', 'client')
+  ],
   output: {
     path: path.join(__dirname, 'build', 'client'),
     filename: 'bundle.js',
