@@ -1,6 +1,3 @@
-@import 'font.css';
-@import 'reset.css';
-
 #root { min-width: 320px; }
 
 header[role="banner"] {
@@ -10,9 +7,9 @@ header[role="banner"] {
   align-items: center;
   z-index: 3;
   width: calc(100% + (100vw - 100%));
-  height: 70px;
+  height: 4.375rem;
   margin-left: calc(-100vw + 100%);
-  padding: 0 calc(50% - (480px - (50vw - 50%)));
+  padding: 0 calc(50% - (30rem - (50vw - 50%)));
   background-color: #323232;
   font-weight: 600;
   white-space: nowrap;
@@ -35,11 +32,11 @@ nav > :matches(.dropdown, aside, address),
   height: inherit;
 }
 
-header[role="banner"] > h1 { padding: 0 36px 0 15px; }
+header[role="banner"] > h1 { padding: 0 2.25rem 0 0.9375rem; }
 
 header[role="banner"] > h1 svg {
-  width: 320px;
-  height: 64px;
+  width: 20rem;
+  height: 4rem;
 }
 
 header[role="banner"] > :matches(span, button) {
@@ -48,17 +45,17 @@ header[role="banner"] > :matches(span, button) {
 }
 
 header[role="banner"] > span {
-  right: 12px;
+  right: 0.75rem;
   color: #fff;
   text-align: center;
-  font-size: 7px;
-  letter-spacing: 1px;
+  font-size: 0.4375rem;
+  letter-spacing: 0.0625rem;
   text-transform: uppercase;
 }
 
 header[role="banner"] > button {
   left: 0;
-  width: 50px;
+  width: 3.125rem;
 }
 
 nav,
@@ -67,7 +64,7 @@ nav > :matches(.dropdown, aside, address) {
   background-color: inherit;
 }
 
-nav { width: calc(100% - 371px); }
+nav { width: calc(100% - 23.1875rem); }
 
 nav a,
 nav > :matches(.dropdown, aside, address) {
@@ -89,12 +86,12 @@ nav > a:hover,
 .dropdown { flex-wrap: wrap; }
 
 .caret {
-  width: 9px;
-  height: 9px;
+  width: 0.5625rem;
+  height: 0.5625rem;
   transition: transform 350ms;
 }
 
-.dropdown .caret { margin: 3px 0 0 4px; }
+.dropdown .caret { margin: 0.1875rem 0 0 0.25rem; }
 
 :matches(a, button)[aria-expanded="true"] > .caret { transform: rotate(180deg); }
 
@@ -104,7 +101,7 @@ nav > a:hover,
   top: 100%;
   left: 0;
   min-width: 100%;
-  max-width: 282px;
+  max-width: 17.625rem;
   background-color: rgba(50, 50, 50, 0.95);
   opacity: 0;
   font-weight: 400;
@@ -123,11 +120,11 @@ a[aria-expanded="true"] + ul {
   display: flex;
   justify-content: left;
   align-items: center;
-  height: 60px;
+  height: 3.75rem;
 }
 
 .dropdown > ul a {
-  padding: 0 31px;
+  padding: 0 1.9375rem;
   white-space: nowrap;
 }
 
@@ -138,8 +135,8 @@ a[aria-expanded="true"] + ul {
 } 
 
 nav > :matches(aside, address) svg {
-  width: 34px;
-  height: 17px;
+  width: 2.125rem;
+  height: 1.0625rem;
   transition: transform 250ms;
 }
 
@@ -148,16 +145,16 @@ nav > :matches(aside, address) > a:hover > svg { transform: scale(1.2) }
 nav > :matches(aside, address) span { display: none; }
 
 main {
-  max-width: 960px;
+  max-width: 60rem;
   margin: auto;
-  padding-top: 100px;
+  padding-top: 6.25rem;
 }
 
 main, footer { color: #000; }
 
 section {
   overflow: hidden;
-  height: 45px;
+  height: 2.8125rem;
   transition: height 350ms;
 }
 
@@ -168,23 +165,23 @@ section::after {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 20px;
+  height: 1.25rem;
   background-image: linear-gradient(
     rgba(255, 255, 255, 0), 
     rgba(255, 255, 255, 1) 90%);
 }
 
 section > header {
-  height: 25px;
-  border-bottom: 1px solid #000;
-  padding: 0 8px;
+  height: 1.5625rem;
+  border-bottom: 0.0625rem solid #000;
+  padding: 0 0.5rem;
 }
 
 section h2 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: calc(100% - 20px);
+  max-width: calc(100% - 1.25rem);
   font-size: 1.125rem;
 }
 
@@ -198,8 +195,8 @@ section > header > button {
 
 section > header svg {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 0.5rem;
+  right: 0.5rem;
   fill: #000;
   transition: transform 350ms;
 }
@@ -218,7 +215,7 @@ article {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 article > div,
@@ -228,15 +225,15 @@ article aside {
 
 article > div {
   flex-direction: column;
-  width: calc(50% - 10px);
-  min-height: 270px;
-  padding: 4px 0 0 3.5%;
+  width: calc(50% - 0.625rem);
+  min-height: 16.875rem;
+  padding: 0.25rem 0 0 3.5%;
 }
 
-article h1 { margin-bottom: 8px; }
+article h1 { margin-bottom: 0.5rem; }
 
 article p {
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   font-size: 0.875rem;
 }
 
@@ -247,13 +244,13 @@ article :matches(aside, aside > a) { flex: 1 1 auto; }
 figure {
   overflow: hidden;
   width: 50%;
-  height: 270px;
-  margin-left: 8px;
+  height: 16.875rem;
+  margin-left: 0.5rem;
   background-color: #fff;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.25);
 }
 
-.accessible figure:focus-within { outline: 2px solid #fa0; }
+.accessible figure:focus-within { outline: 0.125rem solid #fa0; }
 .accessible figure:focus-within > a { outline: none; }
 
 figure img { height: 100%; }
@@ -280,8 +277,8 @@ figure img { height: 100%; }
 
 .runtime {
   bottom: 0;
-  left: 12px;
-  padding-bottom: 6px;
+  left: 0.75rem;
+  padding-bottom: 0.375rem;
   color: #fff;
   font-size: 0.875rem;
   font-weight: 600;
@@ -292,14 +289,14 @@ figure img { height: 100%; }
 .play { opacity: 0.75; }
 
 main + footer {
-  padding: 40px 0;
+  padding: 2.5rem 0;
   font-size: 0.75rem;
   text-align: center;
 }
 
 main + footer > a {
-  padding: 5px 25px;
-  border-radius: 4px;
+  padding: 0.3125rem 1.5625rem;
+  border-radius: 0.25rem;
   transition: background-color 150ms, color 150ms;
 }
 
@@ -322,7 +319,7 @@ main + footer > a:hover {
 
   article > div {
     min-height: auto;
-    padding: 20px 16px 0;
+    padding: 1.25rem 1rem 0;
   }
 
   article > div, figure {
@@ -337,12 +334,12 @@ main + footer > a:hover {
 
 @media (max-width: 812px) {
   header[role="banner"] {
-    height: 50px;
+    height: 3.125rem;
     background-color: #000;
   }
 
   header[role="banner"] > h1 {
-    width: 180px;
+    width: 11.25rem;
     padding: 0;
   }
 
@@ -358,9 +355,9 @@ main + footer > a:hover {
     flex-direction: column;
     justify-content: flex-start;
     position: fixed;
-    top: 50px;
+    top: 3.125rem;
     width: 100%;
-    height: calc(100% - 50px);
+    height: calc(100% - 3.125rem);
     transform: translateX(-100%);
     transition: transform 250ms, visibility 0ms 250ms;
   }
@@ -379,13 +376,13 @@ main + footer > a:hover {
     width: 100%;
   }
 
-  nav > a { flex-basis: 60px; }
+  nav > a { flex-basis: 3.75rem; }
 
   .dropdown { height: auto; }
 
   .dropdown > a,
   nav > :matches(aside, address) > a {
-    height: 60px;
+    height: 3.75rem;
   }
 
   .dropdown > ul {
@@ -393,7 +390,7 @@ main + footer > a:hover {
     top: 0;
     height: 0;
     background-color: transparent;
-    border-bottom: 1px solid #fff;
+    border-bottom: 0.0625rem solid #fff;
     transition-delay: 0ms;
   }
 
@@ -405,11 +402,11 @@ main + footer > a:hover {
   nav > :matches(aside, address) svg { display: none; }
   nav > :matches(aside, address) span { display: inline-block; }
 
-  main { padding-top: 80px; }
+  main { padding-top: 5rem; }
 }
 
 @media (max-width: 375px) {
-  article h1 { font-size: 18px; }
+  article h1 { font-size: 1.125rem; }
 }
 
 /* -- MISC -- */
