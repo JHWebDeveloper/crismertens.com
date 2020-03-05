@@ -11,6 +11,33 @@ import Head from '../html/Head'
 import Feature from './Feature'
 import { Loading } from '../svg'
 
+const schema = JSON.stringify({
+  '@context': 'http://schema.org',
+  '@type': 'person',
+  name: 'Cris Mertens',
+  jobTitle: 'Editor',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://www.crismertens.com'
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Los Angeles',
+    addressRegion: 'CA'
+  },
+  email: 'mailto:crismertens@gmail.com',
+  url: 'https://www.crismertens.com',
+  sameAs: [
+    'https://www.imdb.com/name/nm2549237/',
+    'https://www.instagram.com/crismertens/',
+    'https://www.youtube.com/channel/UC05EvpDqctkPvOBjmj40T2w',
+    'https://www.facebook.com/cristophermertens',
+    'https://www.linkedin.com/in/crismertens/',
+    'https://twitter.com/CrisMertens',
+    'https://vimeo.com/crismertens'
+  ]
+})
+
 const Reel = ({ route }) => {
   const { data, dispatch } = useContext(CMContext)
   const { featured } = data
@@ -32,7 +59,9 @@ const Reel = ({ route }) => {
 
   return (
     <>
-      <Head {...route} />
+      <Head {...route}>
+        <script type="application/ld+json">{schema}</script>
+      </Head>
       <div id="greeting">
         <p>Editing is my craft.</p>
         <p>Storytelling is my passion.</p>
