@@ -10,8 +10,6 @@ import HTMLTemplate from '../shared/components/html/HTMLTemplate'
 
 import SiteData from './routes/SiteData'
 
-if (process.env.NODE_ENV === 'development') require('dotenv').config()
-
 const app  = express()
 const port = process.env.PORT || 3000
 
@@ -19,6 +17,8 @@ app.use(helmet())
 
 /* develblock:start */
 if (process.env.NODE_ENV === 'development') {
+  require('dotenv').config()
+  
   const config = require('../../webpack.dev.js')(process.env.GA_ID)
   const compiler = require('webpack')(config)
 
