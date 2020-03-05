@@ -44,7 +44,7 @@ const ContentSlider = ({ hasScrolling, children }) => {
         <div
           className="slider-items"
           ref={slider}
-          style={hasScrolling ? {} : { textAlign: 'center' }}>
+          style={hasScrolling ? {} : { justifyContent: 'center' }}>
           { children }
         </div>
       </div>
