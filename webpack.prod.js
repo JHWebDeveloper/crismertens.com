@@ -95,9 +95,9 @@ const browserConfig = {
       filename: path.join('css', 'main.min.css')
     }),
     new CopyWebpackPlugin([
+      { from: path.join('src', 'client', 'images'), to: 'images' },
       { from: path.join('src', 'shared', 'font'), to: 'font' },
       { from: path.join('src', 'shared', 'downloads'), to: 'downloads' },
-      { from: path.join('src', 'shared', 'images'), to: 'images' },
       { from: path.join('src', 'shared', 'icons'), to: '' }
     ])
   ]
