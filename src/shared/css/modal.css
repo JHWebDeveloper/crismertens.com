@@ -137,7 +137,7 @@ div[aria-label="gallery"] { overflow: hidden; }
 div[aria-label="gallery"] > button {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   z-index: 2;
