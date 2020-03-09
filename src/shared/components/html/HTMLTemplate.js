@@ -29,7 +29,7 @@ const HTMLTemplate = ({ location }) => (
       <meta property="og:title" content="Cris Mertens | Film Editor" />
       <meta property="og:description" content="The official website of Los Angeles, CA based film editor Cris Mertens." />
       <meta property="og:url" content="https://www.crismertens.com" />
-      <meta property="og:image" content="https://www.crismertens.com/images/render/1920/0/cris-mertens" />
+      <meta property="og:image" content="https://www.crismertens.com/images/cris-mertens.jpg" />
       <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:width" content="1920" />
       <meta property="og:image:height" content="1080" />
