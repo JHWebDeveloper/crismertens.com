@@ -12,7 +12,7 @@ const NotFound = ({ route }) => (
     <div id="notfound">
       <Thumbnail
         image="error-puppy"
-        id="0"
+        id="a6e16920-621d-11ea-bc55-0242ac130003"
         alt="Error Puppy" />
       <div>
         <h2>ZZzzz...</h2>

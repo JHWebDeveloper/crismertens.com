@@ -3,13 +3,13 @@ import fs from 'fs'
 import path from 'path'
 import sharp from 'sharp'
 
+// site images id: a6e16920-621d-11ea-bc55-0242ac130003
+
 const router = express.Router()
 
 router.get('/:width/:id/:title', (req, res, next) => {
   let { width, id, title } = req.params
-  const srcPath = id === '0'
-    ? path.join('src', 'server', 'images', `${title}.jpg`)
-    : path.join('src', 'server', 'images', id, `${title}.jpg`)
+  const srcPath = path.join('src', 'server', 'images', id, `${title}.jpg`)
   
   width = parseInt(width)
 
