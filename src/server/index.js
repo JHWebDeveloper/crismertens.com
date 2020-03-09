@@ -1,5 +1,6 @@
 import express from 'express'
 import helmet from 'helmet'
+import { RateLimiter } from 'limiter'
 import path from 'path'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
@@ -11,9 +12,20 @@ import HTMLTemplate from '../shared/components/html/HTMLTemplate'
 import SiteData from './routes/SiteData'
 
 const app  = express()
+const limiter = new RateLimiter(100, 'hour')
 const port = process.env.PORT || 3000
 
 app.use(helmet())
+
+app.use((req, res, next) => {
+  limiter.removeTokens(1, (err, remainingRequests) => {
+    if (remainingRequests < 1) {
+      res.sendStatus(429)
+    } else {
+      next()
+    }
+  })
+})
 
 /* develblock:start */
 if (process.env.NODE_ENV === 'development') {
