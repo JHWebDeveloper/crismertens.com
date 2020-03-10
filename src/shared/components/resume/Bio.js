@@ -19,11 +19,6 @@ const Bio = ({ content }) => (
       <Thumbnail
         image="cris-mertens"
         id="a6e16920-621d-11ea-bc55-0242ac130003"
-        alt="Photo of Cris Mertens, Film and TV Editor"
-        desktopWidth={480} />
-      <Thumbnail
-        image="cris-mertens"
-        id="0"
         alt="Photo of Cris Mertens, Film and TV Editor" />
     </figure>
   </article>
