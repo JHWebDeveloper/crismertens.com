@@ -15,39 +15,42 @@ export const secondsToTC = s => {
   return tc.join(':')
 }
 
+const getModalMaxWidth = () => {
+  if (window.matchMedia('(min-width: 2561px)').matches) {
+    return 2280
+  } else if (window.matchMedia('(min-width: 1921px)').matches) {
+    return 1500
+  } else if (window.matchMedia('(min-width: 1441px)').matches) {
+    return 1080
+  } else if (window.matchMedia('(min-width: 960px)').matches) {
+    return 960
+  } else {
+    return window.innerWidth
+  }
+}
+
 export const getImageWidth = () => {
   const pxr = window.devicePixelRatio || 1
-  let width = 960
-
-  if (window.matchMedia('min-width: 2561px')) {
-    width = 2280
-  } else if (window.matchMedia('min-width: 1921px')) {
-    width = 1500
-  } else if (window.matchMedia('min-width: 1441px')) {
-    width = 1080
-  }
-
-  return Math.min(window.innerWidth, width) * pxr
+  return getModalMaxWidth() * pxr
 }
 
 export const getShape = el => {
   const startShape = el ? el.getBoundingClientRect() : {}
-  const { innerWidth, innerHeight } = window
   const { top = 0, left = 0, width = 0, height = 0 } = startShape
 
   let scale = 0
   let x = '0px'
   let y = '0px'
 
-  if (window.matchMedia('max-aspect-ratio: 16/9')) {
-    scale = width / Math.min(960, innerWidth)
+  if (window.matchMedia('(max-aspect-ratio: 16/9)').matches) {
+    scale = width /getModalMaxWidth()
   } else {
-    scale = height / Math.min(540, innerHeight)
+    scale = height / (getModalMaxWidth() * 0.5625)
   }
 
   if (el) {
-    x = `${(-innerWidth + width) / 2 + left}px`
-    y = `${(-innerHeight + height) / 2 + top}px`
+    x = `${(-window.innerWidth + width) / 2 + left}px`
+    y = `${(-window.innerHeight + height) / 2 + top}px`
   }
 
   return {
