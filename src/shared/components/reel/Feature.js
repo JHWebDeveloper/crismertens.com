@@ -14,7 +14,6 @@ const Feature = props => {
     entry,
     extendState,
     retractState,
-    displayTitle,
     featuredCurrent,
     setFeaturedCurrent,
     countFeaturedLoaded,
@@ -77,7 +76,7 @@ const Feature = props => {
           onLoad={() => countFeaturedLoaded(featuredLoaded += 1)}/>
         <span className="overlay"></span>
         <Play />
-        <h2>{displayTitle}</h2>
+        <h2>{title}</h2>
         <span className="runtime">{runtime}</span>
       </span>
     </Link>
@@ -88,7 +87,6 @@ Feature.propTypes = {
   entry: shape(VideoEntryPropTypes).isRequired,
   extendState: number.isRequired,
   retractState: number.isRequired,
-  displayTitle: string.isRequired,
   featuredCurrent: number.isRequired,
   setFeaturedCurrent: func.isRequired,
   featuredLoaded: number.isRequired,

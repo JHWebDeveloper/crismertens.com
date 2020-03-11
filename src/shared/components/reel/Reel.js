@@ -70,13 +70,11 @@ const Reel = ({ route }) => {
         {featuredLoaded < 2 && <Loading />}
         {featured.length && <>
           <Feature
-            displayTitle="Editing Reel"
             extendState={1}
             retractState={2}
             entry={featured[0]}
             {...featureProps} />
           <Feature
-            displayTitle="Featured Work"
             extendState={2}
             retractState={1}
             entry={featured[1]}
