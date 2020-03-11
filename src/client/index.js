@@ -2,7 +2,7 @@ import React from 'react'
 import { hydrate } from 'react-dom'
 import ReactGA from 'react-ga'
 import { createBrowserHistory } from 'history'
-import { BrowserRouter } from 'react-router-dom'
+import { Router } from 'react-router-dom'
 import App from '../shared/components/main/App'
 import smoothscroll from 'smoothscroll-polyfill'
 import focusWithin from 'focus-within'
@@ -30,9 +30,9 @@ history.listen(location => {
 })
 
 hydrate(
-  <BrowserRouter history={history}>
+  <Router history={history}>
     <App />
-  </BrowserRouter>,
+  </Router>,
   document.getElementById('root')
 )
 
