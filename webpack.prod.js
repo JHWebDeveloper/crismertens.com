@@ -7,6 +7,8 @@ const postcssPresetEnv = require('postcss-preset-env')
 const cssMQPacker = require('css-mqpacker')
 const cssnano = require('cssnano')
 
+require('dotenv').config()
+
 const jsloader = {
   test: /\.js$/,
   exclude: /node_modules/,
@@ -89,7 +91,8 @@ const browserConfig = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.WEBPACK': true
+      'process.env.WEBPACK': true,
+      'process.env.GA_ID': JSON.stringify(process.env.GA_ID)
     }),
     new MiniCssExtractPlugin({
       filename: path.join('css', 'main.min.css')

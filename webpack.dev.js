@@ -5,7 +5,9 @@ const postcssPresetEnv = require('postcss-preset-env')
 const cssMQPacker = require('css-mqpacker')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-module.exports = GA_ID => ({
+require('dotenv').config()
+
+module.exports = {
   mode: 'development',
   entry: [
     'webpack-hot-middleware/client',
@@ -53,7 +55,7 @@ module.exports = GA_ID => ({
   plugins: [
     new webpack.DefinePlugin({
       'process.env.WEBPACK': true,
-      'process.env.GA_ID': JSON.stringify(GA_ID)
+      'process.env.GA_ID': JSON.stringify(process.env.GA_ID)
     }),
     new MiniCssExtractPlugin({
       filename: path.join('css', 'main.min.css')
@@ -78,4 +80,4 @@ module.exports = GA_ID => ({
       }
     ])
   ]
-})
+}

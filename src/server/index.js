@@ -12,7 +12,7 @@ import HTMLTemplate from '../shared/components/html/HTMLTemplate'
 import SiteData from './routes/SiteData'
 
 const app  = express()
-const limiter = new RateLimiter(100, 'hour')
+const limiter = new RateLimiter(500, 'hour')
 const port = process.env.PORT || 3000
 
 app.use(helmet())
@@ -29,9 +29,7 @@ app.use((req, res, next) => {
 
 /* develblock:start */
 if (process.env.NODE_ENV === 'development') {
-  require('dotenv').config()
-  
-  const config = require('../../webpack.dev.js')(process.env.GA_ID)
+  const config = require('../../webpack.dev.js')
   const compiler = require('webpack')(config)
 
   app.use(require('webpack-dev-middleware')(compiler, {
