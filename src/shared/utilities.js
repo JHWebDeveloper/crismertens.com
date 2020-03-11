@@ -17,11 +17,9 @@ export const secondsToTC = s => {
 
 const getModalMaxWidth = () => {
   if (window.matchMedia('(min-width: 2561px)').matches) {
-    return 2280
+    return 1680
   } else if (window.matchMedia('(min-width: 1921px)').matches) {
-    return 1500
-  } else if (window.matchMedia('(min-width: 1441px)').matches) {
-    return 1080
+    return 1140
   } else if (window.matchMedia('(min-width: 960px)').matches) {
     return 960
   } else {
