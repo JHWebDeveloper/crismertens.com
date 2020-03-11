@@ -229,6 +229,8 @@
   }
   
   #featured > a:nth-child(2) :matches(h2, .runtime) { right: none; }
+
+  .crop-box > h2 { font-size: 5.4vw }
 }
 
 @media (max-width: 599px) {
@@ -238,11 +240,6 @@
   }
   
   #featured > a:first-of-type { margin-bottom: 1.25rem; }
-  
-  .crop-box > h2 {
-    font-size: 1.125rem;
-    font-size: 5.4vw;
-  }
   
   .crop-box > .runtime { font-size: 1rem; }
 }
