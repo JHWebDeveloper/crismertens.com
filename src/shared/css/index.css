@@ -372,8 +372,12 @@ main + footer > a:hover {
   nav > :matches(a, .dropdown, aside, address) {
     justify-content: center;
     align-content: center;
-    flex: 0;
+    flex: none;
     width: 100%;
+  }
+
+  nav > :matches(a, .dropdown, aside, address) {
+    height: auto;
   }
 
   nav > a { flex-basis: 3.75rem; }
