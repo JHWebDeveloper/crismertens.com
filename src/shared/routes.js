@@ -17,15 +17,15 @@ const routes = [
       {
         path: '/',
         exact: true,
-        component: () => <Redirect from="/" exact to="/reel" />
+        component: () => <Redirect from="/" exact to="/reels" />
       },
       {
-        path: '/reel',
+        path: '/reels',
         title,
         component: Reel,
         routes: [
           {
-            path: '/reel/:title/:id?',
+            path: '/reels/:title/:id?',
             component: ModalURLLoader
           }
         ]

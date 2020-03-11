@@ -39,8 +39,8 @@ const Header = () => {
       <nav>
         <Link
           to="/"
-          title="Reel"
-          onClick={() => dispatch(closeNavigation(true))}>Reel</Link>
+          title="Reels"
+          onClick={() => dispatch(closeNavigation(true))}>Reels</Link>
         <Link
           to="/resume"
           title="Résumé"

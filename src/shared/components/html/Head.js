@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { string, bool } from 'prop-types'
 
 const Head = ({ path, title, alternate, noindex, children }) => {
-  const fixedPath = path === '/reel' ? '' : path
+  const fixedPath = path === '/reels' ? '' : path
 
   return (
     <Helmet encodeSpecialCharacters={false}>
