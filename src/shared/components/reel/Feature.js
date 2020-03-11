@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { func, number, shape, string } from 'prop-types'
+import { func, number, shape } from 'prop-types'
 
 import { openModal } from '../../actions'
 import { getImageWidth } from '../../utilities'

@@ -41,7 +41,7 @@ export const getShape = el => {
   let y = '0px'
 
   if (window.matchMedia('(max-aspect-ratio: 16/9)').matches) {
-    scale = width /getModalMaxWidth()
+    scale = width / getModalMaxWidth()
   } else {
     scale = height / (getModalMaxWidth() * 0.5625)
   }

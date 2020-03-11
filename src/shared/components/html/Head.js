@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { string, bool } from 'prop-types'
+import { arrayOf, bool, element, oneOfType, string } from 'prop-types'
 
 const Head = ({ path, title, alternate, noindex, children }) => {
   const fixedPath = path === '/reels' ? '' : path
@@ -21,7 +21,8 @@ Head.propTypes = {
   path: string,
   title: string,
   alternate: string,
-  noindex: bool
+  noindex: bool,
+  children: oneOfType([element, arrayOf(element)])
 }
 
 export default Head
