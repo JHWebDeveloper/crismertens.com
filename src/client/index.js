@@ -25,9 +25,10 @@ ReactGA.initialize(process.env.GA_ID, {
 })
 
 history.listen(location => {
-  ReactGA.set({ page: location.pathname })
   ReactGA.pageview(location.pathname)
 })
+
+ReactGA.pageview(window.location.pathname)
 
 hydrate(
   <Router history={history}>
