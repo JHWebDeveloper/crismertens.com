@@ -9,15 +9,28 @@
         {
           "id": "1cd0e1d0-f74b-11e9-9383-1d9654827c43",
           "type": "video",
-          "title": "Editing Reel",
-          "tag": "editing-reel",
+          "title": "Live Action Editing Reel",
+          "tag": "live-action-editing-reel",
           "altTitle": false,
           "description": [
-            "Includes clips from two features and one short."
+            "Includes clips from two features and one short: Escape Room (2017), Manhattan Undying (2016), and Wildness (2019)."
           ],
           "trt": 237,
-          "year": 2019,
+          "year": 2020,
           "videoId": "HPuML6N9CC8"
+        },
+        {
+          "id": "866cc17e-631e-11ea-bc55-0242ac130003",
+          "type": "video",
+          "title": "Animation Editing Reel",
+          "tag": "animation-editing-reel",
+          "altTitle": false,
+          "description": [
+            "Includes clips from four features: The Jetsons & WWE: Robo-WrestleMania! (2017), LEGO Scooby-Doo! Blowout Beach Bash (2017), LEGO DC Super Heroes: The Flash (2017), and LEGO DC Super Heroes: Aquaman: Rage of Atlantis (2018)."
+          ],
+          "trt": 282,
+          "year": 2020,
+          "videoId": "sFZne5RgxvA"
         }
       ]
     },
@@ -585,6 +598,6 @@
   ],
   "featuredId": [
     "1cd0e1d0-f74b-11e9-9383-1d9654827c43",
-    "1cd108e0-f74b-11e9-9383-1d9654827c43"
+    "866cc17e-631e-11ea-bc55-0242ac130003"
   ]
 }
