@@ -18,6 +18,8 @@
   content: '';
   display: block;
   position: absolute;
+  top: 0; /*IE11 needs this*/
+  left: 0; /*IE11 needs this*/
   z-index: -1;
   background-color: rgba(0,0,0,0.9);
   animation: fade-in 500ms 200ms backwards;
