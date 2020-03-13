@@ -34,7 +34,9 @@ const schema = JSON.stringify({
     'https://www.facebook.com/cristophermertens',
     'https://www.linkedin.com/in/crismertens/',
     'https://twitter.com/CrisMertens',
-    'https://vimeo.com/crismertens'
+    'https://vimeo.com/crismertens',
+    'https://www.mandy.com/crew/profile/cris-mertens',
+    'https://staffmeup.com/profile/crismertens'
   ]
 })
 
