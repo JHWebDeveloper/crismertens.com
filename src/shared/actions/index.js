@@ -99,7 +99,7 @@ export const playEpisode = id => ({
 })
 
 export const closeEpisode = id => dispatch => {
-  document.querySelector(`#${id}`).focus()
+  document.querySelector(`#EP_${id}`).focus()
 
   dispatch({
     type: TYPES.CLOSE_EPISODE
