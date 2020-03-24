@@ -22,7 +22,7 @@ const Feature = props => {
 
   let { featuredLoaded } = props
 
-  const { id, altTitle, title, tag, trt } = entry
+  const { id, alt, title, tag, trt } = entry
 
   const getClass = useCallback(() => {
     switch (featuredCurrent) {
@@ -72,7 +72,7 @@ const Feature = props => {
       <span className="crop-box">
         <img
           src={`/images/render/${getImageWidth()}/${id}/${tag}`}
-          alt={`A still from ${altTitle || title}`}
+          alt={alt || `A still from ${title}`}
           onLoad={() => countFeaturedLoaded(featuredLoaded += 1)}/>
         <span className="overlay"></span>
         <Play />

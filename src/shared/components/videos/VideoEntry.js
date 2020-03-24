@@ -36,7 +36,7 @@ const VideoEntry = ({ entry, dispatch }) => {
           <Thumbnail
             image={tag}
             id={id}
-            alt={`A still from ${entry.altTitle || title}`}
+            alt={entry.alt || `A still from ${title}`}
             preloadModalBG />
           <span className="overlay"></span>
           <span className="runtime" aria-hidden="true">{runtime}</span>

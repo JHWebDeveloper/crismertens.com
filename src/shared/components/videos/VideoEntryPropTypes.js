@@ -5,7 +5,7 @@ export default {
   type: oneOf(['video', 'vod', 'series']).isRequired,
   title: string.isRequired,
   tag: string.isRequired,
-  altTitle: oneOfType([bool, string]),
+  alt: oneOfType([bool, string]),
   description: arrayOf(string).isRequired,
   trt: oneOfType([number, string]).isRequired,
   year: number.isRequired,
