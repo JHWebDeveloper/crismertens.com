@@ -32,7 +32,7 @@ const Player = ({ videoData, episodeId, styles, dispatch, closeModal }) => {
       player.on('stateChange', e => {
         if (e.data > 0) return
 
-        const index = e.target.l.playlistIndex
+        const index = e.target.playerInfo.playlistIndex
 
         if (e.data === 0 && index + 1 === content.length) {
           closeModal()
