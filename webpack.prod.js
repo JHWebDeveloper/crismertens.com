@@ -43,10 +43,12 @@ const serverConfig = {
     ]
   },
   plugins: [
-    new CopyWebpackPlugin([
-      { from: path.join('src', 'server', 'data'), to: 'data' },
-      { from: path.join('src', 'server', 'images'), to: 'images' }
-    ])
+    new CopyWebpackPlugin({
+			patterns: [
+				{ from: path.join('src', 'server', 'data'), to: 'data' },
+				{ from: path.join('src', 'server', 'images'), to: 'images' }
+			]
+		})
   ]
 }
 
