@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo } from 'react'
 import { func, shape } from 'prop-types'
 import { Link } from 'react-router-dom'
-import uuid from 'uuid/v1'
+import { v1 as uuid } from 'uuid'
 
 import { openModal } from '../../actions'
 import { secondsToTC } from '../../utilities'
