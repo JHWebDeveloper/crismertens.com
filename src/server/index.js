@@ -15,7 +15,9 @@ const app  = express()
 const limiter = new RateLimiter(500, 'hour')
 const port = process.env.PORT || 3000
 
-app.use(helmet())
+app.use(helmet({
+	contentSecurityPolicy: false
+}))
 
 app.use((req, res, next) => {
   limiter.removeTokens(1, (err, remainingRequests) => {
