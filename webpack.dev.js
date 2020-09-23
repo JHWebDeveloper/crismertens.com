@@ -14,7 +14,7 @@ module.exports = {
 			'webpack-hot-middleware/client',
 			path.join(__dirname, 'src', 'client')
 		],
-		ie11: path.join(__dirname, 'src', 'shared', 'css', 'ie11.css'),
+		ie11: path.join(__dirname, 'src', 'shared', 'css', 'ie11.css')
 	},
 	output: {
 		path: path.join(__dirname, 'build'),
