@@ -6,60 +6,60 @@ import { playEpisode } from '../../../actions'
 import VideoEntryPropTypes from '../../videos/VideoEntryPropTypes'
 
 const Player = ({ videoData, episodeId, styles, dispatch, closeModal }) => {
-  const { type, videoId, content } = videoData
+	const { type, videoId, content } = videoData
 
-  const options = {
-    playerVars: {
-      controls: 1,
-      autoplay: 1,
-      playsinline: 1
-    },
-    suggestedQuality: 1080
-  }
+	const options = {
+		playerVars: {
+			controls: 1,
+			autoplay: 1,
+			playsinline: 1
+		},
+		suggestedQuality: 1080
+	}
 
-  if (type === 'video') options.videoId = videoId
+	if (type === 'video') options.videoId = videoId
 
-  useEffect(() => {
-    const player = YouTubePlayer('player-placeholder', options)
+	useEffect(() => {
+		const player = YouTubePlayer('player-placeholder', options)
 
-    if (type === 'series') {
-      player.loadPlaylist({
-        list: videoId,
-        listType: 'playlist',
-        index: content.findIndex(ep => ep.id === episodeId)
-      })
+		if (type === 'series') {
+			player.loadPlaylist({
+				list: videoId,
+				listType: 'playlist',
+				index: content.findIndex(ep => ep.id === episodeId)
+			})
 
-      player.on('stateChange', e => {
-        if (e.data > 0) return
+			player.on('stateChange', e => {
+				if (e.data > 0) return
 
-        const index = e.target.playerInfo.playlistIndex
+				const index = e.target.playerInfo.playlistIndex
 
-        if (e.data === 0 && index + 1 === content.length) {
-          closeModal()
-        } else if (e.data < 1) {
-          dispatch(playEpisode(content[index].id))
-        }
-      })
-    } else {
-      player.on('stateChange', e => {
-        if (e.data === 0) closeModal()
-      })
-    }
-  })
+				if (e.data === 0 && index + 1 === content.length) {
+					closeModal()
+				} else if (e.data < 1) {
+					dispatch(playEpisode(content[index].id))
+				}
+			})
+		} else {
+			player.on('stateChange', e => {
+				if (e.data === 0) closeModal()
+			})
+		}
+	})
 
-  return (
-    <div id="player" style={styles}>
-      <div id="player-placeholder"></div>
-    </div>
-  )
+	return (
+		<div id="player" style={styles}>
+			<div id="player-placeholder"></div>
+		</div>
+	)
 }
 
 Player.propTypes = {
-  videoData: shape(VideoEntryPropTypes).isRequired,
-  episodeId: oneOfType([bool, string]),
-  styles: object,
-  dispatch: func.isRequired,
-  closeModal: func.isRequired
+	videoData: shape(VideoEntryPropTypes).isRequired,
+	episodeId: oneOfType([bool, string]),
+	styles: object,
+	dispatch: func.isRequired,
+	closeModal: func.isRequired
 }
 
 export default Player

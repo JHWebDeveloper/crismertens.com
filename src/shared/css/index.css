@@ -1,25 +1,25 @@
 #root { min-width: 320px; }
 
 header[role="banner"] {
-  position: fixed;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
-  width: 100%;
-  height: 4.375rem;
-  background-color: #323232;
-  font-weight: 600;
-  white-space: nowrap;
+	position: fixed;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 3;
+	width: 100%;
+	height: 4.375rem;
+	background-color: #323232;
+	font-weight: 600;
+	white-space: nowrap;
 }
 
 /* avoid content jump */
 @media (min-width: 1024px) {
-  header[role="banner"] {
-    width: calc(100% + (100vw - 100%));
-    margin-left: calc(-100vw + 100%);
-    padding: 0 calc(50% - (30rem - (50vw - 50%)));
-  }
+	header[role="banner"] {
+		width: calc(100% + (100vw - 100%));
+		margin-left: calc(-100vw + 100%);
+		padding: 0 calc(50% - (30rem - (50vw - 50%)));
+	}
 }
 
 header > :matches(h1, button),
@@ -27,77 +27,77 @@ header > h1 > a,
 nav,
 nav a,
 nav > :matches(.dropdown, aside, address) {
-  display: inherit;
-  align-items: inherit;
+	display: inherit;
+	align-items: inherit;
 }
 
 nav,
 nav a,
 nav > :matches(.dropdown, aside, address),
 .dropdown > ul a {
-  justify-content: inherit;
-  height: inherit;
+	justify-content: inherit;
+	height: inherit;
 }
 
 header[role="banner"] > h1 { padding: 0 2.25rem 0 0.9375rem; }
 
 header[role="banner"] > h1 svg {
-  width: 20rem;
-  height: 4rem;
+	width: 20rem;
+	height: 4rem;
 }
 
 header[role="banner"] > :matches(span, button) {
-  display: none;
-  position: absolute;
+	display: none;
+	position: absolute;
 }
 
 header[role="banner"] > span {
-  right: 0.75rem;
-  color: #fff;
-  text-align: center;
-  font-size: 0.4375rem;
-  letter-spacing: 0.0625rem;
-  text-transform: uppercase;
+	right: 0.75rem;
+	color: #fff;
+	text-align: center;
+	font-size: 0.4375rem;
+	letter-spacing: 0.0625rem;
+	text-transform: uppercase;
 }
 
 header[role="banner"] > button {
-  top: 0; /*IE11*/
-  left: 0;
-  width: 3.125rem;
-  height: inherit;
+	top: 0; /*IE11*/
+	left: 0;
+	width: 3.125rem;
+	height: inherit;
 }
 
 nav,
 nav a,
 nav > :matches(.dropdown, aside, address) {
-  background-color: inherit;
+	background-color: inherit;
 }
 
 nav { width: calc(100% - 23.1875rem); }
 
 nav a,
 nav > :matches(.dropdown, aside, address) {
-  flex: 1;
+	flex: 1;
 }
 
 nav > :matches(a, aside, address),
 .dropdown > a {
-  z-index: 2;
+	z-index: 2;
 }
 
 nav a { font-size: 1rem; }
 
 nav > a:hover,
 .dropdown a:hover {
-  background-color: #4a4a4a;
+	background-color: #4a4a4a;
 }
 
 .dropdown { flex-wrap: wrap; }
 
 .caret {
-  width: 0.5625rem;
-  height: 0.5625rem;
-  transition: transform 350ms;
+	width: 0.5625rem;
+	height: 0.5625rem;
+	transition: transform 350ms;
 }
 
 .dropdown .caret { margin: 0.1875rem 0 0 0.25rem; }
@@ -105,48 +105,48 @@ nav > a:hover,
 :matches(a, button)[aria-expanded="true"] > .caret { transform: rotate(180deg); }
 
 .dropdown > ul {
-  visibility: hidden;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 100%;
-  max-width: 17.625rem;
-  background-color: rgba(50, 50, 50, 0.95);
-  opacity: 0;
-  font-weight: 400;
-  transform: translateY(-20%);
-  transition: transform 350ms 350ms, opacity 350ms 350ms, visibility 0ms 700ms
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	min-width: 100%;
+	max-width: 17.625rem;
+	background-color: rgba(50, 50, 50, 0.95);
+	opacity: 0;
+	font-weight: 400;
+	transform: translateY(-20%);
+	transition: transform 350ms 350ms, opacity 350ms 350ms, visibility 0ms 700ms
 }
 
 a[aria-expanded="true"] + ul {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0ms;
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 0ms;
 }
 
 .dropdown li {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  height: 3.75rem;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	height: 3.75rem;
 }
 
 .dropdown > ul a {
-  padding: 0 1.9375rem;
-  white-space: nowrap;
+	padding: 0 1.9375rem;
+	white-space: nowrap;
 }
 
 .dropdown > ul span {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
 } 
 
 nav > :matches(aside, address) svg {
-  width: 2.125rem;
-  height: 1.0625rem;
-  transition: transform 250ms;
+	width: 2.125rem;
+	height: 1.0625rem;
+	transition: transform 250ms;
 }
 
 nav > :matches(aside, address) > a:hover > svg { transform: scale(1.2) }
@@ -154,96 +154,96 @@ nav > :matches(aside, address) > a:hover > svg { transform: scale(1.2) }
 nav > :matches(aside, address) span { display: none; }
 
 main {
-  max-width: 60rem;
-  margin: auto;
-  padding-top: 6.25rem;
+	max-width: 60rem;
+	margin: auto;
+	padding-top: 6.25rem;
 }
 
 main, footer { color: #000; }
 
 section {
-  overflow: hidden;
-  height: 2.8125rem;
-  transition: height 350ms;
+	overflow: hidden;
+	height: 2.8125rem;
+	transition: height 350ms;
 }
 
 section.open { height: auto; }
 
 section::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 1.25rem;
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0), 
-    rgba(255, 255, 255, 1) 90%);
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 1.25rem;
+	background-image: linear-gradient(
+		rgba(255, 255, 255, 0), 
+		rgba(255, 255, 255, 1) 90%);
 }
 
 section > header {
-  height: 1.5625rem;
-  border-bottom: 0.0625rem solid #000;
-  padding: 0 0.5rem;
+	height: 1.5625rem;
+	border-bottom: 0.0625rem solid #000;
+	padding: 0 0.5rem;
 }
 
 section h2 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: calc(100% - 1.25rem);
-  font-size: 1.125rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: calc(100% - 1.25rem);
+	font-size: 1.125rem;
 }
 
 section > header > button {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 section > header svg {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  fill: #000;
-  transition: transform 350ms;
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	fill: #000;
+	transition: transform 350ms;
 }
 
 section > div {
-  visibility: hidden;
-  transition: visibility 0ms 350ms
+	visibility: hidden;
+	transition: visibility 0ms 350ms
 }
 
 section.open > div {
-  visibility: visible;
-  transition-delay: 0ms;
+	visibility: visible;
+	transition-delay: 0ms;
 }
 
 article {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  margin-bottom: 1.875rem;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	margin-bottom: 1.875rem;
 }
 
 article > div,
 article aside {
-  display: inherit;
+	display: inherit;
 }
 
 article > div {
-  flex-direction: column;
-  width: calc(50% - 0.625rem);
-  min-height: 16.875rem;
-  padding: 0.25rem 0 0 3.5%;
+	flex-direction: column;
+	width: calc(50% - 0.625rem);
+	min-height: 16.875rem;
+	padding: 0.25rem 0 0 3.5%;
 }
 
 article h1 { margin-bottom: 0.5rem; }
 
 article p {
-  margin-bottom: 0.3125rem;
-  font-size: 0.875rem;
+	margin-bottom: 0.3125rem;
+	font-size: 0.875rem;
 }
 
 article p:last-of-type { margin-bottom: 0; }
@@ -251,12 +251,12 @@ article p:last-of-type { margin-bottom: 0; }
 article :matches(aside, aside > a) { flex: 1 1 auto; }
 
 figure {
-  overflow: hidden;
-  width: 50%;
-  height: 16.875rem;
-  margin-left: 0.5rem;
-  background-color: #fff;
-  box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.25);
+	overflow: hidden;
+	width: 50%;
+	height: 16.875rem;
+	margin-left: 0.5rem;
+	background-color: #fff;
+	box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.25);
 }
 
 .accessible figure:focus-within { outline: 0.125rem solid #fa0; }
@@ -267,172 +267,172 @@ figure img { height: 100%; }
 .overlay,
 .runtime,
 .play {
-  pointer-events: none;
-  position: absolute;
+	pointer-events: none;
+	position: absolute;
 }
 
 .overlay,
 .play {
-  transition: opacity 300ms;
+	transition: opacity 300ms;
 }
 
 .overlay {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
 }
 
 .runtime {
-  bottom: 0;
-  left: 0.75rem;
-  padding-bottom: 0.375rem;
-  color: #fff;
-  font-size: 0.875rem;
-  font-weight: 600;
-  transform: translateY(100%);
-  transition: transform 300ms;
+	bottom: 0;
+	left: 0.75rem;
+	padding-bottom: 0.375rem;
+	color: #fff;
+	font-size: 0.875rem;
+	font-weight: 600;
+	transform: translateY(100%);
+	transition: transform 300ms;
 }
 
 .play { opacity: 0.75; }
 
 main + footer {
-  padding: 2.5rem 0;
-  font-size: 0.75rem;
-  text-align: center;
+	padding: 2.5rem 0;
+	font-size: 0.75rem;
+	text-align: center;
 }
 
 main + footer > a {
-  padding: 0.3125rem 1.5625rem;
-  border-radius: 0.25rem;
-  transition: background-color 150ms, color 150ms;
+	padding: 0.3125rem 1.5625rem;
+	border-radius: 0.25rem;
+	transition: background-color 150ms, color 150ms;
 }
 
 main + footer > a:hover {
-  background-color: #000;
-  color: #fff;
+	background-color: #000;
+	color: #fff;
 }
 
 #all { display: none; }
 
 @media (any-hover: none) {
-  #all { display: flex; }
+	#all { display: flex; }
 }
 
 @media (max-width: 1023px) {
-  article {
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-  }
+	article {
+		flex-direction: column-reverse;
+		justify-content: flex-start;
+	}
 
-  article > div {
-    min-height: auto;
-    padding: 1.25rem 1rem 0;
-  }
+	article > div {
+		min-height: auto;
+		padding: 1.25rem 1rem 0;
+	}
 
-  article > div, figure {
-    width: 100%;
-  }
+	article > div, figure {
+		width: 100%;
+	}
 
-  figure {
-    height: auto;
-    margin: 0;
-  }
+	figure {
+		height: auto;
+		margin: 0;
+	}
 }
 
 @media (max-width: 812px) {
-  header[role="banner"] {
-    height: 3.125rem;
-    background-color: #000;
-  }
+	header[role="banner"] {
+		height: 3.125rem;
+		background-color: #000;
+	}
 
-  header[role="banner"] > h1 {
-    width: 11.25rem;
-    padding: 0;
-  }
+	header[role="banner"] > h1 {
+		width: 11.25rem;
+		padding: 0;
+	}
 
-  header[role="banner"] > h1 > a,
-  header[role="banner"] > h1 svg {
-    width: 100%;
-  }
+	header[role="banner"] > h1 > a,
+	header[role="banner"] > h1 svg {
+		width: 100%;
+	}
 
-  header[role="banner"] > :matches(span, button) { display: block; }
+	header[role="banner"] > :matches(span, button) { display: block; }
 
-  nav {
-    visibility: hidden;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: fixed;
-    top: 3.125rem;
-    left: 0; /*IE11*/
-    width: 100%;
-    height: calc(100% - 3.125rem);
-    transform: translateX(-100%);
-    transition: transform 250ms, visibility 0ms 250ms;
-  }
+	nav {
+		visibility: hidden;
+		flex-direction: column;
+		justify-content: flex-start;
+		position: fixed;
+		top: 3.125rem;
+		left: 0; /*IE11*/
+		width: 100%;
+		height: calc(100% - 3.125rem);
+		transform: translateX(-100%);
+		transition: transform 250ms, visibility 0ms 250ms;
+	}
 
-  button[aria-expanded="true"] + nav {
-    visibility: visible;
-    transform: translateX(0);
-    transition-delay: 0ms;
-  }
+	button[aria-expanded="true"] + nav {
+		visibility: visible;
+		transform: translateX(0);
+		transition-delay: 0ms;
+	}
 
-  .dropdown li,
-  nav > :matches(a, .dropdown, aside, address) {
-    justify-content: center;
-    align-content: center;
-    flex: none;
-    width: 100%;
-  }
+	.dropdown li,
+	nav > :matches(a, .dropdown, aside, address) {
+		justify-content: center;
+		align-content: center;
+		flex: none;
+		width: 100%;
+	}
 
-  nav > :matches(a, .dropdown, aside, address) {
-    height: auto;
-  }
+	nav > :matches(a, .dropdown, aside, address) {
+		height: auto;
+	}
 
-  nav > a { flex-basis: 3.75rem; }
+	nav > a { flex-basis: 3.75rem; }
 
-  .dropdown { height: auto; }
+	.dropdown { height: auto; }
 
-  .dropdown > a,
-  nav > :matches(aside, address) > a {
-    height: 3.75rem;
-  }
+	.dropdown > a,
+	nav > :matches(aside, address) > a {
+		height: 3.75rem;
+	}
 
-  .dropdown > ul {
-    position: relative;
-    top: 0;
-    height: 0;
-    background-color: transparent;
-    border-bottom: 0.0625rem solid #fff;
-    transition-delay: 0ms;
-  }
+	.dropdown > ul {
+		position: relative;
+		top: 0;
+		height: 0;
+		background-color: transparent;
+		border-bottom: 0.0625rem solid #fff;
+		transition-delay: 0ms;
+	}
 
-  a[aria-expanded="true"] + ul { height: auto; }
+	a[aria-expanded="true"] + ul { height: auto; }
 
-  .dropdown span { text-align: center; }
+	.dropdown span { text-align: center; }
 
-  nav > :matches(aside, address) > a:hover { background-color: #4a4a4a; }
-  nav > :matches(aside, address) svg { display: none; }
-  nav > :matches(aside, address) span { display: inline-block; }
+	nav > :matches(aside, address) > a:hover { background-color: #4a4a4a; }
+	nav > :matches(aside, address) svg { display: none; }
+	nav > :matches(aside, address) span { display: inline-block; }
 
-  main { padding-top: 5rem; }
+	main { padding-top: 5rem; }
 }
 
 @media (max-width: 375px) {
-  article h1 { font-size: 1.125rem; }
+	article h1 { font-size: 1.125rem; }
 }
 
 /* -- MISC -- */
 
 @keyframes fade-in {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+	0% { opacity: 0; }
+	100% { opacity: 1; }
 }
 
 .noscroll {
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
 }
 
 .notloaded { opacity: 0; }

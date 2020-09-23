@@ -3,14 +3,14 @@ header[role="banner"] > span { top: 1rem; }
 article aside > a { height: 2.22875rem }
 
 @media (max-width: 1023px) {
-  article aside {
-    display: block;
-    text-align: center;
-  }
+	article aside {
+		display: block;
+		text-align: center;
+	}
 
-  article aside > a {
-    width: 25%;
-    height: 57vw;
-    max-height: 60px;
-  }
+	article aside > a {
+		width: 25%;
+		height: 57vw;
+		max-height: 60px;
+	}
 }

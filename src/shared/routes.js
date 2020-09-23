@@ -11,50 +11,50 @@ import NotFound from './components/misc/NotFound'
 const title = 'Cris Mertens | Film Editor'
 
 const routes = [
-  {
-    component: Root,
-    routes: [
-      {
-        path: '/',
-        exact: true,
-        component: () => <Redirect from="/" exact to="/reels" />
-      },
-      {
-        path: '/reels',
-        title,
-        component: Reel,
-        routes: [
-          {
-            path: '/reels/:title/:id?',
-            component: ModalURLLoader
-          }
-        ]
-      },
-      {
-        path: '/resume',
-        alternate: '/downloads/cris-mertens-resume.pdf',
-        title: `${title} | Résumé`,
-        component: Resume
-      },
-      {
-        path: '/videos',
-        title: `${title} | Videos`,
-        component: Videos,
-        routes: [
-          {
-            path: '/videos/:title/:id?',
-            component: ModalURLLoader
-          }
-        ]
-      },
-      {
-        path: '*',
-        title: `Error! | ${title}`,
-        component: NotFound,
-        noindex: true
-      }
-    ]
-  }
+	{
+		component: Root,
+		routes: [
+			{
+				path: '/',
+				exact: true,
+				component: () => <Redirect from="/" exact to="/reels" />
+			},
+			{
+				path: '/reels',
+				title,
+				component: Reel,
+				routes: [
+					{
+						path: '/reels/:title/:id?',
+						component: ModalURLLoader
+					}
+				]
+			},
+			{
+				path: '/resume',
+				alternate: '/downloads/cris-mertens-resume.pdf',
+				title: `${title} | Résumé`,
+				component: Resume
+			},
+			{
+				path: '/videos',
+				title: `${title} | Videos`,
+				component: Videos,
+				routes: [
+					{
+						path: '/videos/:title/:id?',
+						component: ModalURLLoader
+					}
+				]
+			},
+			{
+				path: '*',
+				title: `Error! | ${title}`,
+				component: NotFound,
+				noindex: true
+			}
+		]
+	}
 ]
 
 export default routes

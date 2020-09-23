@@ -1,21 +1,21 @@
 .hamburger > rect {
-  transform-origin: left center;
-  transition: transform 250ms;
+	transform-origin: left center;
+	transition: transform 250ms;
 }
 
 .hamburger > rect:nth-child(2) {
-  transition: transform 250ms, opacity 350ms;
+	transition: transform 250ms, opacity 350ms;
 }
 
 button[aria-expanded="true"] > .hamburger > rect:nth-child(1) {
-  transform: rotate(45deg) translate(-15%);
+	transform: rotate(45deg) translate(-15%);
 }
 
 button[aria-expanded="true"] > .hamburger > rect:nth-child(2) {
-  opacity: 0;
-  transform: scaleX(0);
+	opacity: 0;
+	transform: scaleX(0);
 }
 
 button[aria-expanded="true"] > .hamburger > rect:nth-child(3) {
-  transform: rotate(-45deg) translate(-15%);
+	transform: rotate(-45deg) translate(-15%);
 }

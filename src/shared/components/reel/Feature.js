@@ -10,88 +10,88 @@ import { secondsToTC } from '../../utilities'
 import VideoEntryPropTypes from '../videos/VideoEntryPropTypes'
 
 const Feature = props => {
-  const {
-    entry,
-    extendState,
-    retractState,
-    featuredCurrent,
-    setFeaturedCurrent,
-    countFeaturedLoaded,
-    dispatch
-  } = props
+	const {
+		entry,
+		extendState,
+		retractState,
+		featuredCurrent,
+		setFeaturedCurrent,
+		countFeaturedLoaded,
+		dispatch
+	} = props
 
-  let { featuredLoaded } = props
+	let { featuredLoaded } = props
 
-  const { id, alt, title, tag, trt } = entry
+	const { id, alt, title, tag, trt } = entry
 
-  const getClass = useCallback(() => {
-    switch (featuredCurrent) {
-      case extendState:
-        return 'extend'
-      case retractState:
-        return 'retract'
-      default:
-        return ''
-    }
-  }, [featuredCurrent])
+	const getClass = useCallback(() => {
+		switch (featuredCurrent) {
+			case extendState:
+				return 'extend'
+			case retractState:
+				return 'retract'
+			default:
+				return ''
+		}
+	}, [featuredCurrent])
 
-  const openModalOnSecondTouch = useCallback(e => {
-    if (window.matchMedia('hover: none')) return
-    if (featuredCurrent !== extendState) e.preventDefault()
-    setFeaturedCurrent(extendState)
-  }, [featuredCurrent])
+	const openModalOnSecondTouch = useCallback(e => {
+		if (window.matchMedia('hover: none')) return
+		if (featuredCurrent !== extendState) e.preventDefault()
+		setFeaturedCurrent(extendState)
+	}, [featuredCurrent])
 
-  const openVideo = useCallback(e => {
-    e.preventDefault()
-    dispatch(openModal(e.currentTarget, entry, 'reel'))
-  }, [])
+	const openVideo = useCallback(e => {
+		e.preventDefault()
+		dispatch(openModal(e.currentTarget, entry, 'reel'))
+	}, [])
 
-  const runtime = useMemo(() => secondsToTC(trt), [trt])
+	const runtime = useMemo(() => secondsToTC(trt), [trt])
 
-  const ref = useRef()
+	const ref = useRef()
 
-  useEffect(() => {
-    ref.current.addEventListener('touchstart', openModalOnSecondTouch)
+	useEffect(() => {
+		ref.current.addEventListener('touchstart', openModalOnSecondTouch)
 
-    return () => {
-      ref.current.removeEventListener('touchstart', openModalOnSecondTouch)
-    }
-  }, [featuredCurrent])
+		return () => {
+			ref.current.removeEventListener('touchstart', openModalOnSecondTouch)
+		}
+	}, [featuredCurrent])
 
-  return (
-    <Link
-      to={`/reel/${tag}/${id}`}
-      title={`Click to play ${title}`}
-      className={getClass()}
-      ref={ref}
-      onMouseEnter={() => setFeaturedCurrent(extendState)}
-      onMouseLeave={() => setFeaturedCurrent(0)}
-      onFocus={() => setFeaturedCurrent(extendState)}
-      onBlur={() => setFeaturedCurrent(0)}
-      onClick={openVideo}>
-      <span className="crop-box">
-        <img
-          src={`/images/render/${getImageWidth()}/${id}/${tag}`}
-          alt={alt || `A still from ${title}`}
-          onLoad={() => countFeaturedLoaded(featuredLoaded += 1)}/>
-        <span className="overlay"></span>
-        <Play />
-        <h2>{title}</h2>
-        <span className="runtime">{runtime}</span>
-      </span>
-    </Link>
-  )
+	return (
+		<Link
+			to={`/reel/${tag}/${id}`}
+			title={`Click to play ${title}`}
+			className={getClass()}
+			ref={ref}
+			onMouseEnter={() => setFeaturedCurrent(extendState)}
+			onMouseLeave={() => setFeaturedCurrent(0)}
+			onFocus={() => setFeaturedCurrent(extendState)}
+			onBlur={() => setFeaturedCurrent(0)}
+			onClick={openVideo}>
+			<span className="crop-box">
+				<img
+					src={`/images/render/${getImageWidth()}/${id}/${tag}`}
+					alt={alt || `A still from ${title}`}
+					onLoad={() => countFeaturedLoaded(featuredLoaded += 1)}/>
+				<span className="overlay"></span>
+				<Play />
+				<h2>{title}</h2>
+				<span className="runtime">{runtime}</span>
+			</span>
+		</Link>
+	)
 }
 
 Feature.propTypes = {
-  entry: shape(VideoEntryPropTypes).isRequired,
-  extendState: number.isRequired,
-  retractState: number.isRequired,
-  featuredCurrent: number.isRequired,
-  setFeaturedCurrent: func.isRequired,
-  featuredLoaded: number.isRequired,
-  countFeaturedLoaded: func.isRequired,
-  dispatch: func.isRequired
+	entry: shape(VideoEntryPropTypes).isRequired,
+	extendState: number.isRequired,
+	retractState: number.isRequired,
+	featuredCurrent: number.isRequired,
+	setFeaturedCurrent: func.isRequired,
+	featuredLoaded: number.isRequired,
+	countFeaturedLoaded: func.isRequired,
+	dispatch: func.isRequired
 }
 
 export default Feature

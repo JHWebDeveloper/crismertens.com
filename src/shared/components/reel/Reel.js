@@ -12,84 +12,84 @@ import Feature from './Feature'
 import { Loading } from '../svg'
 
 const schema = JSON.stringify({
-  '@context': 'http://schema.org',
-  '@type': 'person',
-  name: 'Cris Mertens',
-  jobTitle: 'Editor',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.crismertens.com'
-  },
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Los Angeles',
-    addressRegion: 'CA'
-  },
-  email: 'mailto:crismertens@gmail.com',
-  url: 'https://www.crismertens.com',
-  sameAs: [
-    'https://www.imdb.com/name/nm2549237/',
-    'https://www.instagram.com/crismertens/',
-    'https://www.youtube.com/channel/UC05EvpDqctkPvOBjmj40T2w',
-    'https://www.facebook.com/cristophermertens',
-    'https://www.linkedin.com/in/crismertens/',
-    'https://twitter.com/CrisMertens',
-    'https://vimeo.com/crismertens',
-    'https://www.mandy.com/crew/profile/cris-mertens',
-    'https://staffmeup.com/profile/crismertens'
-  ]
+	'@context': 'http://schema.org',
+	'@type': 'person',
+	name: 'Cris Mertens',
+	jobTitle: 'Editor',
+	mainEntityOfPage: {
+		'@type': 'WebPage',
+		'@id': 'https://www.crismertens.com'
+	},
+	address: {
+		'@type': 'PostalAddress',
+		addressLocality: 'Los Angeles',
+		addressRegion: 'CA'
+	},
+	email: 'mailto:crismertens@gmail.com',
+	url: 'https://www.crismertens.com',
+	sameAs: [
+		'https://www.imdb.com/name/nm2549237/',
+		'https://www.instagram.com/crismertens/',
+		'https://www.youtube.com/channel/UC05EvpDqctkPvOBjmj40T2w',
+		'https://www.facebook.com/cristophermertens',
+		'https://www.linkedin.com/in/crismertens/',
+		'https://twitter.com/CrisMertens',
+		'https://vimeo.com/crismertens',
+		'https://www.mandy.com/crew/profile/cris-mertens',
+		'https://staffmeup.com/profile/crismertens'
+	]
 })
 
 const Reel = ({ route }) => {
-  const { data, dispatch } = useContext(CMContext)
-  const { featured } = data
+	const { data, dispatch } = useContext(CMContext)
+	const { featured } = data
 
-  const [featuredLoaded, countFeaturedLoaded] = useState(0)
-  const [featuredCurrent, setFeaturedCurrent] = useState(0)
+	const [featuredLoaded, countFeaturedLoaded] = useState(0)
+	const [featuredCurrent, setFeaturedCurrent] = useState(0)
 
-  const featureProps = {
-    featuredLoaded,
-    setFeaturedCurrent,
-    featuredCurrent,
-    countFeaturedLoaded,
-    dispatch
-  }
+	const featureProps = {
+		featuredLoaded,
+		setFeaturedCurrent,
+		featuredCurrent,
+		countFeaturedLoaded,
+		dispatch
+	}
 
-  useEffect(() => {
-    dispatch(loadFeatured())
-  }, [data.videos])
+	useEffect(() => {
+		dispatch(loadFeatured())
+	}, [data.videos])
 
-  return (
-    <>
-      <Head {...route}>
-        <script type="application/ld+json">{schema}</script>
-      </Head>
-      <div id="greeting">
-        <p>Editing is my craft.</p>
-        <p>Storytelling is my passion.</p>
-      </div>
-      <div id="featured" className={featuredLoaded < 2 ? 'loading' : ''}>
-        {featuredLoaded < 2 && <Loading />}
-        {featured.length && <>
-          <Feature
-            extendState={1}
-            retractState={2}
-            entry={featured[0]}
-            {...featureProps} />
-          <Feature
-            extendState={2}
-            retractState={1}
-            entry={featured[1]}
-            {...featureProps} />
-        </>}
-      </div>
-      {renderRoutes(route.routes)}
-    </>
-  )
+	return (
+		<>
+			<Head {...route}>
+				<script type="application/ld+json">{schema}</script>
+			</Head>
+			<div id="greeting">
+				<p>Editing is my craft.</p>
+				<p>Storytelling is my passion.</p>
+			</div>
+			<div id="featured" className={featuredLoaded < 2 ? 'loading' : ''}>
+				{featuredLoaded < 2 && <Loading />}
+				{featured.length && <>
+					<Feature
+						extendState={1}
+						retractState={2}
+						entry={featured[0]}
+						{...featureProps} />
+					<Feature
+						extendState={2}
+						retractState={1}
+						entry={featured[1]}
+						{...featureProps} />
+				</>}
+			</div>
+			{renderRoutes(route.routes)}
+		</>
+	)
 }
 
 Reel.propTypes = {
-  route: object.isRequired
+	route: object.isRequired
 }
 
 export default Reel

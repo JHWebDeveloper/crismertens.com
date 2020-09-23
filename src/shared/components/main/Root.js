@@ -4,13 +4,13 @@ import { renderRoutes } from 'react-router-config'
 import { object } from 'prop-types'
 
 const Root = ({ route }) => (
-  <Switch>
-    {renderRoutes(route.routes)}
-  </Switch>
+	<Switch>
+		{renderRoutes(route.routes)}
+	</Switch>
 )
 
 Root.propTypes = {
-  route: object.isRequired
+	route: object.isRequired
 }
 
 export default Root

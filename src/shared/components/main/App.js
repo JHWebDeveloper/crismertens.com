@@ -2,9 +2,9 @@ import React from 'react'
 import { renderRoutes } from 'react-router-config'
 
 if (process.env.WEBPACK) {
-  require('../../css/font.css')
-  require('../../css/reset.css')
-  require('../../css/index.css')
+	require('../../css/font.css')
+	require('../../css/reset.css')
+	require('../../css/index.css')
 }
 
 import { CMProvider } from '../../store'
@@ -15,16 +15,16 @@ import Footer from './Footer'
 import ModalLoader from '../modal/ModalLoader'
 
 const App = () => (
-  <ScrollHandlerProvider>
-    <CMProvider>
-      <Header />
-      <main>
-        {renderRoutes(routes)}
-      </main>
-      <Footer />
-      <ModalLoader />
-    </CMProvider>
-  </ScrollHandlerProvider>
+	<ScrollHandlerProvider>
+		<CMProvider>
+			<Header />
+			<main>
+				{renderRoutes(routes)}
+			</main>
+			<Footer />
+			<ModalLoader />
+		</CMProvider>
+	</ScrollHandlerProvider>
 )
 
 export default App

@@ -9,24 +9,24 @@ import Bio from './Bio'
 import ResumeCategory from './ResumeCategory'
 
 const Resume = ({ route }) => {
-  const { data, dispatch } = useContext(CMContext)
+	const { data, dispatch } = useContext(CMContext)
 
-  return (
-    <>
-      <Head {...route} />
-      <Bio content={data.bio}/>
-      {data.resume.map(category => (
-        <ResumeCategory
-          key={category.id}
-          dispatch={dispatch}
-          {...category} />
-      ))}
-    </>
-  )
+	return (
+		<>
+			<Head {...route} />
+			<Bio content={data.bio}/>
+			{data.resume.map(category => (
+				<ResumeCategory
+					key={category.id}
+					dispatch={dispatch}
+					{...category} />
+			))}
+		</>
+	)
 }
 
 Resume.propTypes = {
-  route: object.isRequired
+	route: object.isRequired
 }
 
 export default Resume

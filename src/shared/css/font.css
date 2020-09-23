@@ -1,54 +1,54 @@
 @font-face {
-  font-family: 'Montserrat';
-  src: local('Montserrat SemiBold'),
-       local('Montserrat-SemiBold'),
-       url('../font/montserrat-semibold.woff2') format('woff2'),
-       url('../font/montserrat-semibold.woff') format('woff'),
-       url('../font/montserrat-semibold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
+	font-family: 'Montserrat';
+	src: local('Montserrat SemiBold'),
+			 local('Montserrat-SemiBold'),
+			 url('../font/montserrat-semibold.woff2') format('woff2'),
+			 url('../font/montserrat-semibold.woff') format('woff'),
+			 url('../font/montserrat-semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans'),
-       local('OpenSans-Regular'),
-       url('../font/opensans-regular.woff2') format('woff2'),
-       url('../font/opensans-regular.woff') format('woff'),
-       url('../font/opensans-regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+	font-family: 'Open Sans';
+	src: local('Open Sans'),
+			 local('OpenSans-Regular'),
+			 url('../font/opensans-regular.woff2') format('woff2'),
+			 url('../font/opensans-regular.woff') format('woff'),
+			 url('../font/opensans-regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans SemiBold'),
-       local('OpenSans-SemiBold'),
-       url('../font/opensans-semibold.woff2') format('woff2'),
-       url('../font/opensans-semibold.woff') format('woff'),
-       url('../font/opensans-semibold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
+	font-family: 'Open Sans';
+	src: local('Open Sans SemiBold'),
+			 local('OpenSans-SemiBold'),
+			 url('../font/opensans-semibold.woff2') format('woff2'),
+			 url('../font/opensans-semibold.woff') format('woff'),
+			 url('../font/opensans-semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans Light'),
-       local('OpenSans-Light'),
-       url('../font/opensans-light.woff2') format('woff2'),
-       url('../font/opensans-light.woff') format('woff'),
-       url('../font/opensans-light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
+	font-family: 'Open Sans';
+	src: local('Open Sans Light'),
+			 local('OpenSans-Light'),
+			 url('../font/opensans-light.woff2') format('woff2'),
+			 url('../font/opensans-light.woff') format('woff'),
+			 url('../font/opensans-light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans Italic'),
-       local('OpenSans-Italic'),
-       url('../font/opensans-italic.woff2') format('woff2'),
-       url('../font/opensans-italic.woff') format('woff'),
-       url('../font/opensans-italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
+	font-family: 'Open Sans';
+	src: local('Open Sans Italic'),
+			 local('OpenSans-Italic'),
+			 url('../font/opensans-italic.woff2') format('woff2'),
+			 url('../font/opensans-italic.woff') format('woff'),
+			 url('../font/opensans-italic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
 }

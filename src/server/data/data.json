@@ -1,603 +1,603 @@
 {
-  "videos": [
-    {
-      "id": "1cd06ca0-f74b-11e9-9383-1d9654827c43",
-      "title": "Reel",
-      "open": true,
-      "defaultIndex": 0,
-      "entries": [
-        {
-          "id": "1cd0e1d0-f74b-11e9-9383-1d9654827c43",
-          "type": "video",
-          "title": "Live Action Editing Reel",
-          "tag": "live-action-editing-reel",
-          "alt": "A still from Manhattan Undying",
-          "description": [
-            "Includes clips from two features and one short: Escape Room (2017), Manhattan Undying (2016), and Wildness (2019)."
-          ],
-          "trt": 237,
-          "year": 2020,
-          "videoId": "HPuML6N9CC8"
-        },
-        {
-          "id": "866cc17e-631e-11ea-bc55-0242ac130003",
-          "type": "video",
-          "title": "Animation Editing Reel",
-          "tag": "animation-editing-reel",
-          "alt": "A still from LEGO DC Super Heroes: The Flash",
-          "description": [
-            "Includes clips from four features: The Jetsons & WWE: Robo-WrestleMania! (2017), LEGO Scooby-Doo! Blowout Beach Bash (2017), LEGO DC Super Heroes: The Flash (2017), and LEGO DC Super Heroes: Aquaman: Rage of Atlantis (2018)."
-          ],
-          "trt": 282,
-          "year": 2020,
-          "videoId": "sFZne5RgxvA"
-        }
-      ]
-    },
-    {
-      "id": "30c11550-0387-11ea-bb51-970db9680488",
-      "title": "Series",
-      "open": true,
-      "defaultIndex": 3,
-      "entries": [
-        {
-          "id": "episode_test",
-          "type": "series",
-          "title": "Battle Damage",
-          "tag": "battle-damage",
-          "description": [
-            "The Indie Machines' Erik Beck and Justin Johnson are here to destroy your electronics - all in the name of science. Watch in ultra slow motion as they find out just how tough our personal tech devices really are!"
-          ],
-          "trt": "Web Series",
-          "year": 2015,
-          "videoId": "PLHWWYNoH4JRC0-FULbCxhB6bbi0t8T1x3",
-          "content": [
-            {
-              "id": "episode_test_0",
-              "title": "Mac vs PC",
-              "tag": "mac-vs-pc"
-            },
-            {
-              "id": "episode_test_1",
-              "title": "iPhone Deathmatch",
-              "tag": "iphone-deathmatch"
-            },
-            {
-              "id": "episode_test_2",
-              "title": "Samsung Galaxy Deathmatch",
-              "tag": "samsung-galaxy-deathmatch"
-            },
-            {
-              "id": "episode_test_3",
-              "title": "iPhone 6 vs Galaxy Note 4",
-              "tag": "iphone-6-vs-galaxy-note-4"
-            },
-            {
-              "id": "episode_test_4",
-              "title": "Video Game Console Wars",
-              "tag": "video-game-console-wars"
-            },
-            {
-              "id": "episode_test_5",
-              "title": "50-Pound Safe Folds iPhone in Half",
-              "tag": "50-pound-safe-folds-iphone-in-half"
-            },
-            {
-              "id": "episode_test_6",
-              "title": "Smash Testing a GoPro",
-              "tag": "smash-testing-a-gopro"
-            },
-            {
-              "id": "episode_test_7",
-              "title": "Oculus Rift vs Samsung VR vs Virtual Boy",
-              "tag": "oculus-rift-vs-samsung-vr-vs-virtual-boy"
-            }
-          ]
-        }
-      ]
-  },
-    {
-      "id": "1cd0e1d1-f74b-11e9-9383-1d9654827c43",
-      "title": "Features",
-      "open": true,
-      "defaultIndex": 1,
-      "entries": [
-        {
-          "id": "1cd108e0-f74b-11e9-9383-1d9654827c43",
-          "type": "vod",
-          "title": "Teen Titans Go! Vs. Teen Titans",
-          "tag": "teen-titans-go-vs-teen-titans",
-          "alt": false,
-          "description": [
-            "Earths collide when the mysterious \"Master of Games\" appears over Titans Tower and throws the Teen Titans in a fight against their taller, more serious selves. Now, our heroes must set aside their differences and work together to stop him. It's a crisis of multiverse proportions that will take nothing less than two versions of the Teen Titans to solve!"
-          ],
-          "trt": "Feature Film",
-          "year": 2019,
-          "imdb": "https://www.imdb.com/title/tt10548944/",
-          "content": [
-            {
-              "id": "49077560-ff21-11e9-b06c-217bbe3911a6",
-              "title": "iTunes Store",
-              "url": "https://itunes.apple.com/us/movie/teen-titans-go-vs-teen-titans/id1470514777"
-            },
-            {
-              "id": "490838b0-ff21-11e9-b06c-217bbe3911a6",
-              "title": "Google Play",
-              "url": "https://play.google.com/store/movies/details?id=xm3WtJ-S2-Q.P"
-            },
-            {
-              "id": "49085fc0-ff21-11e9-b06c-217bbe3911a6",
-              "title": "Amazon Video",
-              "url": "https://www.amazon.com/gp/video/detail/B07VF1T3SR"
-            },
-            {
-              "id": "49085fc1-ff21-11e9-b06c-217bbe3911a6",
-              "title": "YouTube",
-              "url": "https://www.youtube.com/watch?v=7uEAvwuzRYU"
-            }
-          ]
-        },
-        {
-          "id": "1cd108e1-f74b-11e9-9383-1d9654827c43",
-          "type": "vod",
-          "title": "Lego DC Batman: Family Matters",
-          "tag": "lego-dc-batman-family-matters",
-          "alt": false,
-          "description": [
-            "Ominous notes sent to the Bat-family have the nocturnal heroes racing against time to stop the villainous Red Hood, who's gathering Gotham City's rogues' gallery to enact revenge on the Dark Knight. As the origins of the Red Hood are slowly revealed, Batman must face the past in order to save the future!"
-          ],
-          "trt": "Feature Film",
-          "year": 2019,
-          "imdb": "https://www.imdb.com/title/tt10327712/",
-          "content": [
-            {
-              "id": "49085fc2-ff21-11e9-b06c-217bbe3911a6",
-              "title": "iTunes Store",
-              "url": "https://itunes.apple.com/us/movie/lego-dc-batman-family-matters/id1460329533"
-            },
-            {
-              "id": "490886d0-ff21-11e9-b06c-217bbe3911a6",
-              "title": "Google Play",
-              "url": "https://play.google.com/store/movies/details/LEGO_DC_Batman_Family_Matters?id=_zY5pTGgrrc&hl=en_US"
-            },
-            {
-              "id": "490886d1-ff21-11e9-b06c-217bbe3911a6",
-              "title": "Amazon Video",
-              "url": "https://www.amazon.com/LEGO-DC-Batman-Family-Matters/dp/B07SKQWY3P/ref=tmm_aiv_swatch_0?_encoding=UTF8&qid=1559073651&sr=8-3"
-            },
-            {
-              "id": "490886d2-ff21-11e9-b06c-217bbe3911a6",
-              "title": "YouTube",
-              "url": "https://www.youtube.com/watch?v=_zY5pTGgrrc"
-            }
-          ]
-        },
-        {
-          "id": "1cd108e2-f74b-11e9-9383-1d9654827c43",
-          "type": "vod",
-          "title": "Lego DC Super Heroes: Aquaman: Rage of Atlantis",
-          "tag": "lego-dc-super-heroes-aquaman-rage-of-atlantis",
-          "alt": false,
-          "description": [
-            "After narrowly escaping a menacing threat, Aquaman is unjustly stripped of his throne and exiled from his own kingdom. Joined by the rest of the Justice League, he must now uncover a secret plot against Atlantis and learn what it means to truly be a hero."
-          ],
-          "trt": "Feature Film",
-          "year": 2018,
-          "imdb": "https://www.imdb.com/title/tt8457394/",
-          "content": [
-            {
-              "id": "4908ade0-ff21-11e9-b06c-217bbe3911a6",
-              "title": "iTunes Store",
-              "url": "https://itunes.apple.com/us/movie/lego-dc-super-heroes-aquaman-rage-of-atlantis/id1383149948"
-            },
-            {
-              "id": "4908ade1-ff21-11e9-b06c-217bbe3911a6",
-              "title": "Google Play",
-              "url": "https://play.google.com/store/movies/details/LEGO_DC_Super_Heroes_Aquaman_Rage_of_Atlantis?id=dDU_0cdKljg"
-            },
-            {
-              "id": "4908ade2-ff21-11e9-b06c-217bbe3911a6",
-              "title": "Amazon Video",
-              "url": "https://www.amazon.com/LEGO-DC-Comics-Super-Heroes/dp/B07D5MRY9L/"
-            },
-            {
-              "id": "4908d4f0-ff21-11e9-b06c-217bbe3911a6",
-              "title": "YouTube",
-              "url": "https://www.youtube.com/watch?v=dDU_0cdKljg"
-            }
-          ]
-        },
-        {
-          "id": "1cd12ff0-f74b-11e9-9383-1d9654827c43",
-          "type": "vod",
-          "title": "Lego DC Super Heroes: The Flash",
-          "tag": "lego-dc-super-heroes-the-flash",
-          "alt": false,
-          "description": [
-            "Reverse-Flash manipulates the Speed Force which strands The Flash in a never-ending time-loop with progressively disastrous results. Now he must find a way to restore his powers and finally apprehend his archnemesis with the help of the Justice League!"
-          ],
-          "trt": "Feature Film",
-          "year": 2018,
-          "imdb": "http://www.imdb.com/title/tt7877382/",
-          "content": [
-            {
-              "id": "4908d4f1-ff21-11e9-b06c-217bbe3911a6",
-              "title": "iTunes Store",
-              "url": "https://itunes.apple.com/us/movie/lego-dc-super-heroes-the-flash/id1330276666"
-            },
-            {
-              "id": "4908fc00-ff21-11e9-b06c-217bbe3911a6",
-              "title": "Google Play",
-              "url": "https://play.google.com/store/movies/details?id=Y566qkvJ56Y"
-            },
-            {
-              "id": "4908fc01-ff21-11e9-b06c-217bbe3911a6",
-              "title": "Amazon Video",
-              "url": "https://www.amazon.com/LEGO-DC-Super-Heroes-Flash/dp/B078WGS36L"
-            },
-            {
-              "id": "4908fc02-ff21-11e9-b06c-217bbe3911a6",
-              "title": "YouTube",
-              "url": "https://www.youtube.com/watch?v=A2bFC7QTv9o"
-            }
-          ]
-        },
-        {
-          "id": "1cd12ff1-f74b-11e9-9383-1d9654827c43",
-          "type": "vod",
-          "title": "Escape Room",
-          "tag": "escape-room",
-          "alt": false,
-          "description": [
-            "Six best friends test their intelligence when an escape room they participate in takes a dark and twisted turn. One hour. One exit. Who can you trust?"
-          ],
-          "trt": "Feature Film",
-          "year": 2017,
-          "imdb": "http://www.imdb.com/title/tt5159414/?ref_=fn_al_tt_1",
-          "content": [
-            {
-              "id": "49092310-ff21-11e9-b06c-217bbe3911a6",
-              "title": "iTunes Store",
-              "url": "https://itunes.apple.com/us/movie/escape-room/id1284052857"
-            },
-            {
-              "id": "49092311-ff21-11e9-b06c-217bbe3911a6",
-              "title": "Google Play",
-              "url": "https://play.google.com/store/movies/details/Escape_Room?id=SUXCLp3M50k"
-            },
-            {
-              "id": "49092312-ff21-11e9-b06c-217bbe3911a6",
-              "title": "Amazon Video",
-              "url": "https://www.amazon.com/Escape-Room-Evan-Williams/dp/B076FL6FH4/ref=tmm_aiv_swatch_1?_encoding=UTF8&qid=&sr="
-            },
-            {
-              "id": "9f6f5cb0-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "YouTube",
-              "url": "https://www.youtube.com/watch?v=SUXCLp3M50k"
-            }
-          ]
-        },
-        {
-          "id": "1cd12ff2-f74b-11e9-9383-1d9654827c43",
-          "type": "vod",
-          "title": "Lego Scooby-Doo! Blowout Beach Bash",
-          "tag": "lego-scooby-doo-blowout-beach-bash",
-          "alt": false,
-          "description": [
-            "Mystery, Inc. heads to Blowout Beach for a real swinging beach party. But when the Ghost Pirates threaten to harsh the good vibes, it's up to the Scooby Gang to get the party back on track and save the day!"
-          ],
-          "trt": "Feature Film",
-          "year": 2017,
-          "imdb": "http://www.imdb.com/title/tt6946580/?ref_=nv_sr_1",
-          "content": [
-            {
-              "id": "9f706e20-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "iTunes Store",
-              "url": "https://itunes.apple.com/us/movie/lego-scooby-doo-blowout-beach-bash/id1245545279"
-            },
-            {
-              "id": "9f706e21-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "Google Play",
-              "url": "https://play.google.com/store/movies/details?id=0PnS0tnRSWQ"
-            },
-            {
-              "id": "9f709530-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "Amazon Video",
-              "url": "https://www.amazon.com/dp/B071VM3C1L"
-            },
-            {
-              "id": "9f709531-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "YouTube",
-              "url": "https://www.youtube.com/watch?v=0PnS0tnRSWQ"
-            }
-          ]
-        },
-        {
-          "id": "1cd12ff3-f74b-11e9-9383-1d9654827c43",
-          "type": "vod",
-          "title": "Jetsons & WWE: Robo Wrestlemania",
-          "tag": "jetsons-and-wwe-robo-wrestlemania",
-          "alt": false,
-          "description": [
-            "When George Jetson accidentally compromises the safety of Orbit City, the Jetsons must travel back in time to enlist the help of WWE's brightest stars - Sheamus, Seth Rollins, Roman Reigns, Alicia Fox and the Uso's - to take their city back!"
-          ],
-          "trt": "Feature Film",
-          "year": 2017,
-          "imdb": "http://www.imdb.com/title/tt6415248/?ref_=nv_sr_5",
-          "content": [
-            {
-              "id": "9f709532-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "iTunes Store",
-              "url": "https://itunes.apple.com/us/movie/the-jetsons-wwe-robo-wrestlemania/id1192573232"
-            },
-            {
-              "id": "9f70bc40-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "Google Play",
-              "url": "https://play.google.com/store/movies/details/Jetsons_and_WWE_Robo_Wrestlemania?id=kY1sEmsxFA0&hl=en"
-            },
-            {
-              "id": "9f70bc41-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "Amazon Video",
-              "url": "https://www.amazon.com/Jetsons-WWE-Robo-Wrestlemania-Jeff-Bergman/dp/B01N7VCUPT"
-            },
-            {
-              "id": "9f70bc42-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "YouTube",
-              "url": "https://www.youtube.com/watch?v=kY1sEmsxFA0"
-            }
-          ]
-        },
-        {
-          "id": "1cd15700-f74b-11e9-9383-1d9654827c43",
-          "type": "vod",
-          "title": "Manhattan Undying",
-          "tag": "manhattan-undying",
-          "alt": false,
-          "description": [
-            "In this sexually-charged NYC thriller, a beautiful vampire (Sarah Roemer) seeks out a local famed artist (Luke Grimes) to paint her portrait. Meanwhile a trail of grisly murders sparks a police investigation lead by a chief detective (Daniel Kash) who is determined to uncover the truth."
-          ],
-          "trt": "Feature Film",
-          "year": 2016,
-          "imdb": "http://www.imdb.com/title/tt2330973/?ref_=fn_al_tt_1",
-          "content": [
-            {
-              "id": "9f70e350-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "iTunes Store",
-              "url": "https://itunes.apple.com/us/movie/manhattan-undying/id1232463495"
-            },
-            {
-              "id": "9f70e351-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "Google Play",
-              "url": "https://play.google.com/store/movies/details/Manhattan_Undying?id=DC01EB444738130BMV"
-            },
-            {
-              "id": "9f70e352-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "Amazon Video",
-              "url": "https://www.amazon.com/dp/B072JL1PKS/ref=cm_sw_r_cp_ep_dp_QyXozbGSN5H2S"
-            }
-          ]
-        },
-        {
-          "id": "1cd15701-f74b-11e9-9383-1d9654827c43",
-          "type": "vod",
-          "title": "2 Survive",
-          "tag": "2-survive",
-          "alt": false,
-          "description": [
-            "In this found footage thriller, six reality show contestants are dropped into the middle of the Mojave desert to compete for a $100k prize. But when an unexpected accident cuts off communication with the outside world, the game devolves into a terrorized frenzy for survival where no one can be trusted."
-          ],
-          "trt": "Feature Film",
-          "year": 2014,
-          "imdb": "http://www.imdb.com/title/tt3559570",
-          "content": [
-            {
-              "id": "9f710a60-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "iTunes Store",
-              "url": "https://itunes.apple.com/us/movie/2-survive/id976803895"
-            },
-            {
-              "id": "9f710a61-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "Google Play",
-              "url": "https://play.google.com/store/movies/details/2_Survive?id=hfXmn6sYupQ&hl=en"
-            },
-            {
-              "id": "9f710a62-ff21-11e9-b6e5-5b5ba77bd4bd",
-              "title": "Amazon Video",
-              "url": "https://www.amazon.com/dp/B00X5FX7Q6/ref=cm_sw_su_dp"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1cd15702-f74b-11e9-9383-1d9654827c43",
-      "title": "Shorts",
-      "open": true,
-      "defaultIndex": 2,
-      "entries": [
-        {
-          "id": "1cd17e10-f74b-11e9-9383-1d9654827c43",
-          "type": "video",
-          "title": "Wildness",
-          "tag": "wildness",
-          "alt": false,
-          "description": [
-            "San Francisco, 1967: Wild Bill balances fatherhood in a lifestyle born in the Summer of Love, and turns to robbing banks to get by. Based on a true story."
-          ],
-          "trt": 831,
-          "year": 2018,
-          "videoId": "YCx6Du8UjxY"
-        },
-        {
-          "id": "1cd17e11-f74b-11e9-9383-1d9654827c43",
-          "type": "video",
-          "title": "Shadow May Lie",
-          "tag": "shadow-may-lie",
-          "alt": false,
-          "description": [
-            "When a man awakens in dire circumstances with a mysterious caller hunting him down, he must defend himself at all costs."
-          ],
-          "trt": 346,
-          "year": 2015,
-          "videoId": "qKqBzDAWNCo"
-        }
-      ]
-    }
-  ],
-  "resume": [
-    {
-      "id": "3481d0f0-ff20-11e9-9f03-69efd541dc3d",
-      "title": "Experience",
-      "open": true,
-      "defaultIndex": 0,
-      "entries": [
-        {
-          "id": "3482e260-ff20-11e9-9f03-69efd541dc3d",
-          "type": "job",
-          "title": "Follow Me",
-          "company": "Voltage Pictures",
-          "format": "Feature",
-          "position": "Editor",
-          "year": 2019
-        },
-        {
-          "id": "3482e261-ff20-11e9-9f03-69efd541dc3d",
-          "type": "job",
-          "title": "Teen Titans Go! Vs. Teen Titans",
-          "company": "Warner Bros. Animation",
-          "format": "Feature",
-          "position": "Editor",
-          "year": 2019
-        },
-        {
-          "id": "34830970-ff20-11e9-9f03-69efd541dc3d",
-          "type": "job",
-          "title": "LEGO DC: Batman - Family Matters",
-          "company": "Warner Bros. Animation",
-          "format": "Feature",
-          "position": "Editor",
-          "year": 2018
-        },
-        {
-          "id": "34830971-ff20-11e9-9f03-69efd541dc3d",
-          "type": "job",
-          "title": "LEGO DC Super Heroes: Aquaman: Rage of Atlantis",
-          "company": "Warner Bros. Animation",
-          "format": "Feature",
-          "position": "Editor",
-          "year": 2018
-        },
-        {
-          "id": "34830972-ff20-11e9-9f03-69efd541dc3d",
-          "type": "job",
-          "title": "LEGO DC Super Heroes: The Flash",
-          "company": "Warner Bros. Animation",
-          "format": "Feature",
-          "position": "Editor",
-          "year": 2017
-        },
-        {
-          "id": "34830973-ff20-11e9-9f03-69efd541dc3d",
-          "type": "job",
-          "title": "LEGO Scooby-Doo! Blowout Beach Bash",
-          "company": "Warner Bros. Animation",
-          "format": "Feature",
-          "position": "Editor",
-          "year": 2017
-        },
-        {
-          "id": "34833080-ff20-11e9-9f03-69efd541dc3d",
-          "type": "job",
-          "title": "The Jetsons & WWE: Robo-WrestleMania!",
-          "company": "Warner Bros. Animation",
-          "format": "Feature",
-          "position": "Editor",
-          "year": 2017
-        },
-        {
-          "id": "34833081-ff20-11e9-9f03-69efd541dc3d",
-          "type": "job",
-          "title": "Escape Room",
-          "company": "Distributed by Lionsgate",
-          "format": "Feature",
-          "position": "Editor",
-          "year": 2016
-        },
-        {
-          "id": "34833082-ff20-11e9-9f03-69efd541dc3d",
-          "type": "job",
-          "title": "Manhattan Undying",
-          "company": "Distributed by Paramount UK",
-          "format": "Feature",
-          "position": "Editor",
-          "year": 2015
-        },
-        {
-          "id": "34835790-ff20-11e9-9f03-69efd541dc3d",
-          "type": "job",
-          "title": "2 Survive",
-          "company": "Distributed by Gravitas Ventures",
-          "format": "Feature",
-          "position": "Editor",
-          "year": 2014
-        },
-        {
-          "id": "34835791-ff20-11e9-9f03-69efd541dc3d",
-          "type": "job",
-          "title": "The Rift",
-          "company": "Featured Artists",
-          "format": "Feature",
-          "position": "Editor",
-          "year": 2013
-        }
-      ]
-    },
-    {
-      "id": "34835792-ff20-11e9-9f03-69efd541dc3d",
-      "title": "Skills",
-      "open": true,
-      "defaultIndex": 1,
-      "entries": [
-        {
-          "id": "34835793-ff20-11e9-9f03-69efd541dc3d",
-          "type": "skill",
-          "title": "FCPX, Premiere, Avid, Resolve and Storyboard Pro"
-        },
-        {
-          "id": "34837ea0-ff20-11e9-9f03-69efd541dc3d",
-          "type": "skill",
-          "title": "Finding the best story available, being precious with the material and thinking outside the box"
-        },
-        {
-          "id": "34837ea1-ff20-11e9-9f03-69efd541dc3d",
-          "type": "skill",
-          "title": "Robust sound design with any project because sound is everything"
-        },
-        {
-          "id": "34837ea2-ff20-11e9-9f03-69efd541dc3d",
-          "type": "skill",
-          "title": "Mobility to work in office or from home"
-        },
-        {
-          "id": "3483a5b0-ff20-11e9-9f03-69efd541dc3d",
-          "type": "skill",
-          "title": "Stereoscopic (3D) workflows using Quantel, FileMaker Pro & Pablo Rio platforms"
-        },
-        {
-          "id": "3483a5b1-ff20-11e9-9f03-69efd541dc3d",
-          "type": "skill",
-          "title": "Experienced voice actor if scratch dialogue is needed"
-        }
-      ]
-    }
-  ],
-  "bio": [
-    "is a film editor in L.A. who's worked with clients such as Lionsgate, Paramount, Adult Swim, and Warner Bros Animation. Collaborating with indie filmmakers and large studios alike, Cris believes a great story is always paramount to a positive audience experience.",
-    "Raised as an American in Japan, Cris' cultural upbringing inspired him with the ideology of <i lang=\"ja-Latn\">Shokunin</i> (<i lang=\"ja-Hani\">職人</i>) which means <q>the complete mastery of one’s profession</q>. Or in other words, to always strive to be the best - both in your craft and as a person.",
-    "Equipped with smart workflows and a strong narrative sense, Cris actively thinks outside the box to solve problems on the fly. His enthusiasm for building compelling stories with slick sound design is matched only by his unequivocal love for Weiner dogs."
-  ],
-  "featuredId": [
-    "1cd0e1d0-f74b-11e9-9383-1d9654827c43",
-    "866cc17e-631e-11ea-bc55-0242ac130003"
-  ]
+	"videos": [
+		{
+			"id": "1cd06ca0-f74b-11e9-9383-1d9654827c43",
+			"title": "Reel",
+			"open": true,
+			"defaultIndex": 0,
+			"entries": [
+				{
+					"id": "1cd0e1d0-f74b-11e9-9383-1d9654827c43",
+					"type": "video",
+					"title": "Live Action Editing Reel",
+					"tag": "live-action-editing-reel",
+					"alt": "A still from Manhattan Undying",
+					"description": [
+						"Includes clips from two features and one short: Escape Room (2017), Manhattan Undying (2016), and Wildness (2019)."
+					],
+					"trt": 237,
+					"year": 2020,
+					"videoId": "HPuML6N9CC8"
+				},
+				{
+					"id": "866cc17e-631e-11ea-bc55-0242ac130003",
+					"type": "video",
+					"title": "Animation Editing Reel",
+					"tag": "animation-editing-reel",
+					"alt": "A still from LEGO DC Super Heroes: The Flash",
+					"description": [
+						"Includes clips from four features: The Jetsons & WWE: Robo-WrestleMania! (2017), LEGO Scooby-Doo! Blowout Beach Bash (2017), LEGO DC Super Heroes: The Flash (2017), and LEGO DC Super Heroes: Aquaman: Rage of Atlantis (2018)."
+					],
+					"trt": 282,
+					"year": 2020,
+					"videoId": "sFZne5RgxvA"
+				}
+			]
+		},
+		{
+			"id": "30c11550-0387-11ea-bb51-970db9680488",
+			"title": "Series",
+			"open": true,
+			"defaultIndex": 3,
+			"entries": [
+				{
+					"id": "episode_test",
+					"type": "series",
+					"title": "Battle Damage",
+					"tag": "battle-damage",
+					"description": [
+						"The Indie Machines' Erik Beck and Justin Johnson are here to destroy your electronics - all in the name of science. Watch in ultra slow motion as they find out just how tough our personal tech devices really are!"
+					],
+					"trt": "Web Series",
+					"year": 2015,
+					"videoId": "PLHWWYNoH4JRC0-FULbCxhB6bbi0t8T1x3",
+					"content": [
+						{
+							"id": "episode_test_0",
+							"title": "Mac vs PC",
+							"tag": "mac-vs-pc"
+						},
+						{
+							"id": "episode_test_1",
+							"title": "iPhone Deathmatch",
+							"tag": "iphone-deathmatch"
+						},
+						{
+							"id": "episode_test_2",
+							"title": "Samsung Galaxy Deathmatch",
+							"tag": "samsung-galaxy-deathmatch"
+						},
+						{
+							"id": "episode_test_3",
+							"title": "iPhone 6 vs Galaxy Note 4",
+							"tag": "iphone-6-vs-galaxy-note-4"
+						},
+						{
+							"id": "episode_test_4",
+							"title": "Video Game Console Wars",
+							"tag": "video-game-console-wars"
+						},
+						{
+							"id": "episode_test_5",
+							"title": "50-Pound Safe Folds iPhone in Half",
+							"tag": "50-pound-safe-folds-iphone-in-half"
+						},
+						{
+							"id": "episode_test_6",
+							"title": "Smash Testing a GoPro",
+							"tag": "smash-testing-a-gopro"
+						},
+						{
+							"id": "episode_test_7",
+							"title": "Oculus Rift vs Samsung VR vs Virtual Boy",
+							"tag": "oculus-rift-vs-samsung-vr-vs-virtual-boy"
+						}
+					]
+				}
+			]
+	},
+		{
+			"id": "1cd0e1d1-f74b-11e9-9383-1d9654827c43",
+			"title": "Features",
+			"open": true,
+			"defaultIndex": 1,
+			"entries": [
+				{
+					"id": "1cd108e0-f74b-11e9-9383-1d9654827c43",
+					"type": "vod",
+					"title": "Teen Titans Go! Vs. Teen Titans",
+					"tag": "teen-titans-go-vs-teen-titans",
+					"alt": false,
+					"description": [
+						"Earths collide when the mysterious \"Master of Games\" appears over Titans Tower and throws the Teen Titans in a fight against their taller, more serious selves. Now, our heroes must set aside their differences and work together to stop him. It's a crisis of multiverse proportions that will take nothing less than two versions of the Teen Titans to solve!"
+					],
+					"trt": "Feature Film",
+					"year": 2019,
+					"imdb": "https://www.imdb.com/title/tt10548944/",
+					"content": [
+						{
+							"id": "49077560-ff21-11e9-b06c-217bbe3911a6",
+							"title": "iTunes Store",
+							"url": "https://itunes.apple.com/us/movie/teen-titans-go-vs-teen-titans/id1470514777"
+						},
+						{
+							"id": "490838b0-ff21-11e9-b06c-217bbe3911a6",
+							"title": "Google Play",
+							"url": "https://play.google.com/store/movies/details?id=xm3WtJ-S2-Q.P"
+						},
+						{
+							"id": "49085fc0-ff21-11e9-b06c-217bbe3911a6",
+							"title": "Amazon Video",
+							"url": "https://www.amazon.com/gp/video/detail/B07VF1T3SR"
+						},
+						{
+							"id": "49085fc1-ff21-11e9-b06c-217bbe3911a6",
+							"title": "YouTube",
+							"url": "https://www.youtube.com/watch?v=7uEAvwuzRYU"
+						}
+					]
+				},
+				{
+					"id": "1cd108e1-f74b-11e9-9383-1d9654827c43",
+					"type": "vod",
+					"title": "Lego DC Batman: Family Matters",
+					"tag": "lego-dc-batman-family-matters",
+					"alt": false,
+					"description": [
+						"Ominous notes sent to the Bat-family have the nocturnal heroes racing against time to stop the villainous Red Hood, who's gathering Gotham City's rogues' gallery to enact revenge on the Dark Knight. As the origins of the Red Hood are slowly revealed, Batman must face the past in order to save the future!"
+					],
+					"trt": "Feature Film",
+					"year": 2019,
+					"imdb": "https://www.imdb.com/title/tt10327712/",
+					"content": [
+						{
+							"id": "49085fc2-ff21-11e9-b06c-217bbe3911a6",
+							"title": "iTunes Store",
+							"url": "https://itunes.apple.com/us/movie/lego-dc-batman-family-matters/id1460329533"
+						},
+						{
+							"id": "490886d0-ff21-11e9-b06c-217bbe3911a6",
+							"title": "Google Play",
+							"url": "https://play.google.com/store/movies/details/LEGO_DC_Batman_Family_Matters?id=_zY5pTGgrrc&hl=en_US"
+						},
+						{
+							"id": "490886d1-ff21-11e9-b06c-217bbe3911a6",
+							"title": "Amazon Video",
+							"url": "https://www.amazon.com/LEGO-DC-Batman-Family-Matters/dp/B07SKQWY3P/ref=tmm_aiv_swatch_0?_encoding=UTF8&qid=1559073651&sr=8-3"
+						},
+						{
+							"id": "490886d2-ff21-11e9-b06c-217bbe3911a6",
+							"title": "YouTube",
+							"url": "https://www.youtube.com/watch?v=_zY5pTGgrrc"
+						}
+					]
+				},
+				{
+					"id": "1cd108e2-f74b-11e9-9383-1d9654827c43",
+					"type": "vod",
+					"title": "Lego DC Super Heroes: Aquaman: Rage of Atlantis",
+					"tag": "lego-dc-super-heroes-aquaman-rage-of-atlantis",
+					"alt": false,
+					"description": [
+						"After narrowly escaping a menacing threat, Aquaman is unjustly stripped of his throne and exiled from his own kingdom. Joined by the rest of the Justice League, he must now uncover a secret plot against Atlantis and learn what it means to truly be a hero."
+					],
+					"trt": "Feature Film",
+					"year": 2018,
+					"imdb": "https://www.imdb.com/title/tt8457394/",
+					"content": [
+						{
+							"id": "4908ade0-ff21-11e9-b06c-217bbe3911a6",
+							"title": "iTunes Store",
+							"url": "https://itunes.apple.com/us/movie/lego-dc-super-heroes-aquaman-rage-of-atlantis/id1383149948"
+						},
+						{
+							"id": "4908ade1-ff21-11e9-b06c-217bbe3911a6",
+							"title": "Google Play",
+							"url": "https://play.google.com/store/movies/details/LEGO_DC_Super_Heroes_Aquaman_Rage_of_Atlantis?id=dDU_0cdKljg"
+						},
+						{
+							"id": "4908ade2-ff21-11e9-b06c-217bbe3911a6",
+							"title": "Amazon Video",
+							"url": "https://www.amazon.com/LEGO-DC-Comics-Super-Heroes/dp/B07D5MRY9L/"
+						},
+						{
+							"id": "4908d4f0-ff21-11e9-b06c-217bbe3911a6",
+							"title": "YouTube",
+							"url": "https://www.youtube.com/watch?v=dDU_0cdKljg"
+						}
+					]
+				},
+				{
+					"id": "1cd12ff0-f74b-11e9-9383-1d9654827c43",
+					"type": "vod",
+					"title": "Lego DC Super Heroes: The Flash",
+					"tag": "lego-dc-super-heroes-the-flash",
+					"alt": false,
+					"description": [
+						"Reverse-Flash manipulates the Speed Force which strands The Flash in a never-ending time-loop with progressively disastrous results. Now he must find a way to restore his powers and finally apprehend his archnemesis with the help of the Justice League!"
+					],
+					"trt": "Feature Film",
+					"year": 2018,
+					"imdb": "http://www.imdb.com/title/tt7877382/",
+					"content": [
+						{
+							"id": "4908d4f1-ff21-11e9-b06c-217bbe3911a6",
+							"title": "iTunes Store",
+							"url": "https://itunes.apple.com/us/movie/lego-dc-super-heroes-the-flash/id1330276666"
+						},
+						{
+							"id": "4908fc00-ff21-11e9-b06c-217bbe3911a6",
+							"title": "Google Play",
+							"url": "https://play.google.com/store/movies/details?id=Y566qkvJ56Y"
+						},
+						{
+							"id": "4908fc01-ff21-11e9-b06c-217bbe3911a6",
+							"title": "Amazon Video",
+							"url": "https://www.amazon.com/LEGO-DC-Super-Heroes-Flash/dp/B078WGS36L"
+						},
+						{
+							"id": "4908fc02-ff21-11e9-b06c-217bbe3911a6",
+							"title": "YouTube",
+							"url": "https://www.youtube.com/watch?v=A2bFC7QTv9o"
+						}
+					]
+				},
+				{
+					"id": "1cd12ff1-f74b-11e9-9383-1d9654827c43",
+					"type": "vod",
+					"title": "Escape Room",
+					"tag": "escape-room",
+					"alt": false,
+					"description": [
+						"Six best friends test their intelligence when an escape room they participate in takes a dark and twisted turn. One hour. One exit. Who can you trust?"
+					],
+					"trt": "Feature Film",
+					"year": 2017,
+					"imdb": "http://www.imdb.com/title/tt5159414/?ref_=fn_al_tt_1",
+					"content": [
+						{
+							"id": "49092310-ff21-11e9-b06c-217bbe3911a6",
+							"title": "iTunes Store",
+							"url": "https://itunes.apple.com/us/movie/escape-room/id1284052857"
+						},
+						{
+							"id": "49092311-ff21-11e9-b06c-217bbe3911a6",
+							"title": "Google Play",
+							"url": "https://play.google.com/store/movies/details/Escape_Room?id=SUXCLp3M50k"
+						},
+						{
+							"id": "49092312-ff21-11e9-b06c-217bbe3911a6",
+							"title": "Amazon Video",
+							"url": "https://www.amazon.com/Escape-Room-Evan-Williams/dp/B076FL6FH4/ref=tmm_aiv_swatch_1?_encoding=UTF8&qid=&sr="
+						},
+						{
+							"id": "9f6f5cb0-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "YouTube",
+							"url": "https://www.youtube.com/watch?v=SUXCLp3M50k"
+						}
+					]
+				},
+				{
+					"id": "1cd12ff2-f74b-11e9-9383-1d9654827c43",
+					"type": "vod",
+					"title": "Lego Scooby-Doo! Blowout Beach Bash",
+					"tag": "lego-scooby-doo-blowout-beach-bash",
+					"alt": false,
+					"description": [
+						"Mystery, Inc. heads to Blowout Beach for a real swinging beach party. But when the Ghost Pirates threaten to harsh the good vibes, it's up to the Scooby Gang to get the party back on track and save the day!"
+					],
+					"trt": "Feature Film",
+					"year": 2017,
+					"imdb": "http://www.imdb.com/title/tt6946580/?ref_=nv_sr_1",
+					"content": [
+						{
+							"id": "9f706e20-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "iTunes Store",
+							"url": "https://itunes.apple.com/us/movie/lego-scooby-doo-blowout-beach-bash/id1245545279"
+						},
+						{
+							"id": "9f706e21-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "Google Play",
+							"url": "https://play.google.com/store/movies/details?id=0PnS0tnRSWQ"
+						},
+						{
+							"id": "9f709530-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "Amazon Video",
+							"url": "https://www.amazon.com/dp/B071VM3C1L"
+						},
+						{
+							"id": "9f709531-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "YouTube",
+							"url": "https://www.youtube.com/watch?v=0PnS0tnRSWQ"
+						}
+					]
+				},
+				{
+					"id": "1cd12ff3-f74b-11e9-9383-1d9654827c43",
+					"type": "vod",
+					"title": "Jetsons & WWE: Robo Wrestlemania",
+					"tag": "jetsons-and-wwe-robo-wrestlemania",
+					"alt": false,
+					"description": [
+						"When George Jetson accidentally compromises the safety of Orbit City, the Jetsons must travel back in time to enlist the help of WWE's brightest stars - Sheamus, Seth Rollins, Roman Reigns, Alicia Fox and the Uso's - to take their city back!"
+					],
+					"trt": "Feature Film",
+					"year": 2017,
+					"imdb": "http://www.imdb.com/title/tt6415248/?ref_=nv_sr_5",
+					"content": [
+						{
+							"id": "9f709532-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "iTunes Store",
+							"url": "https://itunes.apple.com/us/movie/the-jetsons-wwe-robo-wrestlemania/id1192573232"
+						},
+						{
+							"id": "9f70bc40-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "Google Play",
+							"url": "https://play.google.com/store/movies/details/Jetsons_and_WWE_Robo_Wrestlemania?id=kY1sEmsxFA0&hl=en"
+						},
+						{
+							"id": "9f70bc41-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "Amazon Video",
+							"url": "https://www.amazon.com/Jetsons-WWE-Robo-Wrestlemania-Jeff-Bergman/dp/B01N7VCUPT"
+						},
+						{
+							"id": "9f70bc42-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "YouTube",
+							"url": "https://www.youtube.com/watch?v=kY1sEmsxFA0"
+						}
+					]
+				},
+				{
+					"id": "1cd15700-f74b-11e9-9383-1d9654827c43",
+					"type": "vod",
+					"title": "Manhattan Undying",
+					"tag": "manhattan-undying",
+					"alt": false,
+					"description": [
+						"In this sexually-charged NYC thriller, a beautiful vampire (Sarah Roemer) seeks out a local famed artist (Luke Grimes) to paint her portrait. Meanwhile a trail of grisly murders sparks a police investigation lead by a chief detective (Daniel Kash) who is determined to uncover the truth."
+					],
+					"trt": "Feature Film",
+					"year": 2016,
+					"imdb": "http://www.imdb.com/title/tt2330973/?ref_=fn_al_tt_1",
+					"content": [
+						{
+							"id": "9f70e350-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "iTunes Store",
+							"url": "https://itunes.apple.com/us/movie/manhattan-undying/id1232463495"
+						},
+						{
+							"id": "9f70e351-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "Google Play",
+							"url": "https://play.google.com/store/movies/details/Manhattan_Undying?id=DC01EB444738130BMV"
+						},
+						{
+							"id": "9f70e352-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "Amazon Video",
+							"url": "https://www.amazon.com/dp/B072JL1PKS/ref=cm_sw_r_cp_ep_dp_QyXozbGSN5H2S"
+						}
+					]
+				},
+				{
+					"id": "1cd15701-f74b-11e9-9383-1d9654827c43",
+					"type": "vod",
+					"title": "2 Survive",
+					"tag": "2-survive",
+					"alt": false,
+					"description": [
+						"In this found footage thriller, six reality show contestants are dropped into the middle of the Mojave desert to compete for a $100k prize. But when an unexpected accident cuts off communication with the outside world, the game devolves into a terrorized frenzy for survival where no one can be trusted."
+					],
+					"trt": "Feature Film",
+					"year": 2014,
+					"imdb": "http://www.imdb.com/title/tt3559570",
+					"content": [
+						{
+							"id": "9f710a60-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "iTunes Store",
+							"url": "https://itunes.apple.com/us/movie/2-survive/id976803895"
+						},
+						{
+							"id": "9f710a61-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "Google Play",
+							"url": "https://play.google.com/store/movies/details/2_Survive?id=hfXmn6sYupQ&hl=en"
+						},
+						{
+							"id": "9f710a62-ff21-11e9-b6e5-5b5ba77bd4bd",
+							"title": "Amazon Video",
+							"url": "https://www.amazon.com/dp/B00X5FX7Q6/ref=cm_sw_su_dp"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "1cd15702-f74b-11e9-9383-1d9654827c43",
+			"title": "Shorts",
+			"open": true,
+			"defaultIndex": 2,
+			"entries": [
+				{
+					"id": "1cd17e10-f74b-11e9-9383-1d9654827c43",
+					"type": "video",
+					"title": "Wildness",
+					"tag": "wildness",
+					"alt": false,
+					"description": [
+						"San Francisco, 1967: Wild Bill balances fatherhood in a lifestyle born in the Summer of Love, and turns to robbing banks to get by. Based on a true story."
+					],
+					"trt": 831,
+					"year": 2018,
+					"videoId": "YCx6Du8UjxY"
+				},
+				{
+					"id": "1cd17e11-f74b-11e9-9383-1d9654827c43",
+					"type": "video",
+					"title": "Shadow May Lie",
+					"tag": "shadow-may-lie",
+					"alt": false,
+					"description": [
+						"When a man awakens in dire circumstances with a mysterious caller hunting him down, he must defend himself at all costs."
+					],
+					"trt": 346,
+					"year": 2015,
+					"videoId": "qKqBzDAWNCo"
+				}
+			]
+		}
+	],
+	"resume": [
+		{
+			"id": "3481d0f0-ff20-11e9-9f03-69efd541dc3d",
+			"title": "Experience",
+			"open": true,
+			"defaultIndex": 0,
+			"entries": [
+				{
+					"id": "3482e260-ff20-11e9-9f03-69efd541dc3d",
+					"type": "job",
+					"title": "Follow Me",
+					"company": "Voltage Pictures",
+					"format": "Feature",
+					"position": "Editor",
+					"year": 2019
+				},
+				{
+					"id": "3482e261-ff20-11e9-9f03-69efd541dc3d",
+					"type": "job",
+					"title": "Teen Titans Go! Vs. Teen Titans",
+					"company": "Warner Bros. Animation",
+					"format": "Feature",
+					"position": "Editor",
+					"year": 2019
+				},
+				{
+					"id": "34830970-ff20-11e9-9f03-69efd541dc3d",
+					"type": "job",
+					"title": "LEGO DC: Batman - Family Matters",
+					"company": "Warner Bros. Animation",
+					"format": "Feature",
+					"position": "Editor",
+					"year": 2018
+				},
+				{
+					"id": "34830971-ff20-11e9-9f03-69efd541dc3d",
+					"type": "job",
+					"title": "LEGO DC Super Heroes: Aquaman: Rage of Atlantis",
+					"company": "Warner Bros. Animation",
+					"format": "Feature",
+					"position": "Editor",
+					"year": 2018
+				},
+				{
+					"id": "34830972-ff20-11e9-9f03-69efd541dc3d",
+					"type": "job",
+					"title": "LEGO DC Super Heroes: The Flash",
+					"company": "Warner Bros. Animation",
+					"format": "Feature",
+					"position": "Editor",
+					"year": 2017
+				},
+				{
+					"id": "34830973-ff20-11e9-9f03-69efd541dc3d",
+					"type": "job",
+					"title": "LEGO Scooby-Doo! Blowout Beach Bash",
+					"company": "Warner Bros. Animation",
+					"format": "Feature",
+					"position": "Editor",
+					"year": 2017
+				},
+				{
+					"id": "34833080-ff20-11e9-9f03-69efd541dc3d",
+					"type": "job",
+					"title": "The Jetsons & WWE: Robo-WrestleMania!",
+					"company": "Warner Bros. Animation",
+					"format": "Feature",
+					"position": "Editor",
+					"year": 2017
+				},
+				{
+					"id": "34833081-ff20-11e9-9f03-69efd541dc3d",
+					"type": "job",
+					"title": "Escape Room",
+					"company": "Distributed by Lionsgate",
+					"format": "Feature",
+					"position": "Editor",
+					"year": 2016
+				},
+				{
+					"id": "34833082-ff20-11e9-9f03-69efd541dc3d",
+					"type": "job",
+					"title": "Manhattan Undying",
+					"company": "Distributed by Paramount UK",
+					"format": "Feature",
+					"position": "Editor",
+					"year": 2015
+				},
+				{
+					"id": "34835790-ff20-11e9-9f03-69efd541dc3d",
+					"type": "job",
+					"title": "2 Survive",
+					"company": "Distributed by Gravitas Ventures",
+					"format": "Feature",
+					"position": "Editor",
+					"year": 2014
+				},
+				{
+					"id": "34835791-ff20-11e9-9f03-69efd541dc3d",
+					"type": "job",
+					"title": "The Rift",
+					"company": "Featured Artists",
+					"format": "Feature",
+					"position": "Editor",
+					"year": 2013
+				}
+			]
+		},
+		{
+			"id": "34835792-ff20-11e9-9f03-69efd541dc3d",
+			"title": "Skills",
+			"open": true,
+			"defaultIndex": 1,
+			"entries": [
+				{
+					"id": "34835793-ff20-11e9-9f03-69efd541dc3d",
+					"type": "skill",
+					"title": "FCPX, Premiere, Avid, Resolve and Storyboard Pro"
+				},
+				{
+					"id": "34837ea0-ff20-11e9-9f03-69efd541dc3d",
+					"type": "skill",
+					"title": "Finding the best story available, being precious with the material and thinking outside the box"
+				},
+				{
+					"id": "34837ea1-ff20-11e9-9f03-69efd541dc3d",
+					"type": "skill",
+					"title": "Robust sound design with any project because sound is everything"
+				},
+				{
+					"id": "34837ea2-ff20-11e9-9f03-69efd541dc3d",
+					"type": "skill",
+					"title": "Mobility to work in office or from home"
+				},
+				{
+					"id": "3483a5b0-ff20-11e9-9f03-69efd541dc3d",
+					"type": "skill",
+					"title": "Stereoscopic (3D) workflows using Quantel, FileMaker Pro & Pablo Rio platforms"
+				},
+				{
+					"id": "3483a5b1-ff20-11e9-9f03-69efd541dc3d",
+					"type": "skill",
+					"title": "Experienced voice actor if scratch dialogue is needed"
+				}
+			]
+		}
+	],
+	"bio": [
+		"is a film editor in L.A. who's worked with clients such as Lionsgate, Paramount, Adult Swim, and Warner Bros Animation. Collaborating with indie filmmakers and large studios alike, Cris believes a great story is always paramount to a positive audience experience.",
+		"Raised as an American in Japan, Cris' cultural upbringing inspired him with the ideology of <i lang=\"ja-Latn\">Shokunin</i> (<i lang=\"ja-Hani\">職人</i>) which means <q>the complete mastery of one’s profession</q>. Or in other words, to always strive to be the best - both in your craft and as a person.",
+		"Equipped with smart workflows and a strong narrative sense, Cris actively thinks outside the box to solve problems on the fly. His enthusiasm for building compelling stories with slick sound design is matched only by his unequivocal love for Weiner dogs."
+	],
+	"featuredId": [
+		"1cd0e1d0-f74b-11e9-9383-1d9654827c43",
+		"866cc17e-631e-11ea-bc55-0242ac130003"
+	]
 }

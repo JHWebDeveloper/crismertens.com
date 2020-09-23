@@ -1,54 +1,54 @@
 @keyframes text-fade-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+	0% {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
 }
 
 #greeting {
-  padding: 0.625rem 0 5rem;
-  text-align: center;
-  font-size: 2.5rem;
+	padding: 0.625rem 0 5rem;
+	text-align: center;
+	font-size: 2.5rem;
 }
 
 #greeting > p { animation: text-fade-in ease-out 1250ms; }
 
 #greeting > p:first-child {
-  margin-bottom: 0;
-  font-weight: 600;
+	margin-bottom: 0;
+	font-weight: 600;
 }
 
 #greeting > p:last-child {
-  font-weight: 300;
-  font-size: 0.8em;
-  animation-delay: 750ms;
-  animation-fill-mode: backwards;
+	font-weight: 300;
+	font-size: 0.8em;
+	animation-delay: 750ms;
+	animation-fill-mode: backwards;
 }
 
 #featured {
-  display: flex;
-  width: 100%;
-  height: 32.0625rem;
-  min-height: 10rem;
-  margin: 0 auto 3.125rem;
-  color: #fff;
+	display: flex;
+	width: 100%;
+	height: 32.0625rem;
+	min-height: 10rem;
+	margin: 0 auto 3.125rem;
+	color: #fff;
 }
 
 .accessible #featured:focus-within { outline: 0.125rem solid #fa0; }
 
 #featured > a,
 .crop-box {
-  height: inherit;
+	height: inherit;
 }
 
 #featured > a {
-  flex: 1;
-  width: 50%;
-  transition: flex 300ms 260ms, opacity 750ms;
+	flex: 1;
+	width: 50%;
+	transition: flex 300ms 260ms, opacity 750ms;
 }
 
 .loading > a { opacity: 0; }
@@ -56,97 +56,97 @@
 #featured > a:nth-child(2) { text-align: right; }
 
 #featured > a:nth-child(2)::before {
-  content: '';
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 2;
-  height: 118.5%;
-  width: 0.1875rem;
-  background: #000;
-  transform: translate(-50%, -50%);
+	content: '';
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 2;
+	height: 118.5%;
+	width: 0.1875rem;
+	background: #000;
+	transform: translate(-50%, -50%);
 }
 
 .crop-box,
 .crop-box > :matches(img, h2) {
-  position: absolute;
+	position: absolute;
 }
 
 .crop-box {
-  overflow: hidden;
-  display: block;
-  width: 100%;
+	overflow: hidden;
+	display: block;
+	width: 100%;
 }
 
 .crop-box > img {
-  left: 50%;
-  height: 100%;
-  opacity: 1;
-  transform: translateX(-50%);
+	left: 50%;
+	height: 100%;
+	opacity: 1;
+	transform: translateX(-50%);
 }
 
 .crop-box > :matches(.overlay, .runtime) {
-  transition-delay: 260ms;
+	transition-delay: 260ms;
 }
 
 .crop-box > .overlay {
-  width: 57rem;
-  background: radial-gradient(
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0.8));
+	width: 57rem;
+	background: radial-gradient(
+		rgba(0, 0, 0, 0) 50%,
+		rgba(0, 0, 0, 0.8));
 }
 
 .crop-box > .play {
-  top: 50%;
-  left: 50%;
-  width: 7rem;
-  height: 7rem;
-  transform: translate(-50%, -50%);
-  transition: transform 300ms 260ms, opacity 300ms 260ms;
+	top: 50%;
+	left: 50%;
+	width: 7rem;
+	height: 7rem;
+	transform: translate(-50%, -50%);
+	transition: transform 300ms 260ms, opacity 300ms 260ms;
 }
 
 #featured > a :matches(h2, .runtime) {
-  left: 2.7%;
-  text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.45);
+	left: 2.7%;
+	text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.45);
 }
 
 #featured > a:nth-child(2) :matches(h2, .runtime) { right: 2.7%; }
 
 .crop-box > h2 {
-  top: 0;
-  padding-top: 0.625rem;
-  font-size: 3.125rem;
-  white-space: nowrap;
-  transform: translateY(-100%);
-  transition: transform 300ms 260ms;
+	top: 0;
+	padding-top: 0.625rem;
+	font-size: 3.125rem;
+	white-space: nowrap;
+	transform: translateY(-100%);
+	transition: transform 300ms 260ms;
 }
 
 .crop-box > .runtime {
-  font-weight: 600;
-  font-size: 2rem;
-  padding-bottom: 0.625rem;
+	font-weight: 600;
+	font-size: 2rem;
+	padding-bottom: 0.625rem;
 }
 
 @keyframes loading {
-  0%, 50% { transform: scaleY(1); }
-  25% { transform: scaleY(1.6); }
+	0%, 50% { transform: scaleY(1); }
+	25% { transform: scaleY(1.6); }
 }
 
 #featured > svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 6.25rem;
-  height: 6.25rem;
-  fill: #000;
-  transform: translate(-50%, -50%);
-  animation: fade-in 300ms 300ms backwards;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 6.25rem;
+	height: 6.25rem;
+	fill: #000;
+	transform: translate(-50%, -50%);
+	animation: fade-in 300ms 300ms backwards;
 }
 
 #featured > svg > rect {
-  transform-origin: center;
-  animation: loading 1000ms infinite backwards;
+	transform-origin: center;
+	animation: loading 1000ms infinite backwards;
 }
 
 #featured > svg > rect:nth-child(1) { animation-delay: 400ms; }
@@ -154,92 +154,92 @@
 #featured > svg > rect:nth-child(3) { animation-delay: 750ms; }
 
 @media (min-width: 1024px) {
-  #featured > a.extend { flex-grow: 19; }
+	#featured > a.extend { flex-grow: 19; }
 
-  #featured > a:matches(.extend, .retract) { transition-delay: 0ms; }
+	#featured > a:matches(.extend, .retract) { transition-delay: 0ms; }
 
-  :matches(.extend, .retract) :matches(.play, h2, .runtime) {
-    transition-delay: 0ms;
-  }
+	:matches(.extend, .retract) :matches(.play, h2, .runtime) {
+		transition-delay: 0ms;
+	}
 
-  .extend .overlay {
-    opacity: 1;
-    transition-delay: 300ms;
-  }
+	.extend .overlay {
+		opacity: 1;
+		transition-delay: 300ms;
+	}
 
-  .extend .play { opacity: 1; }
+	.extend .play { opacity: 1; }
 
-  .extend:nth-child(1) .play {
-    transform: translate(-50%, -50%) translate(357%, 176%) scale(0.75);
-  }
-  
-  .extend:nth-child(2) .play {
-    transform: translate(-50%, -50%) translate(-357%, 176%) scale(0.75);
-  }
+	.extend:nth-child(1) .play {
+		transform: translate(-50%, -50%) translate(357%, 176%) scale(0.75);
+	}
+	
+	.extend:nth-child(2) .play {
+		transform: translate(-50%, -50%) translate(-357%, 176%) scale(0.75);
+	}
 
-  a.extend h2, .extend .runtime {
-    transform: translateY(0);
-    transition-delay: 150ms;
-  }
+	a.extend h2, .extend .runtime {
+		transform: translateY(0);
+		transition-delay: 150ms;
+	}
 
-  .retract .play { opacity: 0; }
+	.retract .play { opacity: 0; }
 }
 
 @media (hover: none), (max-width: 1023px) {
-  #greeting { padding-bottom: 2.5rem; }
-  
-  #featured,
-  .crop-box > .overlay {
-    display: block;
-  }
-  
-  #featured,
-  .crop-box {
-    height: auto;
-  }
-  
-  #featured { margin-bottom: 0; }
-  
-  #featured > a,
-  .crop-box > :matches(.overlay, img) {
-    width: 100%;
-  }
-  
-  #featured > a:nth-child(1) { margin-bottom: 3.125rem; }
-  #featured > a:nth-child(2) { text-align: left; }
-  
-  #featured > a:nth-child(2)::before { display: none; }
-  
-  .crop-box,
-  .crop-box > img {
-    position: relative;
-  }
-  
-  .crop-box > :matches(.overlay, .play) { opacity: 1; }
-  
-  .crop-box > :matches(.play, h2, .runtime) { transform: none; }
+	#greeting { padding-bottom: 2.5rem; }
+	
+	#featured,
+	.crop-box > .overlay {
+		display: block;
+	}
+	
+	#featured,
+	.crop-box {
+		height: auto;
+	}
+	
+	#featured { margin-bottom: 0; }
+	
+	#featured > a,
+	.crop-box > :matches(.overlay, img) {
+		width: 100%;
+	}
+	
+	#featured > a:nth-child(1) { margin-bottom: 3.125rem; }
+	#featured > a:nth-child(2) { text-align: left; }
+	
+	#featured > a:nth-child(2)::before { display: none; }
+	
+	.crop-box,
+	.crop-box > img {
+		position: relative;
+	}
+	
+	.crop-box > :matches(.overlay, .play) { opacity: 1; }
+	
+	.crop-box > :matches(.play, h2, .runtime) { transform: none; }
 
-  .crop-box > .play {
-    top: auto;
-    left: auto;
-    right: 2.7%;
-    bottom: 4.8%;
-    width: 8.75%;
-    height: auto;
-  }
-  
-  #featured > a:nth-child(2) :matches(h2, .runtime) { right: none; }
+	.crop-box > .play {
+		top: auto;
+		left: auto;
+		right: 2.7%;
+		bottom: 4.8%;
+		width: 8.75%;
+		height: auto;
+	}
+	
+	#featured > a:nth-child(2) :matches(h2, .runtime) { right: none; }
 
-  .crop-box > h2 { font-size: 5.4vw }
+	.crop-box > h2 { font-size: 5.4vw }
 }
 
 @media (max-width: 599px) {
-  #greeting {
-    padding: 0.625rem 0 2.5rem;
-    font-size: 2rem;
-  }
-  
-  #featured > a:first-of-type { margin-bottom: 1.25rem; }
-  
-  .crop-box > .runtime { font-size: 1rem; }
+	#greeting {
+		padding: 0.625rem 0 2.5rem;
+		font-size: 2rem;
+	}
+	
+	#featured > a:first-of-type { margin-bottom: 1.25rem; }
+	
+	.crop-box > .runtime { font-size: 1rem; }
 }
