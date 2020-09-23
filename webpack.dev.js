@@ -65,23 +65,25 @@ module.exports = {
       filename: path.join('css', '[name].min.css')
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new CopyWebpackPlugin([
-      {
-        from: path.join('src', 'server', 'data'),
-        to: 'data'
-      },
-      {
-        from: path.join('src', 'shared', 'font'),
-        to: 'font'
-      },
-      {
-        from: path.join('src', 'shared', 'downloads'),
-        to: 'downloads'
-      },
-      {
-        from: path.join('src', 'shared', 'icons'),
-        to: ''
-      }
-    ])
+    new CopyWebpackPlugin({
+			patterns: [
+				{
+					from: path.join('src', 'server', 'data'),
+					to: 'data'
+				},
+				{
+					from: path.join('src', 'shared', 'font'),
+					to: 'font'
+				},
+				{
+					from: path.join('src', 'shared', 'downloads'),
+					to: 'downloads'
+				},
+				{
+					from: path.join('src', 'shared', 'icons'),
+					to: ''
+				}
+			]
+		})
   ]
 }

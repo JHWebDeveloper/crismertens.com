@@ -101,12 +101,14 @@ const browserConfig = {
     new MiniCssExtractPlugin({
       filename: path.join('css', '[name].min.css')
     }),
-    new CopyWebpackPlugin([
-      { from: path.join('src', 'client', 'images'), to: 'images' },
-      { from: path.join('src', 'shared', 'font'), to: 'font' },
-      { from: path.join('src', 'shared', 'downloads'), to: 'downloads' },
-      { from: path.join('src', 'shared', 'icons'), to: '' }
-    ])
+    new CopyWebpackPlugin({
+			patterns: [
+				{ from: path.join('src', 'client', 'images'), to: 'images' },
+				{ from: path.join('src', 'shared', 'font'), to: 'font' },
+				{ from: path.join('src', 'shared', 'downloads'), to: 'downloads' },
+				{ from: path.join('src', 'shared', 'icons'), to: '' }
+			]
+		})
   ]
 }
 
