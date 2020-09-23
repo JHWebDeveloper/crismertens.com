@@ -28,15 +28,20 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-@media (min-width: 2241px) { /* QHD 2560x2096 */
+/* QHD 2560x2096 */
+@media (min-width: 2241px) {
   html { font-size: 19px; }
 }
 
-@media (min-width: 3201px) { /* 4k 3840x2160 */
+/* 4k 3840x2160 */
+@media (min-width: 3201px) {
   html { font-size: 28px; }
 }
 
-body { padding-left: calc(100vw - 100%); }
+/* avoid content jump */
+@media (min-width: 1024px) {
+  body { padding-left: calc(100vw - 100%); }
+}
 
 div, header, nav, address, aside, main,
 section, article, figure, footer, a, button, span {
