@@ -178,20 +178,20 @@ div[aria-label="gallery"] > div {
 }
 
 .slider-items {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: min-content;
+  display: flex;
   padding: 2% 0;
 }
 
 .slider-items:matches(::before, ::after) {
   content: '';
+  flex: 0 0 auto;
   width: 5.375rem;
 }
 
 .slider-items > :matches(a, button) {
   scroll-snap-stop: always;
   scroll-snap-align: start;
+  flex: 0 0 auto;
   position: relative;
   padding: 0 0.5rem;
   width: 12rem;
