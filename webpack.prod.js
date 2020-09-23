@@ -78,14 +78,15 @@ const browserConfig = {
           {
             loader: 'postcss-loader',
             options: {
-              ident: 'postcss',
-              plugins: [
-                postcssPresetEnv({ stage: 0 }),
-                cssMQPacker({ sort: true }),
-                cssnano({
-                  preset: ['default', { calc: false }]
-                })
-              ]
+              postcssOptions: {
+								plugins: [
+									postcssPresetEnv({ stage: 0 }),
+									cssMQPacker({ sort: true }),
+									cssnano({
+										preset: ['default', { calc: false }]
+									})
+								]
+							}
             }
           }
         ]
