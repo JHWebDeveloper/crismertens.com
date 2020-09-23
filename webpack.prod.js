@@ -41,14 +41,7 @@ const serverConfig = {
 				}]
 			}
 		]
-	},
-	plugins: [
-		new CopyWebpackPlugin({
-			patterns: [
-				{ from: path.join('src', 'server', 'images'), to: 'images' }
-			]
-		})
-	]
+	}
 }
 
 const browserConfig = {
