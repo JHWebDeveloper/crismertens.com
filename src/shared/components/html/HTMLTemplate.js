@@ -12,7 +12,7 @@ const HTMLTemplate = ({ location }) => (
       
       <title>Cris Mertens | Film Editor</title>
       <meta name="description" content="The official website of Los Angeles, CA based film editor Cris Mertens." />
-      <link rel="stylesheet" href="/css/main.min.css" />
+      <link rel="stylesheet" href="/css/index.min.css" />
       <link rel="preconnect" href="https://www.youtube.com/iframe_api" crossOrigin="true" />
 
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -41,7 +41,7 @@ const HTMLTemplate = ({ location }) => (
           <App />
         </StaticRouter>
       </div>
-      <script src="/bundle.js"></script>
+      <script src="/index.bundle.js"></script>
     </body>
   </html>
 )
