@@ -52,13 +52,16 @@ const serverConfig = {
 
 const browserConfig = {
   mode: 'production',
-  entry: [
-    'intersection-observer',
-    path.join(__dirname, 'src', 'client')
-  ],
+  entry: {
+    index: [
+      'intersection-observer',
+      path.join(__dirname, 'src', 'client')
+    ],
+    ie11: path.join(__dirname, 'src', 'shared', 'css', 'ie11.css'),
+  },
   output: {
     path: path.join(__dirname, 'build', 'client'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     publicPath: '/'
   },
   module: {
@@ -95,7 +98,7 @@ const browserConfig = {
       'process.env.GA_ID': JSON.stringify(process.env.GA_ID)
     }),
     new MiniCssExtractPlugin({
-      filename: path.join('css', 'main.min.css')
+      filename: path.join('css', '[name].min.css')
     }),
     new CopyWebpackPlugin([
       { from: path.join('src', 'client', 'images'), to: 'images' },

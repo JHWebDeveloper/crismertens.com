@@ -11,7 +11,7 @@
           "type": "video",
           "title": "Live Action Editing Reel",
           "tag": "live-action-editing-reel",
-          "altTitle": false,
+          "alt": "A still from Manhattan Undying",
           "description": [
             "Includes clips from two features and one short: Escape Room (2017), Manhattan Undying (2016), and Wildness (2019)."
           ],
@@ -24,7 +24,7 @@
           "type": "video",
           "title": "Animation Editing Reel",
           "tag": "animation-editing-reel",
-          "altTitle": false,
+          "alt": "A still from LEGO DC Super Heroes: The Flash",
           "description": [
             "Includes clips from four features: The Jetsons & WWE: Robo-WrestleMania! (2017), LEGO Scooby-Doo! Blowout Beach Bash (2017), LEGO DC Super Heroes: The Flash (2017), and LEGO DC Super Heroes: Aquaman: Rage of Atlantis (2018)."
           ],
@@ -107,7 +107,7 @@
           "type": "vod",
           "title": "Teen Titans Go! Vs. Teen Titans",
           "tag": "teen-titans-go-vs-teen-titans",
-          "altTitle": false,
+          "alt": false,
           "description": [
             "Earths collide when the mysterious \"Master of Games\" appears over Titans Tower and throws the Teen Titans in a fight against their taller, more serious selves. Now, our heroes must set aside their differences and work together to stop him. It's a crisis of multiverse proportions that will take nothing less than two versions of the Teen Titans to solve!"
           ],
@@ -142,7 +142,7 @@
           "type": "vod",
           "title": "Lego DC Batman: Family Matters",
           "tag": "lego-dc-batman-family-matters",
-          "altTitle": false,
+          "alt": false,
           "description": [
             "Ominous notes sent to the Bat-family have the nocturnal heroes racing against time to stop the villainous Red Hood, who's gathering Gotham City's rogues' gallery to enact revenge on the Dark Knight. As the origins of the Red Hood are slowly revealed, Batman must face the past in order to save the future!"
           ],
@@ -177,7 +177,7 @@
           "type": "vod",
           "title": "Lego DC Super Heroes: Aquaman: Rage of Atlantis",
           "tag": "lego-dc-super-heroes-aquaman-rage-of-atlantis",
-          "altTitle": false,
+          "alt": false,
           "description": [
             "After narrowly escaping a menacing threat, Aquaman is unjustly stripped of his throne and exiled from his own kingdom. Joined by the rest of the Justice League, he must now uncover a secret plot against Atlantis and learn what it means to truly be a hero."
           ],
@@ -212,7 +212,7 @@
           "type": "vod",
           "title": "Lego DC Super Heroes: The Flash",
           "tag": "lego-dc-super-heroes-the-flash",
-          "altTitle": false,
+          "alt": false,
           "description": [
             "Reverse-Flash manipulates the Speed Force which strands The Flash in a never-ending time-loop with progressively disastrous results. Now he must find a way to restore his powers and finally apprehend his archnemesis with the help of the Justice League!"
           ],
@@ -247,7 +247,7 @@
           "type": "vod",
           "title": "Escape Room",
           "tag": "escape-room",
-          "altTitle": false,
+          "alt": false,
           "description": [
             "Six best friends test their intelligence when an escape room they participate in takes a dark and twisted turn. One hour. One exit. Who can you trust?"
           ],
@@ -282,7 +282,7 @@
           "type": "vod",
           "title": "Lego Scooby-Doo! Blowout Beach Bash",
           "tag": "lego-scooby-doo-blowout-beach-bash",
-          "altTitle": false,
+          "alt": false,
           "description": [
             "Mystery, Inc. heads to Blowout Beach for a real swinging beach party. But when the Ghost Pirates threaten to harsh the good vibes, it's up to the Scooby Gang to get the party back on track and save the day!"
           ],
@@ -317,7 +317,7 @@
           "type": "vod",
           "title": "Jetsons & WWE: Robo Wrestlemania",
           "tag": "jetsons-and-wwe-robo-wrestlemania",
-          "altTitle": false,
+          "alt": false,
           "description": [
             "When George Jetson accidentally compromises the safety of Orbit City, the Jetsons must travel back in time to enlist the help of WWE's brightest stars - Sheamus, Seth Rollins, Roman Reigns, Alicia Fox and the Uso's - to take their city back!"
           ],
@@ -352,7 +352,7 @@
           "type": "vod",
           "title": "Manhattan Undying",
           "tag": "manhattan-undying",
-          "altTitle": false,
+          "alt": false,
           "description": [
             "In this sexually-charged NYC thriller, a beautiful vampire (Sarah Roemer) seeks out a local famed artist (Luke Grimes) to paint her portrait. Meanwhile a trail of grisly murders sparks a police investigation lead by a chief detective (Daniel Kash) who is determined to uncover the truth."
           ],
@@ -382,7 +382,7 @@
           "type": "vod",
           "title": "2 Survive",
           "tag": "2-survive",
-          "altTitle": false,
+          "alt": false,
           "description": [
             "In this found footage thriller, six reality show contestants are dropped into the middle of the Mojave desert to compete for a $100k prize. But when an unexpected accident cuts off communication with the outside world, the game devolves into a terrorized frenzy for survival where no one can be trusted."
           ],
@@ -420,7 +420,7 @@
           "type": "video",
           "title": "Wildness",
           "tag": "wildness",
-          "altTitle": false,
+          "alt": false,
           "description": [
             "San Francisco, 1967: Wild Bill balances fatherhood in a lifestyle born in the Summer of Love, and turns to robbing banks to get by. Based on a true story."
           ],
@@ -433,7 +433,7 @@
           "type": "video",
           "title": "Shadow May Lie",
           "tag": "shadow-may-lie",
-          "altTitle": false,
+          "alt": false,
           "description": [
             "When a man awakens in dire circumstances with a mysterious caller hunting him down, he must defend himself at all costs."
           ],

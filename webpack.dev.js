@@ -9,13 +9,16 @@ require('dotenv').config()
 
 module.exports = {
   mode: 'development',
-  entry: [
-    'webpack-hot-middleware/client',
-    path.join(__dirname, 'src', 'client')
-  ],
+  entry: {
+    index: [
+      'webpack-hot-middleware/client',
+      path.join(__dirname, 'src', 'client')
+    ],
+    ie11: path.join(__dirname, 'src', 'shared', 'css', 'ie11.css'),
+  },
   output: {
     path: path.join(__dirname, 'build'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     publicPath: '/'
   },
   module: {
@@ -58,7 +61,7 @@ module.exports = {
       'process.env.GA_ID': JSON.stringify(process.env.GA_ID)
     }),
     new MiniCssExtractPlugin({
-      filename: path.join('css', 'main.min.css')
+      filename: path.join('css', '[name].min.css')
     }),
     new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([
