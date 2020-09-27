@@ -1,6 +1,5 @@
 node_modules/
 build/
-src/server/data/
 src/shared/downloads/cris-mertens-resume.pdf
 src/shared/images/signature
 .htaccess
